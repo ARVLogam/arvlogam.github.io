@@ -1,239 +1,123 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="id">
 <head>
-<title>ARV Logam</title>
-<meta charset="utf-8">
-<noscript>
-<link rel="stylesheet" href="css/5grid/core.css">
-<link rel="stylesheet" href="css/5grid/core-desktop.css">
-<link rel="stylesheet" href="css/5grid/core-1200px.css">
-<link rel="stylesheet" href="css/5grid/core-noscript.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/style-desktop.css">
-</noscript>
-<script src="css/5grid/jquery.js"></script>
-<script src="css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
-<!--[if IE 9]>
-<link rel="stylesheet" href="css/style-ie9.css">
-<![endif]-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #7c1c1c;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 150px;
+        }
+        button {
+            background-color: #7c1c1c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #7c1c1c;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
 </head>
-<body class="homepage">
-<div id="header-wrapper">
-  <header id="header">
-    <div class="5grid-layout">
-      <div class="row">
-        <div class="5u" id="logo">
-          <h1><a href="#" class="mobileUI-site-name"><font size="10"> ARV Logam </font><br></a></h1>
-          <h1></h1>
-        </div>
-        <!--<div class="7u" id="menu">
-          <nav class="mobileUI-site-nav">
-            <ul>
-              <li class="current_page_item"><a href="index.html">Menu Utama</a></li>
-              <li><a href="twocolumn1.html">Hubungi Kami</a></li>
-              <li><a href="twocolumn2.html">Two Column #2</a></li>
-              <li><a href="onecolumn.html">One Column</a></li>
-            </ul>-->
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
-</div>
-<div id="wrapper" class="5grid-layout">
-  <div id="banner" class="row">
-    <div class="12u">
-      <section><a href="#"><img src="images/gmb01.jpg" alt=""></a></section>
-    </div>
-  </div>
-  <div id="marketing" class="row">
-    <div class="3u">
-      <section class="box">
-        <h2>ALUMINIUM</h2>
-        <p class="subtitle">ALUMINIUM</p>
-        <ul class="style1">
-          <li><a href="#">Alumunium Blok</a></li>
-          <li><a href="#">Alumunium Kaleng</a></li>
-          <!--<li><a href="#">DonecEtiam posuere amet nisl</a></li>
-          <li><a href="#">DonecMauris vulputate nibh</a></li>-->
-        </ul>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Hubungi Kami</h1>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <li><a href="index.html">Beranda</a></li>
+    </nav>
+
+    <!-- Contact Form -->
+    <div class="container">
+        <h2>Formulir Kontak</h2>
+        <p>Jika Anda memiliki pertanyaan atau ingin menghubungi kami, silakan isi formulir di bawah ini:</p>
         
-      </section>
-    </div>
-    <div class="3u">
-      <section class="box">
-        <h2>KUNINGAN</h2>
-        <p class="subtitle">-</p>
-        <ul class="style1">
-          <li><a href="#">Kuningan A</a></li>
-          <li><a href="#">Kuningan B</a></li>
-         <!-- <li><a href="#">DonecEtiam posuere amet nisl</a></li>
-          <li><a href="#">DonecMauris vulputate nibh</a></li>-->
-        </ul>
-        
-      </section>
-    </div>
-   <div class="3u">
-      <section class="box">
-        <h2>TEMBAGA</h2>
-        <p class="subtitle">-</p>
-        <ul class="style1">
-          <li><a href="#">Tembaga TM</a></li>
-        </ul>
-        
-      <!--</section>
-    </div>
-    <div class="3u">
-      <section class="box">
-        <h2>Donec</h2>
-        <p class="subtitle">dictum metus</p>
-        <ul class="style1">
-          <li><a href="#">Donec dictum metus sapien</a></li>
-          <li><a href="#">DonecInteger gravida urna</a></li>
-          <li><a href="#">DonecEtiam posuere amet nisl</a></li>
-          <li><a href="#">DonecMauris vulputate nibh</a></li>
-        </ul>
-        <p><a href="#" class="button"><span>Read More</span></a></p>-->
-      </section>
-    </div>
-  </div>
-  <div id="page" class="row">
-    <div id="content" class="8u">
-      <section>
-        <h2>Tentang Perusahaan</h2>
-        <p><a href="#"><img src="images/pics04.jpg" alt=""></a></p>
-        <p>Selamat datang di <strong>laman website</strong>, ARV Logam merupakan perusahaan inovatif yang bergerak di bidang manajemen dan daur ulang limbah logam, dengan fokus utama pada pengumpulan, pengolahan, dan penyediaan limbah logam berkualitas bagi industri pengolahan limbah. Didirikan dengan visi untuk mendukung praktik ekonomi sirkular dan keberlanjutan lingkungan, perusahaan ini memainkan peran penting dalam rantai pasok daur ulang logam.
-          Layanan Utama:
-          <p> 1. Pengumpulan Limbah Logam</p>
-         <h5>- Melakukan koleksi limbah logam dari berbagai sumber industri</h5>
-         <h5>- Memiliki jaringan mitra yang luas dari pabrik, bengkel, konstruksi, dan industri manufaktur</h5>
-          <h5>- Menggunakan teknologi canggih untuk klasifikasi dan pemilahan logam</h5>
-          
-         <p> 2. Penyediaan Bahan Baku Daur Ulang</p>
-         <h5> - Mensuplai limbah logam berkualitas tinggi ke pabrik pengolahan</h5>
-          <h5>- Menjamin standar mutu dan kebersihan material yang ketat</h5>
-          <h5>- Menawarkan berbagai jenis logam: besi, aluminium, tembaga, stainless steel, dan campuran logam lainnya</h5>
-          
-          <p>3. Manajemen Lingkungan</p>
-          <h5>- Mendukung praktik ekonomi hijau</h5>
-          <h5>- Mengurangi pembuangan limbah ke tempat pembuangan akhir</h5>
-          <h5>- Membantu industri mencapai target keberlanjutan lingkungan</h5>
-          
-          <p>4. Keunggulan Kompetitif:</p>
-          <h5>- Teknologi pemilahan modern</h5>
-          <h5>- Proses logistik efisien</h5>
-          <h5>- Komitmen terhadap standar lingkungan</h5>
-          <h5>- Harga kompetitif</h5>
-          <h5>- Layanan pelanggan prima</h5>
-          
-          <p>Dengan pendekatan profesional dan berkelanjutan, ARV Logam berkomitmen menjadi mitra terpercaya dalam ekosistem daur ulang limbah logam Indonesia.</p>
-        <!--<p><a href="#" class="button"><span>Read More</span></a></p>-->
-      </section>
-      <section>
-        <div id="two-column" class="5grid">
-          <div class="row">
-            <div class="6u">
-              <section>
-                <h2>VISI</h2>
-                <p>"Menjadi pemimpin nasional dalam pengelolaan limbah logam berkelanjutan yang inovatif, bertanggung jawab, dan ramah lingkungan, serta berkontribusi secara signifikan dalam mendukung ekonomi sirkular Indonesia."</p>
-               <!-- <ul class="style3">
-                  <li class="first">
-                    <p><span class="date"><a href="#">2045.10.25</a></span><span class="heading-title">Etiam posuere augue</span></p>
-                    <p><a href="#">Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. </a></p>
-                  </li>
-                  <li>
-                    <p><span class="date"><a href="#">2045.10.25</a></span><span class="heading-title">Etiam posuere augue</span></p>
-                    <p><a href="#">Quisque dictum. Integer nisl risus, sagittis elementum congue, nibh. Suspendisse dictum porta lectus. </a></p>
-                  </li>
-                </ul>
-              </section>
+        <form action="mailto:secrap7@gmail.com" method="POST">
+            <div class="form-group">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" name="name" required>
             </div>
-            <div class="6u">
-              <section>-->
-                <h2>MISI</h2>
-                <ul class="style4">
-                  <li class="first">
-                    <p><a href="#">
-                      Mengembangkan sistem pengelolaan limbah logam yang efisien dan ramah lingkungan,
-                      Meminimalisir dampak negatif terhadap lingkungan melalui proses pengolahan yang ketat,
-                      Memastikan standar kualitas tertinggi dalam penyimpanan dan pengolahan limbah logam,
-                      Menjalankan protokol keselamatan dan kesehatan kerja yang komprehensif,
-                      Memberikan edukasi kepada masyarakat tenting pentingnya daur ulang logam,
-                      Berkontribusi pada pembangunan ekonomi hijau nasional,
-                      Menciptakan rantai nilai yang berkelanjutan dalam industri logam,
-                      Mematuhi seluruh regulasi lingkungan dan industri,
-                      Menerapkan praktik bisnis yang transparan dan etis,
-                      Mendukung pembangunan industri yang bertanggung jawab.</a></p>
-                  </li>
-                  <!--<li>
-                    <h3>Fusce ultrices fringilla metus</h3>
-                    <p><a href="#">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</a></p>
-                  </li>
-                  <li>
-                    <h3>Donec dictum metus in sapien</h3>
-                    <p><a href="#">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</a></p>
-                  </li>-->
-                </ul>
-              </section>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
             </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <div id="sidebar" class="4u">
-      <section id="box1">
-        <div class="5grid">
-          <div class="row">
-            <div class="6u">
-              <section>
-                <h2>Sertifikasi Lingkungan</h2>
-                <ul class="style4">
-                  <li class="first"><a href="#">Sertifikasi ISO 14001 (Sistem Manajemen Lingkungan)</a></li>
-                  <li><a href="#">Surat Kelayakan Pengelolaan Limbah dari Dinas Lingkungan Hidup</a></li>
-                  <li><a href="#">Sertifikat Pengolahan Limbah Logam</a></li>
-                </ul>
-              </section>
+            <div class="form-group">
+                <label for="subject">Subjek</label>
+                <input type="text" id="subject" name="subject" required>
             </div>
-            <div class="6u">
-              <section>
-                <h2>Perizinan Teknis</h2>
-                <ul class="style4">
-                  <li class="first"><a href="#">Izin Pengangkutan Limbah B3</a></li>
-                  <li><a href="#">Izin Penyimpanan Sementara Limbah B3</a></li>
-                  <li><a href="#">Rekomendasi Teknis dari Dinas Perindustrian</a></li>
-                  <li><a href="#">Surat Keterangan Sanitasi Lingkungan</a></li>
-                </ul>
-              </section>
+            <div class="form-group">
+                <label for="message">Pesan</label>
+                <textarea id="message" name="message" required></textarea>
             </div>
-          </div>
-        </div>
-      </section>
-      <section id="box2">
-        <h2>Sistem Manajemen</h2>
-        <ul class="style2">
-          <li class="first">
-            <p><a href="#"><img src="images/gmb02.jpg" alt="">Sukawi, CEO-Direktur-General Manager. </a></p>
-          </li>
-          <li>
-            <p><a href="#"><img src="images/gmb03.png" alt="">Manajer Operasional, HRD </a></p>
-          </li>
-          <!--<li>
-            <p><a href="#"><img src="images/pics09.jpg" alt="">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. </a></p>
-          </li>
-          <li>
-            <p><a href="#"><img src="images/pics10.jpg" alt="">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. </a></p>
-          </li>-->
-        </ul>
-      </section>
+            <button type="submit">Kirim Pesan</button>
+        </form>
     </div>
-  </div>
-</div>
-<div class="5grid-layout" id="copyright">
-  <div class="row">
-    <div class="12u">
-      <p>&copy; © 2024 CV ARV Logam - Hak Cipta Dilindungi | Jalan Ki Hajar Dewantoro, Growong Kidul, Kec. Juwana, Kab. Pati | Images</a></p>
-    </div>
-  </div>
-</div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 CV ARISVA LOGAM.</p>
+    </footer>
+
 </body>
 </html>
