@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>ARISVA LOGAM</title>
+<title>ARV Logam</title>
 <meta charset="utf-8">
 <noscript>
 <link rel="stylesheet" href="css/5grid/core.css">
@@ -13,9 +13,72 @@
 </noscript>
 <script src="css/5grid/jquery.js"></script>
 <script src="css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
-<!--[if IE 9]>
-<link rel="stylesheet" href="css/style-ie9.css">
-<![endif]-->
+<style>
+  .slideshow-container {
+      max-width: 800px;
+      position: relative;
+      margin: auto;
+      height: 400px;
+      background: #f1f1f1;
+  }
+
+  .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+  }
+
+  .slide.active {
+      display: block;
+  }
+
+  img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 16px;
+      color: rgb(112, 38, 38);
+      font-weight: bold;
+      font-size: 24px;
+      background: rgba(0,0,0,0.5);
+      user-select: none;
+      border: none;
+  }
+
+  .next {
+      right: 0;
+  }
+
+  .prev {
+      left: 0;
+  }
+
+  .dots-container {
+      text-align: center;
+      padding: 10px;
+  }
+
+  .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 4px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+  }
+
+  .dot.active {
+      background-color: #717171;
+  }
+</style>
 </head>
 <body class="homepage">
 <div id="header-wrapper">
@@ -23,7 +86,7 @@
     <div class="5grid-layout">
       <div class="row">
         <div class="5u" id="logo">
-          <h1><a href="#" class="mobileUI-site-name"><font size="8"> ARISVA LOGAM </font><br></a></h1>
+          <h1><a href="#" class="mobileUI-site-name"><font size="10"> ARV Logam </font><br></a></h1>
           <h1></h1>
         </div>
         <div class="7u" id="menu">
@@ -42,9 +105,54 @@
 </div>
 <div id="wrapper" class="5grid-layout">
   <div id="banner" class="row">
-    <div class="12u">
-      <section><a href="#"><img src="images/foto05.jpg" alt=""></a></section>
-    </div>
+    <div class="slideshow-container">
+      <div class="slide active">
+          <img src="images/poto1.jpg" alt="Slide 1">
+      </div>
+      <div class="slide">
+          <img src="images/poto2.jpg" alt="Slide 2">
+      </div>
+      <div class="slide">
+          <img src="images/poto3.jpg" alt="Slide 3">
+      </div>
+
+      <button class="prev" onclick="changeSlide(-1)">❮</button>
+      <button class="next" onclick="changeSlide(1)">❯</button>
+  </div>
+
+  <div class="dots-container">
+      <span class="dot active" onclick="showSlide(0)"></span>
+      <span class="dot" onclick="showSlide(1)"></span>
+      <span class="dot" onclick="showSlide(2)"></span>
+  </div>
+
+  <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+
+      function showSlide(n) {
+          slides[currentSlide].classList.remove('active');
+          dots[currentSlide].classList.remove('active');
+          
+          currentSlide = n;
+          
+          if (currentSlide >= slides.length) currentSlide = 0;
+          if (currentSlide < 0) currentSlide = slides.length - 1;
+          
+          slides[currentSlide].classList.add('active');
+          dots[currentSlide].classList.add('active');
+      }
+
+      function changeSlide(n) {
+          showSlide(currentSlide + n);
+      }
+
+      // Auto advance slides every 3 seconds
+      setInterval(() => changeSlide(1), 4000);
+  </script>
+<link rel="stylesheet" href="css/style-ie9.css">
+
   </div>
   <div id="marketing" class="row">
     <div class="3u">
