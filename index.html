@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARV Logam</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/logo2.png" type="image/x-icon">
+  </head>  
+<body>
+  <header class="header">
+    <div class="logo img">
+        <img src="./img/logo2.png" alt="Santander Logo">
+    </div>
+    
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="abot.html">Tentang</a></li>
+            <li><a href="contacts.html">Kontak</a></li>
+            <li class="language-selector">
+              <a href="index2.html" class="lang" id="en">EN</a> | 
+              <a href="index.html" class="lang" id="id">ID</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<style>
+  /* Gaya tombol dasar */
+  .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #d50000;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Hover animation */
+  .btn:hover {
+    transform: scale(1.1);
+    background-color: #ff4d4d;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Active state (saat diklik) */
+  .btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Animasi tambahan saat dipilih */
+  .btn.selected {
+    background-color: #008000; /* Hijau sebagai indikator bahasa aktif */
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+
+  .nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav ul li {
+  display: inline-block;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.nav ul li a:hover {
+  color: #d50000;
+}
+
+.language-selector {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .language-selector a {
+            padding: 5px 10px;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .language-selector a:hover {
+            background-color: #d5000057;
+
+        }
+      
+
+</style>
+
+
+
+  <section class="hero">
+    <div class="hero-content fade-in">
+      <h1>CV. ARV LOGAM</h1>
+      <p>
+        "Pengelolaan dan Pemasok Limbah Logam Berkualitas Tinggi"
+      </p>
+      <a href="abot.html" class="learn-more">Pelajari lebih lanjut →</a>
+    </div>
+  </section>
+  <section class="services">
+    <div class="services-header">
+      <h2>Produk</h2>
+    </div>
+    <div class="services-cards-wrapper">
+      <div class="services-cards">
+        <div class="service-card card-1">
+          <div class="card-content">
+            <span class="card-number">01</span>
+            <h3>Kuningan</h3>
+            <p>Limbah</p>
+          </div>
+        </div>
+        <div class="service-card card-2">
+          <div class="card-content">
+            <span class="card-number">02</span>
+            <h3>Alumunium</h3>
+            <p>Limbah</p>
+          </div>
+        </div>
+        <div class="service-card card-3">
+          <div class="card-content">
+            <span class="card-number">03</span>
+            <h3>Tembaga</h3>
+            <p>Limbah</p>
+          </div>
+        </div>
+        <div class="service-card card-4">
+          <div class="card-content">
+            <span class="card-number">04</span>
+            <h3>Stenlis</h3>
+            <p>Limbah</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="report-section fadeinup">
+    <div class="report-container">
+      <div class="report-image"></div>
+      <img src="./img/img1.jpg" alt="Santander Logo">
+      <div class="report-content">
+        <h2>Laporan 2024</h2>
+        <p>kami sudah menjadi pemasok bahan logam terpercaya dengan memberikan barang yang berkualitas.</p>
+        <ul class="report-links">
+          <!--<li><a href="#">View full 2016 report →</a></li>
+          <li><a href="#">Read our press release →</a></li>-->
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARV Logam</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f9fd;
+    }
+
+    .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px 100px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 150px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.column {
+  flex: 1;
+  margin-left: 30px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.column h3 {
+  color: #d50000;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.column ul li {
+  margin-bottom: 10px;
+}
+
+.column ul li a {
+  color: #d50000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.column ul li a:hover {
+  text-decoration: underline;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-info div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #d500002a;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #d500002a;
+  transform: rotate(360deg);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .column {
+    flex: 1 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  .contact-info div {
+    font-size: 12px;
+  }
+
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .column h3 {
+    font-size: 16px;
+  }
+
+  .column ul li a {
+    font-size: 12px;
+  }
+
+  .social-icons a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+  }
+}
+
+  
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="img/logo2.png" >
+    </div>
+    <div class="column">
+      <h3>LINI BISNIS</h3>
+      <ul>
+        <li><a href="#">Ingot Alumunium</a></li>
+        <li><a href="#">Ingot Kuningan</a></li>
+      </ul>
+    </div>
+    <div class="column">
+      <h3>KEBERLANJUTAN</h3>
+      <ul>
+        <li style="color: red; font-size: 12px;">Program pengelolaan limbah dan daur ulang</li>
+        <li style="color: red; font-size: 12px;">Kesejahteraan karyawan dan kondisi kerja yang layak</li>
+        <li style="color: red; font-size: 12px;">Pemeringkatan standar lingkungan</li>
+      </ul>
+    </div>
+    <div class="column">
+      <h3>KONTAK KAMI</h3>
+      <div class="contact-info">
+        <div>
+          <span>📍</span> JL KI HAJAR DEWANTORO, GROWONG KIDUL, JUWANA, PATI
+        </div>
+        <div>
+          <span>📞</span> 087827730791
+        </div>
+        <div>
+          <span>📞</span> 081229226125
+        </div>
+        <div>
+          <span>📧</span> arvlogam@gmail.com
+        </div>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/arv_family?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+          <img src="img/iconig.png" alt="Instagram" />
+        </a>
+        <a href="#">
+          <img src="img/iconfb.png" alt="LinkedIn" />
+        </a>
+       <!-- <a href="#">
+          <img src="youtube-logo.png" alt="YouTube" />
+        </a>-->
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>
+<footer class="footer fade-in">
+  <div class="container">
+    <p>&copy; 2025 CV. ARV Logam. Pengelola Limbah.</p>
+  </div>
+</footer>
+<script src="javascript.js"></script>
+</body>
+</html>
