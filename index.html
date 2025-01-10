@@ -1,343 +1,372 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>ARV Logam</title>
-<meta charset="utf-8">
-<noscript>
-<link rel="stylesheet" href="css/5grid/core.css">
-<link rel="stylesheet" href="css/5grid/core-desktop.css">
-<link rel="stylesheet" href="css/5grid/core-1200px.css">
-<link rel="stylesheet" href="css/5grid/core-noscript.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/style-desktop.css">
-</noscript>
-<script src="css/5grid/jquery.js"></script>
-<script src="css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARV Logam</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/logo2.png" type="image/x-icon">
+  </head>  
+<body>
+  <header class="header">
+    <div class="logo img">
+        <img src="./img/logo2.png" alt="Santander Logo">
+    </div>
+    
+    <nav class="nav">
+        <ul>
+            <li><a href="Index.html">Beranda</a></li>
+            <li><a href="abot.html">Tentang</a></li>
+            <li><a href="contacts.html">Kontak</a></li>
+            <li class="language-selector">
+              <a href="index2.html" class="lang" id="en">EN</a> | 
+              <a href="Index.html" class="lang" id="id">ID</a>
+            </li>
+        </ul>
+    </nav>
+</header>
 <style>
-  .slideshow-container {
-      max-width: 800px;
-      position: relative;
-      margin: auto;
-      height: 400px;
-      background: #f1f1f1;
+  /* Gaya tombol dasar */
+  .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #d50000;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   }
 
-  .slide {
-      display: none;
-      width: 100%;
-      height: 100%;
+  /* Hover animation */
+  .btn:hover {
+    transform: scale(1.1);
+    background-color: #ff4d4d;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
 
-  .slide.active {
-      display: block;
+  /* Active state (saat diklik) */
+  .btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   }
 
-  img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+  /* Animasi tambahan saat dipilih */
+  .btn.selected {
+    background-color: #008000; /* Hijau sebagai indikator bahasa aktif */
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
 
-  .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      padding: 16px;
-      color: rgb(112, 38, 38);
-      font-weight: bold;
-      font-size: 24px;
-      background: rgba(0,0,0,0.5);
-      user-select: none;
-      border: none;
-  }
 
-  .next {
-      right: 0;
-  }
+  .nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
 
-  .prev {
-      left: 0;
-  }
+.nav ul li {
+  display: inline-block;
+}
 
-  .dots-container {
-      text-align: center;
-      padding: 10px;
-  }
+.nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  color: #333;
+  transition: all 0.3s ease;
+}
 
-  .dot {
-      height: 12px;
-      width: 12px;
-      margin: 0 4px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      cursor: pointer;
-  }
+.nav ul li a:hover {
+  color: #d50000;
+}
 
-  .dot.active {
-      background-color: #717171;
-  }
+.language-selector {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .language-selector a {
+            padding: 5px 10px;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .language-selector a:hover {
+            background-color: #d5000057;
+
+        }
+      
+
 </style>
+
+
+
+  <section class="hero">
+    <div class="hero-content fade-in">
+      <h1>CV. ARV LOGAM</h1>
+      <p>
+        "Pengelolaan dan Pemasok Limbah Logam Berkualitas Tinggi"
+      </p>
+      <a href="abot.html" class="learn-more">Pelajari lebih lanjut →</a>
+    </div>
+  </section>
+  <section class="services">
+    <div class="services-header">
+      <h2>Produk</h2>
+    </div>
+    <div class="services-cards-wrapper">
+      <div class="services-cards">
+        <div class="service-card card-1">
+          <div class="card-content">
+            <span class="card-number">01</span>
+            <h3>Kuningan</h3>
+            <p>Limbah</p>
+          </div>
+        </div>
+        <div class="service-card card-2">
+          <div class="card-content">
+            <span class="card-number">02</span>
+            <h3>Alumunium</h3>
+            <p>Limbah</p>
+          </div>
+        </div>
+        <div class="service-card card-3">
+          <div class="card-content">
+            <span class="card-number">03</span>
+            <h3>Tembaga</h3>
+            <p>Limbah</p>
+          </div>
+        </div>
+        <div class="service-card card-4">
+          <div class="card-content">
+            <span class="card-number">04</span>
+            <h3>Stenlis</h3>
+            <p>Limbah</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="report-section fadeinup">
+    <div class="report-container">
+      <div class="report-image"></div>
+      <img src="./img/img1.jpg" alt="Santander Logo">
+      <div class="report-content">
+        <h2>Laporan 2024</h2>
+        <p>kami sudah menjadi pemasok bahan logam terpercaya dengan memberikan barang yang berkualitas.</p>
+        <ul class="report-links">
+          <!--<li><a href="#">View full 2016 report →</a></li>
+          <li><a href="#">Read our press release →</a></li>-->
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARV Logam</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f9fd;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 50px 100px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 150px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .logo img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .column {
+      flex: 1;
+      margin-left: 30px;
+    }
+
+    .column h3 {
+      color: #d50000;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .column ul li {
+      margin-bottom: 10px;
+    }
+
+    .column ul li a {
+      color: #d50000;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .column ul li a:hover {
+      text-decoration: underline;
+    }
+    /* Animasi untuk kontak */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact-info div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+    background-color: #d500002a;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      font-size: 18px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+    background-color: #d500002a;
+      transform: rotate(360deg);
+    }
+
+    /* Animasi kolom */
+    .column {
+      animation: fadeInUp 1s ease-in-out;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
-<body class="homepage">
-<div id="header-wrapper">
-  <header id="header">
-    <div class="5grid-layout">
-      <div class="row">
-        <div class="5u" id="logo">
-          <h1><a href="#" class="mobileUI-site-name"><font size="10"> ARV Logam </font><br></a></h1>
-          <h1></h1>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="img/logo2.png" >
+    </div>
+    <div class="column">
+      <h3>LINI BISNIS</h3>
+      <ul>
+        <li><a href="#">Ingot Alumunium</a></li>
+        <li><a href="#">Ingot Kuningan</a></li>
+      </ul>
+    </div>
+    <div class="column">
+      <h3>KEBERLANJUTAN</h3>
+      <ul>
+        <li style="color: red; font-size: 12px;">Program pengelolaan limbah dan daur ulang</li>
+        <li style="color: red; font-size: 12px;">Kesejahteraan karyawan dan kondisi kerja yang layak</li>
+        <li style="color: red; font-size: 12px;">Pemeringkatan standar lingkungan</li>
+      </ul>
+      
+    </div>
+    <div class="column">
+      <h3>KONTAK KAMI</h3>
+      <div class="contact-info">
+        <div>
+          <span>📍</span> JL KI HAJAR DEWANTORO, GROWONG KIDUL, JUWANA, PATI
         </div>
-        <div class="7u" id="menu">
-          <nav class="mobileUI-site-nav">
-            <ul>
-              <li class="current_page_item"><a href="index.html">Profile</a></li>
-              <li><a href="twocolumn1.html">Kontak</a></li>
-             <!-- <li><a href="twocolumn2.html">Two Column #2</a></li>
-              <li><a href="onecolumn.html">One Column</a></li>
-            </ul>-->
-          </nav>
+        <div>
+          <span>📞</span> 087827730791
+        </div>
+        <div>
+          <span>📞</span> 081229226125
+        </div>
+        <div>
+          <span>📧</span> arvlogam@gmail.com
         </div>
       </div>
-    </div>
-  </header>
-</div>
-<div id="wrapper" class="5grid-layout">
-  <div id="banner" class="row">
-    <div class="slideshow-container">
-      <div class="slide active">
-          <img src="images/poto1.jpg" alt="Slide 1">
+      <div class="social-icons">
+        <a href="https://www.instagram.com/arv_family?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+          <img src="img/iconig.png" alt="Instagram" />
+        </a>
+        <a href="#">
+          <img src="img/iconfb.png" alt="LinkedIn" />
+        </a>
+       <!-- <a href="#">
+          <img src="youtube-logo.png" alt="YouTube" />
+        </a>-->
       </div>
-      <div class="slide">
-          <img src="images/poto2.jpg" alt="Slide 2">
-      </div>
-      <div class="slide">
-          <img src="images/poto3.jpg" alt="Slide 3">
-      </div>
-
-      <button class="prev" onclick="changeSlide(-1)">❮</button>
-      <button class="next" onclick="changeSlide(1)">❯</button>
-  </div>
-
-  <div class="dots-container">
-      <span class="dot active" onclick="showSlide(0)"></span>
-      <span class="dot" onclick="showSlide(1)"></span>
-      <span class="dot" onclick="showSlide(2)"></span>
-  </div>
-
-  <script>
-      let currentSlide = 0;
-      const slides = document.querySelectorAll('.slide');
-      const dots = document.querySelectorAll('.dot');
-
-      function showSlide(n) {
-          slides[currentSlide].classList.remove('active');
-          dots[currentSlide].classList.remove('active');
-          
-          currentSlide = n;
-          
-          if (currentSlide >= slides.length) currentSlide = 0;
-          if (currentSlide < 0) currentSlide = slides.length - 1;
-          
-          slides[currentSlide].classList.add('active');
-          dots[currentSlide].classList.add('active');
-      }
-
-      function changeSlide(n) {
-          showSlide(currentSlide + n);
-      }
-
-      // Auto advance slides every 3 seconds
-      setInterval(() => changeSlide(1), 4000);
-  </script>
-<link rel="stylesheet" href="css/style-ie9.css">
-
-  </div>
-  <div id="marketing" class="row">
-    <div class="3u">
-      <section class="box">
-        <h2>ALUMINIUM</h2>
-        <p class="subtitle">ALUMINIUM</p>
-        <ul class="style1">
-          <li><a href="#">Alumunium Blok</a></li>
-          <li><a href="#">Alumunium Kaleng</a></li>
-          <!--<li><a href="#">DonecEtiam posuere amet nisl</a></li>
-          <li><a href="#">DonecMauris vulputate nibh</a></li>-->
-        </ul>
-        
-      </section>
-    </div>
-    <div class="3u">
-      <section class="box">
-        <h2>KUNINGAN</h2>
-        <p class="subtitle">-</p>
-        <ul class="style1">
-          <li><a href="#">Kuningan A</a></li>
-          <li><a href="#">Kuningan B</a></li>
-         <!-- <li><a href="#">DonecEtiam posuere amet nisl</a></li>
-          <li><a href="#">DonecMauris vulputate nibh</a></li>-->
-        </ul>
-        
-      </section>
-    </div>
-   <div class="3u">
-      <section class="box">
-        <h2>TEMBAGA</h2>
-        <p class="subtitle">-</p>
-        <ul class="style1">
-          <li><a href="#">Tembaga TM</a></li>
-        </ul>
-        
-      <!--</section>
-    </div>
-    <div class="3u">
-      <section class="box">
-        <h2>Donec</h2>
-        <p class="subtitle">dictum metus</p>
-        <ul class="style1">
-          <li><a href="#">Donec dictum metus sapien</a></li>
-          <li><a href="#">DonecInteger gravida urna</a></li>
-          <li><a href="#">DonecEtiam posuere amet nisl</a></li>
-          <li><a href="#">DonecMauris vulputate nibh</a></li>
-        </ul>
-        <p><a href="#" class="button"><span>Read More</span></a></p>-->
-      </section>
+      
     </div>
   </div>
-  <div id="page" class="row">
-    <div id="content" class="8u">
-      <section>
-        <h2>Tentang Perusahaan</h2>
-        <p><a href="#"><img src="images/foto02.jpg" alt=""></a></p>
-        <p> CV. ARISVA LOGAM merupakan perusahaan inovatif yang bergerak di bidang manajemen dan daur ulang limbah logam, dengan fokus utama pada pengumpulan, pengolahan, dan penyediaan limbah logam berkualitas bagi industri pengolahan limbah. Didirikan dengan visi untuk mendukung praktik ekonomi sirkular dan keberlanjutan lingkungan, perusahaan ini memainkan peran penting dalam rantai pasok daur ulang logam.
-          Layanan Utama:
-          <p> 1. Pengumpulan Limbah Logam</p>
-         <h5>- Melakukan koleksi limbah logam dari berbagai sumber industri</h5>
-         <h5>- Memiliki jaringan mitra yang luas dari pabrik, bengkel, konstruksi, dan industri manufaktur</h5>
-          
-         <p> 2. Penyediaan Bahan Baku Daur Ulang</p>
-         <h5> - Mensuplai limbah logam berkualitas tinggi ke pabrik pengolahan</h5>
-          <h5>- Menjamin standar mutu dan kebersihan material yang ketat</h5>
-          <h5>- Menawarkan berbagai jenis logam: aluminium, tembaga, dan kuningan</h5>
-          
-          <p>3. Manajemen Lingkungan</p>
-          <h5>- Mengurangi pembuangan limbah ke tempat pembuangan akhir</h5>
-          <h5>- Membantu industri mencapai target keberlanjutan lingkungan</h5>
-          
-          <p>4. Keunggulan Kompetitif:</p>
-          <h5>- Proses logistik efisien</h5>
-          <h5>- Komitmen terhadap standar lingkungan</h5>
-          <h5>- Harga kompetitif</h5>
-          <h5>- Layanan pelanggan prima</h5>
-          
-          <p>Dengan pendekatan profesional dan berkelanjutan, CV. ARISVA LOGAM berkomitmen menjadi mitra terpercaya dalam ekosistem daur ulang limbah logam Indonesia.</p>
-        <!--<p><a href="#" class="button"><span>Read More</span></a></p>-->
-      </section>
-      <section>
-        <div id="two-column" class="5grid">
-          <div class="row">
-            <div class="6u">
-              <section>
-                <h2>VISI</h2>
-                <p>"Menjadi penyedia limbah logam terkemuka yang mendukung keberlanjutan lingkungan melalui daur ulang dan pemanfaatan bahan secara efisien."</p>
-               <!-- <ul class="style3">
-                  <li class="first">
-                    <p><span class="date"><a href="#">2045.10.25</a></span><span class="heading-title">Etiam posuere augue</span></p>
-                    <p><a href="#">Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. </a></p>
-                  </li>
-                  <li>
-                    <p><span class="date"><a href="#">2045.10.25</a></span><span class="heading-title">Etiam posuere augue</span></p>
-                    <p><a href="#">Quisque dictum. Integer nisl risus, sagittis elementum congue, nibh. Suspendisse dictum porta lectus. </a></p>
-                  </li>
-                </ul>
-              </section>
-            </div>
-            <div class="6u">
-              <section>-->
-                <br> </br>
-                <br> </br>
-                <h2>MISI</h2>
-                      <p>engembangkan sistem pengelolaan limbah logam yang efisien dan ramah lingkungan,
-                      Meminimalisir dampak negatif terhadap lingkungan melalui proses pengolahan yang ketat,
-                      Memastikan standar kualitas tertinggi dalam penyimpanan dan pengolahan limbah logam,
-                      Menjalankan protokol keselamatan dan kesehatan kerja yang komprehensif,
-                      Memberikan edukasi kepada masyarakat tenting pentingnya daur ulang logam,
-                      Berkontribusi pada pembangunan ekonomi hijau nasional,
-                      Menciptakan rantai nilai yang berkelanjutan dalam industri logam,
-                      Mematuhi seluruh regulasi lingkungan dan industri,
-                      Menerapkan praktik bisnis yang transparan dan etis,
-                      Mendukung pembangunan industri yang bertanggung jawab.</p>
-                  </li>
-                  <!--<li>
-                    <h3>Fusce ultrices fringilla metus</h3>
-                    <p><a href="#">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</a></p>
-                  </li>
-                  <li>
-                    <h3>Donec dictum metus in sapien</h3>
-                    <p><a href="#">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</a></p>
-                  </li>-->
-                </ul>
-              </section>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <div id="sidebar" class="4u">
-      <section id="box1">
-        <div class="5grid">
-          <div class="row">
-            <div class="6u">
-              <section>
-                <h2>Legalitas</h2>
-                <ul class="style4">
-                  <li class="first"><a href="#">-</a></li>
-                  <li><a href="#">-</a></li>
-                  <li><a href="#">-</a></li>
-                </ul>
-              </section>
-            </div>
-            <div class="6u">
-              <section>
-                <h2>Perizinan Teknis</h2>
-                <ul class="style4">
-                  <li class="first"><a href="#">-</a></li>
-                  <li><a href="#">-</a></li>
-                  <li><a href="#">-</a></li>
-                  <li><a href="#">-</a></li>
-                </ul>
-              </section>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="box2">
-        <h2>Sistem Manajemen</h2>
-        <ul class="style2">
-          <li class="first">
-            <p><a href="#"><img src="images/gmb02.jpg" alt="">Sukawi - Pimpinan. </a></p>
-          </li>
-          <li>
-            <p><a href="#"><img src="images/gmb03.png" alt="">Aris Kristianto - Wakil Pimpinan </a></p>
-          </li>
-          <li>
-            <p><a href="#"><img src="images/foto01.jpg" alt="">Komar - Staf </a></p>
-          </li>
-          <li>
-           <!-- <p><a href="#"><img src="images/pics10.jpg" alt="">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. </a></p>
-          </li>-->
-        </ul>
-      </section>
-    </div>
+</body>
+</html>
+<footer class="footer fade-in">
+  <div class="container">
+    <p>&copy; 2025 CV. ARV Logam. Pengelola Limbah.</p>
   </div>
-</div>
-<div class="5grid-layout" id="copyright">
-  <div class="row">
-    <div class="12u">
-      <p>&copy; © 2024 CV ARISVA LOGAM - Hak Cipta Dilindungi | Jalan Ki Hajar Dewantoro, Growong Kidul, Kec. Juwana, Kab. Pati | Images</a></p>
-    </div>
-  </div>
-</div>
+</footer>
+<script src="javascript.js"></script>
 </body>
 </html>
