@@ -76,18 +76,23 @@ body {
   
   .learn-more {
     display: inline-block;
-    color: #d50000;
+    color: #ff0000;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
-    border: 2px solid #d50000;
+    border: 2px solid #ffffff;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background: rgba(255, 255, 255, 0.1); /* sedikit transparan */
+    backdrop-filter: blur(8px); /* efek blur */
+    -webkit-backdrop-filter: blur(8px); /* untuk Safari */
+    transition: background-color 0.3s ease, color 0.3s ease, backdrop-filter 0.3s ease;
   }
   
   .learn-more:hover {
-    background-color: #d50000;
-    color: #fff;
+    background: rgba(255, 255, 255, 0.3); /* saat hover lebih terang */
+    color: #ffffff;
+    backdrop-filter: blur(12px); /* blur lebih kuat saat hover */
+    -webkit-backdrop-filter: blur(12px);
   }
   /* Services Section */
 .services {
