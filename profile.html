@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profil — ARV Logam</title>
+    <meta
+      name="description"
+      content="Profil ARV LOGAM: perusahaan pengelolaan dan daur ulang scrap logam, visi misi, dan lokasi."
+    />
+    <meta name="theme-color" content="#c81e1e" />
+    <link rel="icon" href="./img/logo2.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+
+    <!-- Header (SAMA seperti index.html) -->
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Beranda ARV Logam">
+          <img
+            src="./img/logo2.png"
+            alt="Logo CV. ARV Logam"
+            class="brand__logo"
+          />
+          <div class="brand__text">
+            <div class="brand__name">ARV LOGAM</div>
+            <div class="brand__sub">Metal Scrap Management & Supplier</div>
+          </div>
+        </a>
+
+        <button
+          class="hamburger"
+          type="button"
+          aria-label="Buka menu"
+          aria-expanded="false"
+          data-menu-btn
+        >
+          <span class="hamburger__lines" aria-hidden="true"></span>
+        </button>
+
+        <nav class="nav" data-nav aria-label="Navigasi utama">
+          <a href="index.html#produk">Produk</a>
+          <a href="index.html#keunggulan">Keunggulan</a>
+          <a href="index.html#proses">Alur</a>
+          <a href="index.html#faq">FAQ</a>
+          <a class="nav__cta" href="index.html#kontak">Kontak</a>
+          <!-- Kamu bisa pilih: profile.html ATAU abot.html -->
+          <a class="nav__ghost" href="profile.html" aria-current="page"
+            >Profil</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero kecil khusus profil -->
+      <section class="section profileHero">
+        <div class="container">
+          <div class="section__head reveal">
+            <h1>Profil Perusahaan</h1>
+            <p>
+              ARV LOGAM — pengelolaan & daur ulang scrap logam untuk mendukung
+              ekonomi sirkular.
+            </p>
+          </div>
+
+          <div class="grid grid--2 profileGrid">
+            <div class="card profileCard reveal">
+              <h2>Siapa Kami?</h2>
+              <p>
+                <b>ARV LOGAM</b> merupakan perusahaan inovatif yang bergerak di
+                bidang <b>pengelolaan dan daur ulang scrap logam</b>, dengan
+                fokus utama pada
+                <b
+                  >pengumpulan, pengolahan, dan penyediaan scrap logam
+                  berkualitas</b
+                >
+                untuk industri pengolahan scrap.
+              </p>
+              <p>
+                Didirikan dengan visi untuk mendukung praktik
+                <b>ekonomi sirkular</b> dan <b>keberlanjutan lingkungan</b>,
+                kami berperan penting dalam rantai pasokan daur ulang logam.
+              </p>
+
+              <div class="profileBadges">
+                <span class="badge">Ekonomi Sirkular</span>
+                <span class="badge">Daur Ulang</span>
+                <span class="badge">Supply Industri</span>
+              </div>
+            </div>
+
+            <div class="card profileCard reveal">
+              <h2>Mengapa Memilih Kami?</h2>
+              <ul class="profileList">
+                <li>
+                  Jaringan mitra luas dari pabrik, bengkel, konstruksi, dan
+                  manufaktur
+                </li>
+                <li>Standar kualitas & kebersihan material yang ketat</li>
+                <li>
+                  Membantu industri mencapai target keberlanjutan lingkungan
+                </li>
+                <li>Komitmen terhadap standar lingkungan</li>
+              </ul>
+
+              <div class="profileCTA">
+                <a class="btn btn--primary" href="index.html#kontak"
+                  >Hubungi Sekarang</a
+                >
+                <a class="btn btn--ghost" href="index.html#produk"
+                  >Lihat Produk</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Visi & Misi -->
+      <section class="section">
+        <div class="container">
+          <div class="grid grid--2">
+            <div class="card profileCard reveal">
+              <h2>Visi</h2>
+              <p>
+                Menjadi penyedia scrap logam terkemuka yang mendukung
+                keberlanjutan lingkungan melalui daur ulang dan penggunaan
+                material yang efisien.
+              </p>
+            </div>
+
+            <div class="card profileCard reveal">
+              <h2>Misi</h2>
+              <ul class="profileList">
+                <li>
+                  Mengembangkan sistem pengelolaan scrap logam yang efisien dan
+                  ramah lingkungan
+                </li>
+                <li>
+                  Meminimalkan dampak negatif terhadap lingkungan melalui proses
+                  pengolahan yang ketat
+                </li>
+                <li>
+                  Memastikan standar kualitas tertinggi dalam penyimpanan dan
+                  pengolahan scrap logam
+                </li>
+                <li>
+                  Menerapkan protokol keselamatan dan kesehatan kerja yang
+                  komprehensif
+                </li>
+                <li>Mendidik masyarakat tentang pentingnya daur ulang logam</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lokasi + Maps -->
+      <section class="section" id="lokasi">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2>Lokasi Kami</h2>
+            <p>JL KI HAJAR DEWANTORO, GROWONG KIDUL, JUWANA, PATI</p>
+          </div>
+
+          <div class="card mapCard reveal">
+            <!-- Google Maps Embed (alamat bisa kamu ganti) -->
+            <iframe
+              class="mapFrame"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=JL%20KI%20HAJAR%20DEWANTORO%2C%20GROWONG%20KIDUL%2C%20JUWANA%2C%20PATI&output=embed"
+            >
+            </iframe>
+
+            <div class="mapMeta">
+              <div>
+                <div class="mapTitle">ARV LOGAM</div>
+                <div class="small">
+                  Jam operasional & jadwal loading bisa dikonfirmasi via
+                  WhatsApp.
+                </div>
+              </div>
+              <div class="mapActions">
+                <a
+                  class="btn btn--primary"
+                  target="_blank"
+                  href="https://www.google.com/maps/search/?api=1&query=JL%20KI%20HAJAR%20DEWANTORO%2C%20GROWONG%20KIDUL%2C%20JUWANA%2C%20PATI"
+                >
+                  Buka di Google Maps
+                </a>
+                <a class="btn btn--ghost" href="index.html#kontak">Kontak</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer (SAMA seperti index.html) -->
+      <footer class="footer">
+        <div class="container footer__inner">
+          <div class="footer__cols">
+            <div>
+              <div class="footer__brand">ARV LOGAM</div>
+              <p class="small">
+                High Quality Metal Scrap Management and Supplier
+              </p>
+              <p class="small">
+                📍 JL KI HAJAR DEWANTORO, GROWONG KIDUL, JUWANA, PATI
+              </p>
+            </div>
+            <div>
+              <div class="footer__title">Menu</div>
+              <div class="small"><a href="index.html#produk">Produk</a></div>
+              <div class="small">
+                <a href="index.html#keunggulan">Keunggulan</a>
+              </div>
+              <div class="small"><a href="index.html#kontak">Kontak</a></div>
+            </div>
+            <div>
+              <div class="footer__title">Kontak</div>
+              <div class="small">
+                <a href="mailto:arvlogam@gmail.com">arvlogam@gmail.com</a>
+              </div>
+              <div class="small">
+                <a href="tel:+6281229226125">+62 812 2922 6125</a>
+              </div>
+              <div class="small">
+                <a href="tel:+6287827730791">+62 878 2773 0791</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__bottom small">
+            © <span data-year></span> ARV Logam. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
