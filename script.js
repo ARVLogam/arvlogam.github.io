@@ -32,7 +32,7 @@
 // ── Pricelist Harga Beli dari Backend UMGAP ──
 (function () {
   // ⚠️  GANTI URL INI dengan URL backend kamu di Render/Railway/VPS
-  var BACKEND = "https://umgap.onrender.com";
+  var BACKEND = "https://umgap-ai.onrender.com";
 
   var MAT_CONFIG = {
     Tembaga: { icon: "🟤", bg: "rgba(184,135,51,.12)", dot: "#b87333" },
