@@ -1,235 +1,478 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CV. ARV Logam — Metal Scrap Supplier</title>
-  <meta name="description" content="CV. ARV Logam is a scrap metal collector & supplier (brass, aluminium, copper, stainless) for industrial buyers. Quality, grading, and reliable supply." />
-  <link rel="icon" href="./img/logo2.png" type="image/x-icon" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ARV Logam — Supplier Scrap Logam</title>
+    <meta
+      name="description"
+      content="CV. ARV Logam adalah pengepul & pemasok scrap logam (kuningan, aluminium, tembaga, stainless) untuk kebutuhan industri. Kualitas, grading, dan pasokan stabil."
+    />
+    <link rel="icon" href="./img/logo2.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* ── PRICELIST ── */
+      .pl-skeleton {
+        height: 110px;
+        border-radius: 18px;
+        background: linear-gradient(
+          90deg,
+          rgba(15, 23, 42, 0.06) 25%,
+          rgba(15, 23, 42, 0.12) 50%,
+          rgba(15, 23, 42, 0.06) 75%
+        );
+        background-size: 400% 100%;
+        animation: shimmer 1.4s infinite;
+        margin-bottom: 14px;
+      }
+      @keyframes shimmer {
+        0% {
+          background-position: 100% 0;
+        }
+        100% {
+          background-position: -100% 0;
+        }
+      }
+      .pl-group {
+        margin-bottom: 20px;
+      }
+      .pl-mat-label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        font-size: 16px;
+        color: var(--text);
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid rgba(15, 23, 42, 0.08);
+      }
+      .pl-dot {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        flex: 0 0 11px;
+      }
+      .pl-dot.brass {
+        background: #b8860b;
+      }
+      .pl-dot.alu {
+        background: #9aa5b4;
+      }
+      .pl-dot.copper {
+        background: #b87333;
+      }
+      .pl-dot.stainless {
+        background: #607d8b;
+      }
+      .pl-dot.other {
+        background: #8b5cf6;
+      }
+      .pl-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      @media (max-width: 600px) {
+        .pl-items {
+          grid-template-columns: 1fr;
+        }
+      }
+      .pl-item {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.82),
+          rgba(255, 255, 255, 0.65)
+        );
+        border: 1px solid rgba(15, 23, 42, 0.1);
+        border-radius: var(--radius-sm);
+        padding: 16px 16px 14px;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .pl-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 32px rgba(15, 23, 42, 0.12);
+      }
+      .pl-grade {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--text);
+        line-height: 1.35;
+        margin-bottom: 6px;
+      }
+      .pl-price-row {
+        display: flex;
+        align-items: baseline;
+        gap: 5px;
+      }
+      .pl-price {
+        font-size: 22px;
+        font-weight: 900;
+        color: var(--brand);
+        letter-spacing: -0.5px;
+      }
+      .pl-price.zero {
+        font-size: 15px;
+        font-weight: 700;
+        color: rgba(15, 23, 42, 0.45);
+        font-style: italic;
+      }
+      .pl-unit {
+        font-size: 12px;
+        color: rgba(15, 23, 42, 0.5);
+        font-weight: 600;
+      }
+      .pl-note {
+        font-size: 11.5px;
+        color: rgba(15, 23, 42, 0.5);
+        margin-top: 5px;
+      }
+      .pl-updated {
+        font-size: 10.5px;
+        color: rgba(15, 23, 42, 0.35);
+        margin-top: 6px;
+      }
+      .pl-error {
+        padding: 18px;
+        background: rgba(239, 68, 68, 0.07);
+        border: 1px solid rgba(239, 68, 68, 0.2);
+        border-radius: 14px;
+        color: rgba(15, 23, 42, 0.7);
+        font-size: 13px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container bar">
+        <a class="brand" href="index.html">
+          <img src="./img/logo2.png" alt="Logo ARV Logam" />
+          <div>
+            <div class="name">ARV LOGAM</div>
+            <div class="sub">Metal Scrap Management & Supplier</div>
+          </div>
+        </a>
 
-<header class="header">
-  <div class="container bar">
-    <a class="brand" href="index2.html">
-      <img src="./img/logo2.png" alt="ARV Logam logo" />
-      <div>
-        <div class="name">CV. ARV LOGAM</div>
-        <div class="sub">Metal Scrap Management & Supplier</div>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Buka menu"
+          data-menu-toggle
+        >
+          ☰
+        </button>
+
+        <nav class="nav" data-nav>
+          <a href="index.html">Beranda</a>
+          <a href="abot.html">Tentang</a>
+          <a href="contacts.html">Kontak</a>
+          <a class="lang" href="index2.html" title="English">EN</a>
+        </nav>
       </div>
-    </a>
+    </header>
 
-    <button class="menu-toggle" type="button" aria-label="Open menu" data-menu-toggle>☰</button>
+    <section class="hero">
+      <div class="container inner">
+        <div class="wrap">
+          <div class="card headline reveal">
+            <span class="badge"
+              >✅ Supplier Scrap Logam • ✅ Grading & QC • ✅ Pengiriman</span
+            >
+            <h1>Pasokan Scrap Logam yang Rapi, Stabil, dan Siap Industri.</h1>
+            <p>
+              Kami membantu pabrik & perusahaan besar mendapatkan material scrap
+              yang konsisten:
+              <b>kuningan</b>, <b>aluminium</b>, <b>tembaga</b>, dan
+              <b>stainless</b>. Fokus kami: kualitas, ketepatan spesifikasi, dan
+              pengiriman yang bisa diandalkan.
+            </p>
 
-    <nav class="nav" data-nav>
-      <a href="index2.html">Home</a>
-      <a href="abouten.html">About</a>
-      <a href="contactsen.html">Contact</a>
-      <a class="lang" href="index.html" title="Bahasa Indonesia">ID</a>
-    </nav>
-  </div>
-</header>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="contacts.html"
+                >Minta Penawaran</a
+              >
+              <a class="btn btn-ghost" href="#produk">Lihat Produk</a>
+              <a class="btn btn-ghost" href="abot.html">Profil Perusahaan</a>
+            </div>
 
-<section class="hero">
-  <div class="container inner">
-    <div class="wrap">
-      <div class="card headline reveal">
-        <span class="badge">✅ Scrap Supplier • ✅ Grading & QC • ✅ Logistics Ready</span>
-        <h1>Reliable Scrap Metal Supply, Ready for Industrial Buyers.</h1>
-        <p>
-          We support factories and large companies with consistent scrap material:
-          <b>brass</b>, <b>aluminium</b>, <b>copper</b>, and <b>stainless</b>.
-          Our focus: quality, spec consistency, and dependable deliveries.
-        </p>
+            <p class="small" style="margin-top: 12px">
+              📍 Juwana, Pati • 📧 arvlogam@gmail.com • 📞 0812 2922 6125
+            </p>
+          </div>
 
-        <div class="cta-row">
-          <a class="btn btn-primary" href="contactsen.html">Request a Quote</a>
-          <a class="btn btn-ghost" href="#products">View Products</a>
-          <a class="btn btn-ghost" href="abouten.html">Company Profile</a>
+          <div class="card proof reveal">
+            <div>
+              <div class="kicker">
+                Kenapa perusahaan besar memilih supplier yang rapi?
+              </div>
+              <h3>Karena risiko turun, efisiensi naik.</h3>
+              <p>
+                Kami menyiapkan proses <b>sortir</b>, <b>grading</b>,
+                <b>pembersihan</b>, dan <b>packing</b>
+                agar material lebih siap masuk ke proses produksi.
+              </p>
+
+              <div class="stats">
+                <div class="stat">
+                  <div class="n">4+</div>
+                  <div class="l">Jenis material utama</div>
+                </div>
+                <div class="stat">
+                  <div class="n">QC</div>
+                  <div class="l">Grading & inspeksi</div>
+                </div>
+                <div class="stat">
+                  <div class="n">Logistik</div>
+                  <div class="l">Siap kirim</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="badge">
+              💡 Tip: cantumkan spesifikasi & kebutuhan tonase di form kontak
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="produk" class="section">
+      <div class="container">
+        <div class="reveal">
+          <h2>Produk Utama</h2>
+          <p>
+            Material yang kami tangani dengan fokus pada kualitas dan
+            konsistensi.
+          </p>
         </div>
 
-        <p class="small" style="margin-top:12px">
-          📍 Juwana, Pati • 📧 arvlogam@gmail.com • 📞 +62 812 2922 6125
-        </p>
+        <div class="grid products" style="margin-top: 18px">
+          <div class="card product reveal" data-bg="brass">
+            <div class="content">
+              <div class="num">01</div>
+              <h3>Kuningan</h3>
+              <p>Scrap</p>
+            </div>
+          </div>
+
+          <div class="card product reveal" data-bg="alu">
+            <div class="content">
+              <div class="num">02</div>
+              <h3>Aluminium</h3>
+              <p>Scrap</p>
+            </div>
+          </div>
+
+          <div class="card product reveal" data-bg="copper">
+            <div class="content">
+              <div class="num">03</div>
+              <h3>Tembaga</h3>
+              <p>Scrap</p>
+            </div>
+          </div>
+
+          <div class="card product reveal" data-bg="ss">
+            <div class="content">
+              <div class="num">04</div>
+              <h3>Stainless</h3>
+              <p>Scrap</p>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="card proof reveal">
-        <div>
-          <div class="kicker">Why big buyers prefer a well-managed supplier</div>
-          <h3>Lower risk, smoother operations.</h3>
+    <section class="section">
+      <div class="container">
+        <div class="split">
+          <div class="card feature reveal">
+            <div class="icon">🧪</div>
+            <h3>Grading & QC</h3>
+            <p>
+              Sortir dan klasifikasi material untuk menjaga spesifikasi dan
+              mengurangi kontaminasi.
+            </p>
+          </div>
+          <div class="card feature reveal">
+            <div class="icon">📦</div>
+            <h3>Packing & Handling</h3>
+            <p>
+              Penataan dan packing yang rapi agar proses penerimaan di pabrik
+              lebih cepat dan aman.
+            </p>
+          </div>
+          <div class="card feature reveal">
+            <div class="icon">🚚</div>
+            <h3>Pengiriman Terjadwal</h3>
+            <p>Dukungan pengiriman sesuai jadwal dan kebutuhan supply chain.</p>
+          </div>
+          <div class="card feature reveal">
+            <div class="icon">♻️</div>
+            <h3>Keberlanjutan</h3>
+            <p>
+              Mendukung ekonomi sirkular melalui pengelolaan scrap dan daur
+              ulang yang bertanggung jawab.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="reveal">
+          <h2>Alur Kerja</h2>
+          <p>Ringkas, jelas, dan cocok untuk kebutuhan procurement.</p>
+        </div>
+
+        <div class="grid process" style="margin-top: 18px">
+          <div class="card step reveal">
+            <div class="top">
+              <strong>Penawaran</strong><span class="pill">Step 1</span>
+            </div>
+            <p>Kirim jenis material, kebutuhan tonase, dan lokasi tujuan.</p>
+          </div>
+          <div class="card step reveal">
+            <div class="top">
+              <strong>QC & Grading</strong><span class="pill">Step 2</span>
+            </div>
+            <p>Sortir, klasifikasi, dan inspeksi sesuai kebutuhan.</p>
+          </div>
+          <div class="card step reveal">
+            <div class="top">
+              <strong>Packing</strong><span class="pill">Step 3</span>
+            </div>
+            <p>Penataan & packing untuk memudahkan unloading.</p>
+          </div>
+          <div class="card step reveal">
+            <div class="top">
+              <strong>Pengiriman</strong><span class="pill">Step 4</span>
+            </div>
+            <p>Pengiriman terjadwal dengan komunikasi yang rapi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricelist" class="section">
+      <div class="container">
+        <div class="reveal">
+          <h2>Harga Beli Scrap</h2>
           <p>
-            We run <b>sorting</b>, <b>grading</b>, <b>basic cleaning</b>, and <b>packing</b>
-            so material is easier to receive and process.
+            Harga berlaku untuk material bersih dan sesuai spesifikasi. Hubungi
+            kami untuk negosiasi dan konfirmasi harga terkini.
           </p>
+        </div>
 
-          <div class="stats">
-            <div class="stat">
-              <div class="n">4+</div>
-              <div class="l">Core material types</div>
+        <div id="pricelistWrap" style="margin-top: 22px">
+          <!-- Loading skeleton -->
+          <div id="pricelistLoading" class="pricelist-loading">
+            <div class="pl-skeleton"></div>
+            <div class="pl-skeleton"></div>
+            <div class="pl-skeleton"></div>
+          </div>
+          <!-- Content injected by JS -->
+          <div id="pricelistContent" style="display: none"></div>
+          <div id="pricelistError" style="display: none" class="pl-error">
+            Tidak dapat memuat harga. Silakan hubungi kami langsung.
+          </div>
+        </div>
+
+        <div
+          class="card callout reveal"
+          style="margin-top: 22px; padding: 18px 22px"
+        >
+          <div>
+            <strong style="font-size: 15px">💡 Catatan Harga</strong>
+            <p style="margin-top: 6px; font-size: 13.5px">
+              Harga dapat berubah mengikuti kondisi pasar. Harga final
+              ditetapkan setelah inspeksi dan grading material.
+            </p>
+          </div>
+          <a
+            class="btn btn-primary"
+            href="contacts.html"
+            style="white-space: nowrap; margin-top: 4px"
+          >
+            Konfirmasi Harga
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card callout reveal">
+          <div>
+            <h2>Siap jadi mitra supply Anda.</h2>
+            <p>
+              Hubungi kami untuk diskusi kebutuhan material dan jadwal pasokan.
+            </p>
+          </div>
+          <div
+            style="
+              display: flex;
+              gap: 12px;
+              flex-wrap: wrap;
+              justify-content: flex-end;
+            "
+          >
+            <a class="btn btn-primary" href="contacts.html">Kontak Sekarang</a>
+            <a class="btn btn-ghost" href="mailto:arvlogam@gmail.com">Email</a>
+            <a class="btn btn-ghost" href="tel:+6281229226125">Telepon</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="cols">
+          <div>
+            <div class="name" style="font-weight: 800">CV. ARV LOGAM</div>
+            <p class="small">
+              High Quality Metal Scrap Management and Supplier
+            </p>
+            <p class="small">
+              📍 JL KI HAJAR DEWANTORO, GROWONG KIDUL, JUWANA, PATI
+            </p>
+          </div>
+          <div>
+            <div style="font-weight: 800; margin-bottom: 8px">Tautan</div>
+            <div class="small"><a href="abot.html">Tentang</a></div>
+            <div class="small"><a href="contacts.html">Kontak</a></div>
+            <div class="small"><a href="index2.html">English</a></div>
+          </div>
+          <div>
+            <div style="font-weight: 800; margin-bottom: 8px">Kontak</div>
+            <div class="small">
+              📧 <a href="mailto:arvlogam@gmail.com">arvlogam@gmail.com</a>
             </div>
-            <div class="stat">
-              <div class="n">QC</div>
-              <div class="l">Inspection & grading</div>
+            <div class="small">
+              📞 <a href="tel:+6281229226125">+62 812 2922 6125</a>
             </div>
-            <div class="stat">
-              <div class="n">Logistics</div>
-              <div class="l">Delivery support</div>
+            <div class="small">
+              📞 <a href="tel:+6287827730791">+62 878 2773 0791</a>
+            </div>
+            <div class="small" style="margin-top: 10px">
+              <a
+                href="https://www.instagram.com/arv_family?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                >Instagram</a
+              >
             </div>
           </div>
         </div>
 
-        <div class="badge">💡 Tip: share specs & target tonnage in the contact form</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="products" class="section">
-  <div class="container">
-    <div class="reveal">
-      <h2>Key Products</h2>
-      <p>Materials we handle with a focus on quality and consistency.</p>
-    </div>
-
-    <div class="grid products" style="margin-top:18px">
-      <div class="card product reveal" data-bg="brass">
-        <div class="content">
-          <div class="num">01</div>
-          <h3>Brass</h3>
-          <p>Scrap</p>
+        <div class="small" style="margin-top: 18px">
+          © <span data-year></span> CV. ARV Logam. All rights reserved.
         </div>
       </div>
+    </footer>
 
-      <div class="card product reveal" data-bg="alu">
-        <div class="content">
-          <div class="num">02</div>
-          <h3>Aluminium</h3>
-          <p>Scrap</p>
-        </div>
-      </div>
-
-      <div class="card product reveal" data-bg="copper">
-        <div class="content">
-          <div class="num">03</div>
-          <h3>Copper</h3>
-          <p>Scrap</p>
-        </div>
-      </div>
-
-      <div class="card product reveal" data-bg="ss">
-        <div class="content">
-          <div class="num">04</div>
-          <h3>Stainless</h3>
-          <p>Scrap</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="split">
-      <div class="card feature reveal">
-        <div class="icon">🧪</div>
-        <h3>Grading & QC</h3>
-        <p>Sorting and classification to reduce contamination and keep spec consistency.</p>
-      </div>
-      <div class="card feature reveal">
-        <div class="icon">📦</div>
-        <h3>Packing & Handling</h3>
-        <p>Neat packing to speed up receiving and unloading on your site.</p>
-      </div>
-      <div class="card feature reveal">
-        <div class="icon">🚚</div>
-        <h3>Scheduled Delivery</h3>
-        <p>Delivery support aligned with your supply-chain needs.</p>
-      </div>
-      <div class="card feature reveal">
-        <div class="icon">♻️</div>
-        <h3>Sustainability</h3>
-        <p>Supporting circular economy through responsible scrap management.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="reveal">
-      <h2>How We Work</h2>
-      <p>Simple and procurement-friendly process.</p>
-    </div>
-
-    <div class="grid process" style="margin-top:18px">
-      <div class="card step reveal">
-        <div class="top"><strong>Quotation</strong><span class="pill">Step 1</span></div>
-        <p>Send material type, target tonnage, and destination.</p>
-      </div>
-      <div class="card step reveal">
-        <div class="top"><strong>QC & Grading</strong><span class="pill">Step 2</span></div>
-        <p>Sorting, classification, and inspection as required.</p>
-      </div>
-      <div class="card step reveal">
-        <div class="top"><strong>Packing</strong><span class="pill">Step 3</span></div>
-        <p>Packing for easier unloading and faster receiving.</p>
-      </div>
-      <div class="card step reveal">
-        <div class="top"><strong>Delivery</strong><span class="pill">Step 4</span></div>
-        <p>Scheduled delivery with clear communication.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="card callout reveal">
-      <div>
-        <h2>Let’s talk supply.</h2>
-        <p>Contact us to discuss specs, tonnage, and delivery schedule.</p>
-      </div>
-      <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end">
-        <a class="btn btn-primary" href="contactsen.html">Contact Now</a>
-        <a class="btn btn-ghost" href="mailto:arvlogam@gmail.com">Email</a>
-        <a class="btn btn-ghost" href="tel:+6281229226125">Call</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container">
-    <div class="cols">
-      <div>
-        <div class="name" style="font-weight:800">CV. ARV LOGAM</div>
-        <p class="small">High Quality Metal Scrap Management and Supplier</p>
-        <p class="small">📍 JL KI HAJAR DEWANTORO, GROWONG KIDUL, JUWANA, PATI</p>
-      </div>
-      <div>
-        <div style="font-weight:800; margin-bottom:8px">Links</div>
-        <div class="small"><a href="abouten.html">About</a></div>
-        <div class="small"><a href="contactsen.html">Contact</a></div>
-        <div class="small"><a href="index.html">Bahasa Indonesia</a></div>
-      </div>
-      <div>
-        <div style="font-weight:800; margin-bottom:8px">Contact</div>
-        <div class="small">📧 <a href="mailto:arvlogam@gmail.com">arvlogam@gmail.com</a></div>
-        <div class="small">📞 <a href="tel:+6281229226125">+62 812 2922 6125</a></div>
-        <div class="small">📞 <a href="tel:+6287827730791">+62 878 2773 0791</a></div>
-        <div class="small" style="margin-top:10px">
-          <a href="https://www.instagram.com/arv_family?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="small" style="margin-top:18px">
-      © <span data-year></span> CV. ARV Logam. All rights reserved.
-    </div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
