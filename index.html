@@ -12,17 +12,20 @@
     <link rel="stylesheet" href="style.css" />
     <style>
       /* ── PRICELIST ── */
+      #pricelist {
+        background: linear-gradient(180deg, #f6f8fb 0%, #fff 60%, #f6f8fb 100%);
+      }
       .pl-skeleton {
-        height: 110px;
+        height: 130px;
         border-radius: 18px;
         background: linear-gradient(
           90deg,
-          rgba(15, 23, 42, 0.06) 25%,
-          rgba(15, 23, 42, 0.12) 50%,
-          rgba(15, 23, 42, 0.06) 75%
+          rgba(15, 23, 42, 0.05) 25%,
+          rgba(15, 23, 42, 0.1) 50%,
+          rgba(15, 23, 42, 0.05) 75%
         );
         background-size: 400% 100%;
-        animation: shimmer 1.4s infinite;
+        animation: shimmer 1.3s infinite;
         margin-bottom: 14px;
       }
       @keyframes shimmer {
@@ -34,115 +37,129 @@
         }
       }
       .pl-group {
-        margin-bottom: 20px;
+        margin-bottom: 28px;
       }
-      .pl-mat-label {
+      .pl-mat-hd {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
+        margin-bottom: 14px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid rgba(15, 23, 42, 0.07);
+      }
+      .pl-mat-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        flex: 0 0 38px;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+      }
+      .pl-mat-name {
+        font-size: 18px;
         font-weight: 800;
-        font-size: 16px;
         color: var(--text);
-        margin-bottom: 10px;
-        padding-bottom: 8px;
-        border-bottom: 2px solid rgba(15, 23, 42, 0.08);
       }
-      .pl-dot {
-        width: 11px;
-        height: 11px;
-        border-radius: 50%;
-        flex: 0 0 11px;
-      }
-      .pl-dot.brass {
-        background: #b8860b;
-      }
-      .pl-dot.alu {
-        background: #9aa5b4;
-      }
-      .pl-dot.copper {
-        background: #b87333;
-      }
-      .pl-dot.stainless {
-        background: #607d8b;
-      }
-      .pl-dot.other {
-        background: #8b5cf6;
+      .pl-mat-sub {
+        font-size: 12px;
+        color: var(--muted);
+        margin-top: 1px;
       }
       .pl-items {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
       }
-      @media (max-width: 600px) {
+      @media (max-width: 640px) {
+        .pl-items {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 420px) {
         .pl-items {
           grid-template-columns: 1fr;
         }
       }
       .pl-item {
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.82),
-          rgba(255, 255, 255, 0.65)
-        );
-        border: 1px solid rgba(15, 23, 42, 0.1);
-        border-radius: var(--radius-sm);
-        padding: 16px 16px 14px;
-        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid rgba(15, 23, 42, 0.09);
+        border-radius: 14px;
+        padding: 14px 15px 12px;
+        box-shadow: 0 6px 20px rgba(15, 23, 42, 0.07);
         transition:
           transform 0.2s,
           box-shadow 0.2s;
+        cursor: default;
       }
       .pl-item:hover {
-        transform: translateY(-2px);
+        transform: translateY(-3px);
         box-shadow: 0 14px 32px rgba(15, 23, 42, 0.12);
       }
       .pl-grade {
-        font-size: 13px;
+        font-size: 12.5px;
         font-weight: 700;
         color: var(--text);
         line-height: 1.35;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
       }
       .pl-price-row {
         display: flex;
         align-items: baseline;
-        gap: 5px;
+        gap: 4px;
       }
       .pl-price {
-        font-size: 22px;
+        font-size: 21px;
         font-weight: 900;
         color: var(--brand);
         letter-spacing: -0.5px;
+        line-height: 1;
       }
       .pl-price.zero {
-        font-size: 15px;
+        font-size: 13.5px;
         font-weight: 700;
-        color: rgba(15, 23, 42, 0.45);
+        color: rgba(15, 23, 42, 0.38);
         font-style: italic;
       }
       .pl-unit {
-        font-size: 12px;
-        color: rgba(15, 23, 42, 0.5);
+        font-size: 11.5px;
+        color: rgba(15, 23, 42, 0.45);
         font-weight: 600;
       }
       .pl-note {
-        font-size: 11.5px;
-        color: rgba(15, 23, 42, 0.5);
+        font-size: 11px;
+        color: rgba(15, 23, 42, 0.45);
         margin-top: 5px;
+        line-height: 1.4;
       }
       .pl-updated {
-        font-size: 10.5px;
-        color: rgba(15, 23, 42, 0.35);
-        margin-top: 6px;
+        font-size: 10px;
+        color: rgba(15, 23, 42, 0.3);
+        margin-top: 5px;
       }
       .pl-error {
-        padding: 18px;
-        background: rgba(239, 68, 68, 0.07);
-        border: 1px solid rgba(239, 68, 68, 0.2);
+        padding: 22px;
+        background: rgba(239, 68, 68, 0.06);
+        border: 1px solid rgba(239, 68, 68, 0.15);
         border-radius: 14px;
-        color: rgba(15, 23, 42, 0.7);
-        font-size: 13px;
+        color: rgba(15, 23, 42, 0.65);
+        font-size: 14px;
         text-align: center;
+        line-height: 1.6;
+      }
+      .pl-updated-global {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px;
+        color: var(--muted);
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 12px;
+        padding: 8px 14px;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        width: fit-content;
       }
     </style>
   </head>
@@ -363,43 +380,62 @@
         <div class="reveal">
           <h2>Harga Beli Scrap</h2>
           <p>
-            Harga berlaku untuk material bersih dan sesuai spesifikasi. Hubungi
-            kami untuk negosiasi dan konfirmasi harga terkini.
+            Kami membeli scrap logam dengan harga terbaik. Hubungi kami untuk
+            konfirmasi harga terkini sebelum pengiriman.
           </p>
         </div>
 
-        <div id="pricelistWrap" style="margin-top: 22px">
-          <!-- Loading skeleton -->
-          <div id="pricelistLoading" class="pricelist-loading">
-            <div class="pl-skeleton"></div>
-            <div class="pl-skeleton"></div>
-            <div class="pl-skeleton"></div>
-          </div>
-          <!-- Content injected by JS -->
-          <div id="pricelistContent" style="display: none"></div>
-          <div id="pricelistError" style="display: none" class="pl-error">
-            Tidak dapat memuat harga. Silakan hubungi kami langsung.
-          </div>
+        <!-- Loading -->
+        <div id="pricelistLoading" style="margin-top: 22px">
+          <div class="pl-skeleton"></div>
+          <div class="pl-skeleton"></div>
+        </div>
+        <!-- Last updated badge -->
+        <div id="plUpdatedBadge" style="display: none; margin: 18px 0 8px">
+          <div class="pl-updated-global" id="plUpdatedTxt"></div>
+        </div>
+        <!-- Rendered content -->
+        <div
+          id="pricelistContent"
+          style="display: none; margin-top: 18px"
+        ></div>
+        <!-- Error -->
+        <div
+          id="pricelistError"
+          style="display: none; margin-top: 22px"
+          class="pl-error"
+        >
+          ⚠️ Tidak dapat memuat harga saat ini.<br />
+          Silakan hubungi kami langsung untuk informasi harga.<br />
+          <a
+            href="contacts.html"
+            style="
+              color: var(--brand);
+              font-weight: 700;
+              margin-top: 8px;
+              display: inline-block;
+            "
+            >→ Kontak Kami</a
+          >
         </div>
 
         <div
           class="card callout reveal"
-          style="margin-top: 22px; padding: 18px 22px"
+          style="margin-top: 24px; padding: 18px 22px"
         >
           <div>
             <strong style="font-size: 15px">💡 Catatan Harga</strong>
             <p style="margin-top: 6px; font-size: 13.5px">
-              Harga dapat berubah mengikuti kondisi pasar. Harga final
-              ditetapkan setelah inspeksi dan grading material.
+              Harga berlaku untuk material bersih dan sesuai spesifikasi. Harga
+              final ditetapkan setelah inspeksi langsung.
             </p>
           </div>
           <a
             class="btn btn-primary"
             href="contacts.html"
-            style="white-space: nowrap; margin-top: 4px"
+            style="white-space: nowrap; flex-shrink: 0"
+            >Konfirmasi Harga</a
           >
-            Konfirmasi Harga
-          </a>
         </div>
       </div>
     </section>
