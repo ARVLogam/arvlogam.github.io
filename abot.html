@@ -1,417 +1,1112 @@
 <!doctype html>
 <html lang="id">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Tentang Kami — CV. ARV Logam</title>
-  <meta name="description" content="Profil CV. ARV Logam – pengepul dan supplier scrap logam terpercaya di Juwana, Pati. Bayar langsung, harga terbaik, proses rapi."/>
-  <link rel="icon" href="./img/logo2.png" type="image/x-icon"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
-  <style>
-:root{
-  --red:#c81e1e;--red2:#e53935;--red-bg:#fef2f2;--red-bd:#fecaca;
-  --bg:#f7f8fa;--white:#fff;--text:#111827;--sub:#4b5563;
-  --muted:#9ca3af;--bd:#e5e7eb;
-  --sh:0 2px 12px rgba(0,0,0,.07);--r:14px;--max:1080px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.6}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tentang Kami — CV. ARV Logam</title>
+    <meta
+      name="description"
+      content="Profil CV. ARV Logam – pengepul dan supplier scrap logam terpercaya di Juwana, Pati. Bayar langsung, harga terbaik, proses rapi."
+    />
+    <link rel="icon" href="./img/logo2.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --red: #c81e1e;
+        --red2: #e53935;
+        --red-bg: #fef2f2;
+        --red-bd: #fecaca;
+        --bg: #f7f8fa;
+        --white: #fff;
+        --text: #111827;
+        --sub: #4b5563;
+        --muted: #9ca3af;
+        --bd: #e5e7eb;
+        --sh: 0 2px 12px rgba(0, 0, 0, 0.07);
+        --r: 14px;
+        --max: 1080px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        font-size: 15px;
+        line-height: 1.6;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 18px;
+      }
 
-/* ── HEADER ── */
-.hdr{background:var(--white);border-bottom:1px solid var(--bd);position:sticky;top:0;z-index:99;box-shadow:var(--sh)}
-.hdr-in{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;max-width:var(--max);margin:0 auto}
-.brand{display:flex;align-items:center;gap:10px}
-.brand img{width:38px;height:38px;border-radius:10px;object-fit:cover}
-.b-name{font-weight:900;font-size:15px}
-.b-sub{font-size:11px;color:var(--muted);margin-top:1px}
-.nav{display:flex;align-items:center;gap:2px}
-.nav a{padding:8px 13px;border-radius:10px;font-weight:600;font-size:13.5px;color:var(--sub);transition:all .15s}
-.nav a:hover,.nav a.on{background:var(--red-bg);color:var(--red)}
-.nav .cta{background:var(--red);color:#fff !important;padding:8px 16px;font-weight:700}
-.nav .cta:hover{background:var(--red2) !important}
-.mbtn{display:none;border:1px solid var(--bd);background:var(--white);border-radius:10px;padding:8px 12px;cursor:pointer;font-size:18px;line-height:1}
-.mnav{display:none;flex-direction:column;background:var(--white);border-bottom:1px solid var(--bd);padding:8px 18px 14px;gap:2px}
-.mnav.open{display:flex}
-.mnav a{padding:10px 14px;border-radius:10px;font-weight:600;color:var(--sub)}
-.mnav .cta{background:var(--red);color:#fff;text-align:center;margin-top:6px;border-radius:12px}
+      /* ── HEADER ── */
+      .hdr {
+        background: var(--white);
+        border-bottom: 1px solid var(--bd);
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        box-shadow: var(--sh);
+      }
+      .hdr-in {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 18px;
+        max-width: var(--max);
+        margin: 0 auto;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .brand img {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+      .b-name {
+        font-weight: 900;
+        font-size: 15px;
+      }
+      .b-sub {
+        font-size: 11px;
+        color: var(--muted);
+        margin-top: 1px;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+      }
+      .nav a {
+        padding: 8px 13px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 13.5px;
+        color: var(--sub);
+        transition: all 0.15s;
+      }
+      .nav a:hover,
+      .nav a.on {
+        background: var(--red-bg);
+        color: var(--red);
+      }
+      .nav .cta {
+        background: var(--red);
+        color: #fff !important;
+        padding: 8px 16px;
+        font-weight: 700;
+      }
+      .nav .cta:hover {
+        background: var(--red2) !important;
+      }
+      .mbtn {
+        display: none;
+        border: 1px solid var(--bd);
+        background: var(--white);
+        border-radius: 10px;
+        padding: 8px 12px;
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 1;
+      }
+      .mnav {
+        display: none;
+        flex-direction: column;
+        background: var(--white);
+        border-bottom: 1px solid var(--bd);
+        padding: 8px 18px 14px;
+        gap: 2px;
+      }
+      .mnav.open {
+        display: flex;
+      }
+      .mnav a {
+        padding: 10px 14px;
+        border-radius: 10px;
+        font-weight: 600;
+        color: var(--sub);
+      }
+      .mnav .cta {
+        background: var(--red);
+        color: #fff;
+        text-align: center;
+        margin-top: 6px;
+        border-radius: 12px;
+      }
 
-/* ── PAGE HERO ── */
-.phero{
-  background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);
-  padding:56px 0 48px;position:relative;overflow:hidden;
-}
-.phero::before{
-  content:'';position:absolute;inset:0;
-  background:url('./img/gudang1.jpg') center/cover no-repeat;
-  opacity:.18;
-}
-.phero .wrap{position:relative;z-index:1;text-align:center}
-.phero-pill{
-  display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.22);border-radius:999px;
-  padding:5px 16px;font-size:12px;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:16px;
-}
-.phero h1{color:#fff;font-size:clamp(24px,4vw,42px);font-weight:900;letter-spacing:-.5px;margin-bottom:12px}
-.phero p{color:rgba(255,255,255,.75);font-size:15px;max-width:54ch;margin:0 auto}
+      /* ── PAGE HERO ── */
+      .phero {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        padding: 56px 0 48px;
+        position: relative;
+        overflow: hidden;
+      }
+      .phero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("./img/gudang1.jpg") center/cover no-repeat;
+        opacity: 0.18;
+      }
+      .phero .wrap {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+      }
+      .phero-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 999px;
+        padding: 5px 16px;
+        font-size: 12px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 16px;
+      }
+      .phero h1 {
+        color: #fff;
+        font-size: clamp(24px, 4vw, 42px);
+        font-weight: 900;
+        letter-spacing: -0.5px;
+        margin-bottom: 12px;
+      }
+      .phero p {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 15px;
+        max-width: 54ch;
+        margin: 0 auto;
+      }
 
-/* ── STATS STRIP ── */
-.sstrip{background:linear-gradient(135deg,var(--red),var(--red2));padding:28px 0}
-.srow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:var(--max);margin:0 auto;padding:0 18px}
-.si{text-align:center;color:#fff}
-.sn{font-size:34px;font-weight:900;line-height:1;margin-bottom:5px}
-.sl{font-size:12.5px;font-weight:600;opacity:.9}
+      /* ── STATS STRIP ── */
+      .sstrip {
+        background: linear-gradient(135deg, var(--red), var(--red2));
+        padding: 28px 0;
+      }
+      .srow {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 18px;
+      }
+      .si {
+        text-align: center;
+        color: #fff;
+      }
+      .sn {
+        font-size: 34px;
+        font-weight: 900;
+        line-height: 1;
+        margin-bottom: 5px;
+      }
+      .sl {
+        font-size: 12.5px;
+        font-weight: 600;
+        opacity: 0.9;
+      }
 
-/* ── SECTIONS ── */
-.sec{padding:48px 0}
-.sh{font-size:clamp(20px,3vw,28px);font-weight:900;margin-bottom:5px}
-.ss{font-size:14px;color:var(--sub);margin-bottom:24px}
-.sc{text-align:center;max-width:580px;margin:0 auto 28px}
+      /* ── SECTIONS ── */
+      .sec {
+        padding: 48px 0;
+      }
+      .sh {
+        font-size: clamp(20px, 3vw, 28px);
+        font-weight: 900;
+        margin-bottom: 5px;
+      }
+      .ss {
+        font-size: 14px;
+        color: var(--sub);
+        margin-bottom: 24px;
+      }
+      .sc {
+        text-align: center;
+        max-width: 580px;
+        margin: 0 auto 28px;
+      }
 
-/* ── PROFIL ── */
-.profil-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
-.profil-img{border-radius:var(--r);overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.12)}
-.profil-img img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover}
-.profil-txt h2{font-size:clamp(20px,3vw,26px);font-weight:900;margin-bottom:12px}
-.profil-txt p{font-size:14.5px;color:var(--sub);line-height:1.72;margin-bottom:14px}
-.chk-list{list-style:none;display:flex;flex-direction:column;gap:9px;margin-top:4px}
-.chk-list li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--sub);line-height:1.5}
-.chk-list li span.ic{color:var(--red);font-weight:900;flex:0 0 auto;margin-top:2px}
+      /* ── PROFIL ── */
+      .profil-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+        align-items: start;
+      }
+      .profil-img {
+        border-radius: var(--r);
+        overflow: hidden;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+      }
+      .profil-img img {
+        width: 100%;
+        display: block;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+      }
+      .profil-txt h2 {
+        font-size: clamp(20px, 3vw, 26px);
+        font-weight: 900;
+        margin-bottom: 12px;
+      }
+      .profil-txt p {
+        font-size: 14.5px;
+        color: var(--sub);
+        line-height: 1.72;
+        margin-bottom: 14px;
+      }
+      .chk-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        margin-top: 4px;
+      }
+      .chk-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 14px;
+        color: var(--sub);
+        line-height: 1.5;
+      }
+      .chk-list li span.ic {
+        color: var(--red);
+        font-weight: 900;
+        flex: 0 0 auto;
+        margin-top: 2px;
+      }
 
-/* ── VALUE CARDS ── */
-.val-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.vc{background:var(--white);border:1.5px solid var(--bd);border-radius:var(--r);
-  padding:22px;transition:all .2s}
-.vc:hover{border-color:var(--red-bd);box-shadow:0 6px 24px rgba(200,30,30,.1);transform:translateY(-3px)}
-.vc-ico{width:44px;height:44px;background:var(--red);border-radius:12px;
-  display:flex;align-items:center;justify-content:center;font-size:20px;
-  margin-bottom:14px;box-shadow:0 4px 14px rgba(200,30,30,.25)}
-.vc-t{font-size:15px;font-weight:800;margin-bottom:6px}
-.vc-d{font-size:13.5px;color:var(--sub);line-height:1.6}
+      /* ── VALUE CARDS ── */
+      .val-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+      .vc {
+        background: var(--white);
+        border: 1.5px solid var(--bd);
+        border-radius: var(--r);
+        padding: 22px;
+        transition: all 0.2s;
+      }
+      .vc:hover {
+        border-color: var(--red-bd);
+        box-shadow: 0 6px 24px rgba(200, 30, 30, 0.1);
+        transform: translateY(-3px);
+      }
+      .vc-ico {
+        width: 44px;
+        height: 44px;
+        background: var(--red);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        margin-bottom: 14px;
+        box-shadow: 0 4px 14px rgba(200, 30, 30, 0.25);
+      }
+      .vc-t {
+        font-size: 15px;
+        font-weight: 800;
+        margin-bottom: 6px;
+      }
+      .vc-d {
+        font-size: 13.5px;
+        color: var(--sub);
+        line-height: 1.6;
+      }
 
-/* ── STEP TIMELINE ── */
-.steps{display:flex;flex-direction:column;gap:0;max-width:560px}
-.sr{display:grid;grid-template-columns:52px 1fr;align-items:stretch}
-.sl-col{display:flex;flex-direction:column;align-items:center}
-.sc-dot{width:40px;height:40px;border-radius:50%;background:var(--red);color:#fff;
-  font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center;
-  flex:0 0 40px;box-shadow:0 4px 12px rgba(200,30,30,.25);z-index:1}
-.sc-line{width:2px;background:var(--bd);flex:1;margin:4px 0}
-.sr:last-child .sc-line{display:none}
-.sb{background:var(--white);border:1px solid var(--bd);border-radius:var(--r);
-  padding:16px 18px;margin-bottom:12px;margin-left:12px}
-.sb-t{font-weight:800;font-size:14px;margin-bottom:4px}
-.sb-d{font-size:13px;color:var(--sub);line-height:1.55}
+      /* ── STEP TIMELINE ── */
+      .steps {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        max-width: 560px;
+      }
+      .sr {
+        display: grid;
+        grid-template-columns: 52px 1fr;
+        align-items: stretch;
+      }
+      .sl-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .sc-dot {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--red);
+        color: #fff;
+        font-weight: 900;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 40px;
+        box-shadow: 0 4px 12px rgba(200, 30, 30, 0.25);
+        z-index: 1;
+      }
+      .sc-line {
+        width: 2px;
+        background: var(--bd);
+        flex: 1;
+        margin: 4px 0;
+      }
+      .sr:last-child .sc-line {
+        display: none;
+      }
+      .sb {
+        background: var(--white);
+        border: 1px solid var(--bd);
+        border-radius: var(--r);
+        padding: 16px 18px;
+        margin-bottom: 12px;
+        margin-left: 12px;
+      }
+      .sb-t {
+        font-weight: 800;
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+      .sb-d {
+        font-size: 13px;
+        color: var(--sub);
+        line-height: 1.55;
+      }
 
-/* ── MATERIAL CARDS ── */
-.mat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.mc{border-radius:var(--r);overflow:hidden;position:relative;min-height:210px;
-  display:flex;align-items:flex-end;box-shadow:var(--sh);transition:transform .2s}
-.mc:hover{transform:scale(1.02)}
-.mc::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 25%,rgba(0,0,0,.75))}
-.mc-bg{position:absolute;inset:0;background-size:cover;background-position:center}
-.mc-body{position:relative;z-index:1;padding:18px}
-.mc-name{font-size:17px;font-weight:900;color:#fff;margin-bottom:5px}
-.mc-desc{font-size:12.5px;color:rgba(255,255,255,.78);margin-bottom:10px}
-.mc-tags{display:flex;gap:6px;flex-wrap:wrap}
-.mc-tag{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);
-  color:#fff;border-radius:999px;padding:3px 10px;font-size:11px;font-weight:700}
+      /* ── MATERIAL CARDS ── */
+      .mat-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+      .mc {
+        border-radius: var(--r);
+        overflow: hidden;
+        position: relative;
+        min-height: 210px;
+        display: flex;
+        align-items: flex-end;
+        box-shadow: var(--sh);
+        transition: transform 0.2s;
+      }
+      .mc:hover {
+        transform: scale(1.02);
+      }
+      .mc::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          transparent 25%,
+          rgba(0, 0, 0, 0.75)
+        );
+      }
+      .mc-bg {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+      }
+      .mc-body {
+        position: relative;
+        z-index: 1;
+        padding: 18px;
+      }
+      .mc-name {
+        font-size: 17px;
+        font-weight: 900;
+        color: #fff;
+        margin-bottom: 5px;
+      }
+      .mc-desc {
+        font-size: 12.5px;
+        color: rgba(255, 255, 255, 0.78);
+        margin-bottom: 10px;
+      }
+      .mc-tags {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .mc-tag {
+        background: rgba(255, 255, 255, 0.18);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        color: #fff;
+        border-radius: 999px;
+        padding: 3px 10px;
+        font-size: 11px;
+        font-weight: 700;
+      }
 
-/* ── WHY US ── */
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.wc{background:var(--white);border:1px solid var(--bd);border-radius:var(--r);padding:18px}
-.wc-ico{font-size:22px;margin-bottom:10px}
-.wc-t{font-weight:800;font-size:14px;margin-bottom:5px}
-.wc-d{font-size:13px;color:var(--sub);line-height:1.55}
+      /* ── WHY US ── */
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      .wc {
+        background: var(--white);
+        border: 1px solid var(--bd);
+        border-radius: var(--r);
+        padding: 18px;
+      }
+      .wc-ico {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+      .wc-t {
+        font-weight: 800;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      .wc-d {
+        font-size: 13px;
+        color: var(--sub);
+        line-height: 1.55;
+      }
 
-/* ── CTA ── */
-.cta-sec{background:linear-gradient(135deg,var(--red),var(--red2));padding:44px 0}
-.cta-in{text-align:center;color:#fff}
-.cta-in h2{font-size:clamp(20px,3vw,30px);font-weight:900;margin-bottom:8px}
-.cta-in p{font-size:14.5px;opacity:.82;margin-bottom:22px;max-width:44ch;margin-left:auto;margin-right:auto}
-.cta-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:7px;padding:11px 20px;border-radius:12px;
-  font-weight:700;font-size:14px;cursor:pointer;border:none;font-family:inherit;transition:all .15s}
-.btn-w{background:#fff;color:var(--red);font-weight:800}
-.btn-w:hover{background:var(--red-bg)}
-.btn-g{background:rgba(255,255,255,.15);color:#fff;border:1.5px solid rgba(255,255,255,.35)}
-.btn-g:hover{background:rgba(255,255,255,.25)}
+      /* ── CTA ── */
+      .cta-sec {
+        background: linear-gradient(135deg, var(--red), var(--red2));
+        padding: 44px 0;
+      }
+      .cta-in {
+        text-align: center;
+        color: #fff;
+      }
+      .cta-in h2 {
+        font-size: clamp(20px, 3vw, 30px);
+        font-weight: 900;
+        margin-bottom: 8px;
+      }
+      .cta-in p {
+        font-size: 14.5px;
+        opacity: 0.82;
+        margin-bottom: 22px;
+        max-width: 44ch;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .cta-btns {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 11px 20px;
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        font-family: inherit;
+        transition: all 0.15s;
+      }
+      .btn-w {
+        background: #fff;
+        color: var(--red);
+        font-weight: 800;
+      }
+      .btn-w:hover {
+        background: var(--red-bg);
+      }
+      .btn-g {
+        background: rgba(255, 255, 255, 0.15);
+        color: #fff;
+        border: 1.5px solid rgba(255, 255, 255, 0.35);
+      }
+      .btn-g:hover {
+        background: rgba(255, 255, 255, 0.25);
+      }
 
-/* ── FOOTER ── */
-.ft{background:#111827;color:rgba(255,255,255,.78);padding:32px 0 20px}
-.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:22px;margin-bottom:22px}
-.ft-brand{font-weight:900;color:#fff;font-size:15px;margin-bottom:7px}
-.ft-desc{font-size:12.5px;color:rgba(255,255,255,.5);line-height:1.7}
-.ft-hd{font-weight:800;font-size:12.5px;color:#fff;margin-bottom:9px}
-.ft-a{display:block;font-size:12.5px;color:rgba(255,255,255,.5);margin-bottom:5px;transition:color .15s}
-.ft-a:hover{color:#fff}
-.ft-btm{border-top:1px solid rgba(255,255,255,.08);padding-top:16px;font-size:12px;color:rgba(255,255,255,.35)}
+      /* ── FOOTER ── */
+      .ft {
+        background: #111827;
+        color: rgba(255, 255, 255, 0.78);
+        padding: 32px 0 20px;
+      }
+      .ft-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr;
+        gap: 22px;
+        margin-bottom: 22px;
+      }
+      .ft-brand {
+        font-weight: 900;
+        color: #fff;
+        font-size: 15px;
+        margin-bottom: 7px;
+      }
+      .ft-desc {
+        font-size: 12.5px;
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 1.7;
+      }
+      .ft-hd {
+        font-weight: 800;
+        font-size: 12.5px;
+        color: #fff;
+        margin-bottom: 9px;
+      }
+      .ft-a {
+        display: block;
+        font-size: 12.5px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 5px;
+        transition: color 0.15s;
+      }
+      .ft-a:hover {
+        color: #fff;
+      }
+      .ft-btm {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 16px;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.35);
+      }
 
-/* ── REVEAL ── */
-.rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
-.rv.show{opacity:1;transform:translateY(0)}
+      /* ── REVEAL ── */
+      .rv {
+        opacity: 0;
+        transform: translateY(14px);
+        transition:
+          opacity 0.6s,
+          transform 0.6s;
+      }
+      .rv.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-/* ── RESPONSIVE ── */
-@media(max-width:860px){
-  .profil-grid{grid-template-columns:1fr}
-  .srow{grid-template-columns:repeat(2,1fr)}
-  .why-grid{grid-template-columns:repeat(2,1fr)}
-  .ft-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:620px){
-  .nav{display:none}.mbtn{display:block}
-  .val-grid{grid-template-columns:1fr}
-  .mat-grid{grid-template-columns:1fr}
-  .why-grid{grid-template-columns:1fr}
-  .ft-grid{grid-template-columns:1fr}
-}
-  </style>
-</head>
-<body>
-
-<!-- HEADER -->
-<header class="hdr">
-  <div class="hdr-in">
-    <a class="brand" href="index.html">
-      <img src="./img/logo2.png" alt="ARV Logam"/>
-      <div><div class="b-name">ARV LOGAM</div><div class="b-sub">Pengepul & Supplier Scrap</div></div>
-    </a>
-    <nav class="nav">
-      <a href="index.html">Beranda</a>
-      <a href="index.html#harga">💰 Harga Beli</a>
-      <a href="abot.html" class="on">Tentang</a>
-      <a href="index2.html">EN</a>
-      <a href="contacts.html" class="cta">📞 Hubungi Kami</a>
-    </nav>
-    <button class="mbtn" onclick="toggleMenu()">☰</button>
-  </div>
-  <nav class="mnav" id="mnav">
-    <a href="index.html">🏠 Beranda</a>
-    <a href="index.html#harga" onclick="closeMenu()">💰 Harga Beli</a>
-    <a href="abot.html">ℹ️ Tentang Kami</a>
-    <a href="index2.html">🌐 English</a>
-    <a href="contacts.html" class="cta">📞 Hubungi Kami</a>
-  </nav>
-</header>
-
-<!-- PAGE HERO -->
-<section class="phero">
-  <div class="wrap">
-    <div class="rv"><div class="phero-pill">📍 Juwana, Pati — Jawa Tengah</div></div>
-    <h1 class="rv">Tentang CV. ARV Logam</h1>
-    <p class="rv">Pengepul dan supplier scrap logam yang sudah dipercaya. Kami beli dari masyarakat, pilah dengan teliti, dan pasok ke industri.</p>
-  </div>
-</section>
-
-<!-- STATS -->
-<div class="sstrip">
-  <div class="srow">
-    <div class="si rv"><div class="sn">4+</div><div class="sl">Jenis Logam</div></div>
-    <div class="si rv"><div class="sn">✓</div><div class="sl">Bayar Langsung</div></div>
-    <div class="si rv"><div class="sn">QC</div><div class="sl">Sortir & Grading</div></div>
-    <div class="si rv"><div class="sn">🚚</div><div class="sl">Bisa Antar-Jemput</div></div>
-  </div>
-</div>
-
-<!-- PROFIL -->
-<section class="sec">
-  <div class="wrap">
-    <div class="profil-grid">
-      <div class="profil-img rv">
-        <img src="./img/gudang1.jpg" alt="Gudang ARV Logam"/>
+      /* ── RESPONSIVE ── */
+      @media (max-width: 860px) {
+        .profil-grid {
+          grid-template-columns: 1fr;
+        }
+        .srow {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .why-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .ft-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 620px) {
+        .nav {
+          display: none;
+        }
+        .mbtn {
+          display: block;
+        }
+        .val-grid {
+          grid-template-columns: 1fr;
+        }
+        .mat-grid {
+          grid-template-columns: 1fr;
+        }
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+        .ft-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="hdr">
+      <div class="hdr-in">
+        <a class="brand" href="index.html">
+          <img src="./img/logo2.png" alt="ARV Logam" />
+          <div>
+            <div class="b-name">ARV LOGAM</div>
+            <div class="b-sub">Pengepul & Supplier Scrap</div>
+          </div>
+        </a>
+        <nav class="nav">
+          <a href="index.html">Beranda</a>
+          <a href="index.html#harga">💰 Harga Beli</a>
+          <a href="abot.html" class="on">Tentang</a>
+          <a href="index2.html">EN</a>
+          <a href="contacts.html" class="cta">📞 Hubungi Kami</a>
+        </nav>
+        <button class="mbtn" onclick="toggleMenu()">☰</button>
       </div>
-      <div class="profil-txt rv">
-        <h2>Siapa Kami?</h2>
-        <p>CV. ARV Logam adalah usaha pengepul dan supplier scrap logam yang berpusat di Juwana, Pati, Jawa Tengah. Kami membeli scrap dari masyarakat umum, pedagang, dan usaha industri — kemudian memilah, menggrading, dan memasoknya ke pabrik maupun industri peleburan logam.</p>
-        <p>Prinsip kami sederhana: <strong>timbang jujur, harga adil, bayar langsung</strong>. Tidak ada proses yang rumit.</p>
-        <ul class="chk-list">
-          <li><span class="ic">✓</span>Beli scrap kuningan, aluminium, tembaga, dan stainless</li>
-          <li><span class="ic">✓</span>Harga transparan, mengikuti harga pasar</li>
-          <li><span class="ic">✓</span>Bayar di tempat setelah timbang dan sepakat</li>
-          <li><span class="ic">✓</span>Material dipilah dan dicek sebelum dijual ke pabrik</li>
-          <li><span class="ic">✓</span>Melayani dari penjual eceran sampai tonase besar</li>
-          <li><span class="ic">✓</span>Bisa jemput ke lokasi untuk kuantitas tertentu</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+      <nav class="mnav" id="mnav">
+        <a href="index.html">🏠 Beranda</a>
+        <a href="index.html#harga" onclick="closeMenu()">💰 Harga Beli</a>
+        <a href="abot.html">ℹ️ Tentang Kami</a>
+        <a href="index2.html">🌐 English</a>
+        <a href="contacts.html" class="cta">📞 Hubungi Kami</a>
+      </nav>
+    </header>
 
-<!-- NILAI KAMI -->
-<section class="sec" style="background:var(--white)">
-  <div class="wrap">
-    <div class="sc rv">
-      <div class="sh">🤝 Nilai yang Kami Pegang</div>
-      <div class="ss">Ini yang jadi dasar kerja kami setiap hari.</div>
-    </div>
-    <div class="val-grid">
-      <div class="vc rv">
-        <div class="vc-ico">⚖️</div>
-        <div class="vc-t">Timbangan Jujur</div>
-        <div class="vc-d">Timbang bareng, tidak ada yang disembunyikan. Berat dan harga ditunjukkan langsung di depan penjual.</div>
+    <!-- PAGE HERO -->
+    <section class="phero">
+      <div class="wrap">
+        <div class="rv">
+          <div class="phero-pill">📍 Juwana, Pati — Jawa Tengah</div>
+        </div>
+        <h1 class="rv">Tentang CV. ARV Logam</h1>
+        <p class="rv">
+          Pengepul dan supplier scrap logam yang sudah dipercaya. Kami beli dari
+          masyarakat, pilah dengan teliti, dan pasok ke industri.
+        </p>
       </div>
-      <div class="vc rv">
-        <div class="vc-ico">💸</div>
-        <div class="vc-t">Bayar di Tempat</div>
-        <div class="vc-d">Tidak ada istilah "nanti ya". Setelah sepakat harga, langsung bayar saat itu juga — tunai atau transfer.</div>
-      </div>
-      <div class="vc rv">
-        <div class="vc-ico">🧪</div>
-        <div class="vc-t">Sortir Teliti</div>
-        <div class="vc-d">Setiap barang dipilah dengan cermat supaya harga yang diberikan benar-benar sesuai kualitas barang.</div>
-      </div>
-      <div class="vc rv">
-        <div class="vc-ico">🤲</div>
-        <div class="vc-t">Layani Semua</div>
-        <div class="vc-d">Dari penjual dengan 2 kg sampai yang punya truk penuh — semua dilayani dengan hormat dan cepat.</div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- CARA KERJA -->
-<section class="sec">
-  <div class="wrap">
-    <div class="rv">
-      <div class="sh">📋 Bagaimana Kami Bekerja</div>
-      <div class="ss">Dari terima barang sampai bayar — prosesnya jelas dan tidak berbelit.</div>
-    </div>
-    <div class="steps rv">
-      <div class="sr">
-        <div class="sl-col"><div class="sc-dot">1</div><div class="sc-line"></div></div>
-        <div class="sb"><div class="sb-t">Terima & Catat Barang</div><div class="sb-d">Barang yang masuk langsung dicatat jenis dan kondisinya. Dipisahkan dari awal supaya tidak tercampur.</div></div>
-      </div>
-      <div class="sr">
-        <div class="sl-col"><div class="sc-dot">2</div><div class="sc-line"></div></div>
-        <div class="sb"><div class="sb-t">Pilah & Grading</div><div class="sb-d">Material dikelompokkan berdasarkan jenis dan kualitas. Kotoran dan benda asing dibuang agar harga lebih akurat.</div></div>
-      </div>
-      <div class="sr">
-        <div class="sl-col"><div class="sc-dot">3</div><div class="sc-line"></div></div>
-        <div class="sb"><div class="sb-t">Timbang & Sepakati Harga</div><div class="sb-d">Ditimbang bersama, harga disesuaikan dengan grade barang. Penjual bisa lihat langsung prosesnya.</div></div>
-      </div>
-      <div class="sr">
-        <div class="sl-col"><div class="sc-dot">4</div><div class="sc-line"></div></div>
-        <div class="sb"><div class="sb-t">Bayar Langsung</div><div class="sb-d">Setelah sepakat, langsung bayar. Tidak ada nunggu, tidak ada potongan tersembunyi, tidak ribet.</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MATERIAL -->
-<section class="sec" style="background:var(--white)">
-  <div class="wrap">
-    <div class="sc rv">
-      <div class="sh">📦 Scrap yang Kami Beli</div>
-      <div class="ss">Empat jenis logam utama yang kami terima setiap hari.</div>
-    </div>
-    <div class="mat-grid">
-      <div class="mc rv">
-        <div class="mc-bg" style="background-image:url('./img/poto4.jpg')"></div>
-        <div class="mc-body">
-          <div class="mc-name">🟡 Kuningan</div>
-          <div class="mc-desc">Semua jenis scrap kuningan — bron, plat, gram, RD, dan lainnya</div>
-          <div class="mc-tags"><span class="mc-tag">Bron</span><span class="mc-tag">Plat KN</span><span class="mc-tag">Gram</span><span class="mc-tag">RD KN</span></div>
+    <!-- STATS -->
+    <div class="sstrip">
+      <div class="srow">
+        <div class="si rv">
+          <div class="sn">4+</div>
+          <div class="sl">Jenis Logam</div>
+        </div>
+        <div class="si rv">
+          <div class="sn">✓</div>
+          <div class="sl">Bayar Langsung</div>
+        </div>
+        <div class="si rv">
+          <div class="sn">QC</div>
+          <div class="sl">Sortir & Grading</div>
+        </div>
+        <div class="si rv">
+          <div class="sn">🚚</div>
+          <div class="sl">Bisa Antar-Jemput</div>
         </div>
       </div>
-      <div class="mc rv">
-        <div class="mc-bg" style="background-image:url('./img/poto5.jpg')"></div>
-        <div class="mc-body">
-          <div class="mc-name">⚪ Aluminium</div>
-          <div class="mc-desc">AK, kusen, siku, pelek, blok, panci, dan puluhan jenis lain</div>
-          <div class="mc-tags"><span class="mc-tag">AK</span><span class="mc-tag">Kusen</span><span class="mc-tag">Pelek</span><span class="mc-tag">Blok</span></div>
+    </div>
+
+    <!-- PROFIL -->
+    <section class="sec">
+      <div class="wrap">
+        <div class="profil-grid">
+          <div class="profil-img rv">
+            <img src="./img/gudang1.jpg" alt="Gudang ARV Logam" />
+          </div>
+          <div class="profil-txt rv">
+            <h2>Siapa Kami?</h2>
+            <p>
+              CV. ARV Logam adalah usaha pengepul dan supplier scrap logam yang
+              berpusat di Juwana, Pati, Jawa Tengah. Kami membeli scrap dari
+              masyarakat umum, pedagang, dan usaha industri — kemudian memilah,
+              menggrading, dan memasoknya ke pabrik maupun industri peleburan
+              logam.
+            </p>
+            <p>
+              Prinsip kami sederhana:
+              <strong>timbang jujur, harga adil, bayar langsung</strong>. Tidak
+              ada proses yang rumit.
+            </p>
+            <ul class="chk-list">
+              <li>
+                <span class="ic">✓</span>Beli scrap kuningan, aluminium,
+                tembaga, dan stainless
+              </li>
+              <li>
+                <span class="ic">✓</span>Harga transparan, mengikuti harga pasar
+              </li>
+              <li>
+                <span class="ic">✓</span>Bayar di tempat setelah timbang dan
+                sepakat
+              </li>
+              <li>
+                <span class="ic">✓</span>Material dipilah dan dicek sebelum
+                dijual ke pabrik
+              </li>
+              <li>
+                <span class="ic">✓</span>Melayani dari penjual eceran sampai
+                tonase besar
+              </li>
+              <li>
+                <span class="ic">✓</span>Bisa jemput ke lokasi untuk kuantitas
+                tertentu
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="mc rv">
-        <div class="mc-bg" style="background-image:url('./img/poto3.jpg')"></div>
-        <div class="mc-body">
-          <div class="mc-name">🟤 Tembaga</div>
-          <div class="mc-desc">TM 205, BC, TB, telkom, kawat, dan semua jenis tembaga</div>
-          <div class="mc-tags"><span class="mc-tag">TM</span><span class="mc-tag">BC</span><span class="mc-tag">TB</span><span class="mc-tag">Telkom</span></div>
+    </section>
+
+    <!-- NILAI KAMI -->
+    <section class="sec" style="background: var(--white)">
+      <div class="wrap">
+        <div class="sc rv">
+          <div class="sh">🤝 Nilai yang Kami Pegang</div>
+          <div class="ss">Ini yang jadi dasar kerja kami setiap hari.</div>
+        </div>
+        <div class="val-grid">
+          <div class="vc rv">
+            <div class="vc-ico">⚖️</div>
+            <div class="vc-t">Timbangan Jujur</div>
+            <div class="vc-d">
+              Timbang bareng, tidak ada yang disembunyikan. Berat dan harga
+              ditunjukkan langsung di depan penjual.
+            </div>
+          </div>
+          <div class="vc rv">
+            <div class="vc-ico">💸</div>
+            <div class="vc-t">Bayar di Tempat</div>
+            <div class="vc-d">
+              Tidak ada istilah "nanti ya". Setelah sepakat harga, langsung
+              bayar saat itu juga — tunai atau transfer.
+            </div>
+          </div>
+          <div class="vc rv">
+            <div class="vc-ico">🧪</div>
+            <div class="vc-t">Sortir Teliti</div>
+            <div class="vc-d">
+              Setiap barang dipilah dengan cermat supaya harga yang diberikan
+              benar-benar sesuai kualitas barang.
+            </div>
+          </div>
+          <div class="vc rv">
+            <div class="vc-ico">🤲</div>
+            <div class="vc-t">Layani Semua</div>
+            <div class="vc-d">
+              Dari penjual dengan 2 kg sampai yang punya truk penuh — semua
+              dilayani dengan hormat dan cepat.
+            </div>
+          </div>
         </div>
       </div>
-      <div class="mc rv">
-        <div class="mc-bg" style="background-image:url('./img/poto1.jpg')"></div>
-        <div class="mc-body">
-          <div class="mc-name">🔘 Stainless & Lainnya</div>
-          <div class="mc-desc">Stainless monel, timah, dan aki bekas juga kami terima</div>
-          <div class="mc-tags"><span class="mc-tag">Monel</span><span class="mc-tag">India</span><span class="mc-tag">Timah</span><span class="mc-tag">Aki</span></div>
+    </section>
+
+    <!-- CARA KERJA -->
+    <section class="sec">
+      <div class="wrap">
+        <div class="rv">
+          <div class="sh">📋 Bagaimana Kami Bekerja</div>
+          <div class="ss">
+            Dari terima barang sampai bayar — prosesnya jelas dan tidak
+            berbelit.
+          </div>
+        </div>
+        <div class="steps rv">
+          <div class="sr">
+            <div class="sl-col">
+              <div class="sc-dot">1</div>
+              <div class="sc-line"></div>
+            </div>
+            <div class="sb">
+              <div class="sb-t">Terima & Catat Barang</div>
+              <div class="sb-d">
+                Barang yang masuk langsung dicatat jenis dan kondisinya.
+                Dipisahkan dari awal supaya tidak tercampur.
+              </div>
+            </div>
+          </div>
+          <div class="sr">
+            <div class="sl-col">
+              <div class="sc-dot">2</div>
+              <div class="sc-line"></div>
+            </div>
+            <div class="sb">
+              <div class="sb-t">Pilah & Grading</div>
+              <div class="sb-d">
+                Material dikelompokkan berdasarkan jenis dan kualitas. Kotoran
+                dan benda asing dibuang agar harga lebih akurat.
+              </div>
+            </div>
+          </div>
+          <div class="sr">
+            <div class="sl-col">
+              <div class="sc-dot">3</div>
+              <div class="sc-line"></div>
+            </div>
+            <div class="sb">
+              <div class="sb-t">Timbang & Sepakati Harga</div>
+              <div class="sb-d">
+                Ditimbang bersama, harga disesuaikan dengan grade barang.
+                Penjual bisa lihat langsung prosesnya.
+              </div>
+            </div>
+          </div>
+          <div class="sr">
+            <div class="sl-col">
+              <div class="sc-dot">4</div>
+              <div class="sc-line"></div>
+            </div>
+            <div class="sb">
+              <div class="sb-t">Bayar Langsung</div>
+              <div class="sb-d">
+                Setelah sepakat, langsung bayar. Tidak ada nunggu, tidak ada
+                potongan tersembunyi, tidak ribet.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- WHY US -->
-<section class="sec">
-  <div class="wrap">
-    <div class="rv">
-      <div class="sh">👍 Kenapa Pilih ARV Logam?</div>
-      <div class="ss">Ini yang membuat pelanggan kami terus kembali.</div>
-    </div>
-    <div class="why-grid">
-      <div class="wc rv"><div class="wc-ico">⚖️</div><div class="wc-t">Timbangan Akurat</div><div class="wc-d">Timbang dilakukan terbuka dan bisa disaksikan langsung. Tidak ada manipulasi berat.</div></div>
-      <div class="wc rv"><div class="wc-ico">💰</div><div class="wc-t">Harga Kompetitif</div><div class="wc-d">Harga mengikuti kondisi pasar hari ini. Kami usahakan selalu memberikan harga paling baik.</div></div>
-      <div class="wc rv"><div class="wc-ico">⚡</div><div class="wc-t">Proses Cepat</div><div class="wc-d">Datang, timbang, sepakat, langsung bayar. Selesai dalam hitungan menit, tidak perlu antri lama.</div></div>
-      <div class="wc rv"><div class="wc-ico">🚚</div><div class="wc-t">Bisa Jemput</div><div class="wc-d">Tidak punya kendaraan tapi punya scrap banyak? Kami bisa jemput. Hubungi dulu untuk jadwal.</div></div>
-      <div class="wc rv"><div class="wc-ico">📞</div><div class="wc-t">Mudah Dihubungi</div><div class="wc-d">WA, telepon, atau langsung datang. Kami responsif dan siap bantu jawab pertanyaan kamu.</div></div>
-      <div class="wc rv"><div class="wc-ico">🤲</div><div class="wc-t">Terima Semua</div><div class="wc-d">Penjual eceran maupun yang punya tonase besar — semua dilayani dengan pelayanan yang sama baiknya.</div></div>
-    </div>
-  </div>
-</section>
+    <!-- MATERIAL -->
+    <section class="sec" style="background: var(--white)">
+      <div class="wrap">
+        <div class="sc rv">
+          <div class="sh">📦 Scrap yang Kami Beli</div>
+          <div class="ss">
+            Empat jenis logam utama yang kami terima setiap hari.
+          </div>
+        </div>
+        <div class="mat-grid">
+          <div class="mc rv">
+            <div
+              class="mc-bg"
+              style="background-image: url(&quot;./img/poto4.jpg&quot;)"
+            ></div>
+            <div class="mc-body">
+              <div class="mc-name">🟡 Kuningan</div>
+              <div class="mc-desc">
+                Semua jenis scrap kuningan — bron, plat, gram, RD, dan lainnya
+              </div>
+              <div class="mc-tags">
+                <span class="mc-tag">Bron</span
+                ><span class="mc-tag">Plat KN</span
+                ><span class="mc-tag">Gram</span
+                ><span class="mc-tag">RD KN</span>
+              </div>
+            </div>
+          </div>
+          <div class="mc rv">
+            <div
+              class="mc-bg"
+              style="background-image: url(&quot;./img/poto5.jpg&quot;)"
+            ></div>
+            <div class="mc-body">
+              <div class="mc-name">⚪ Aluminium</div>
+              <div class="mc-desc">
+                AK, kusen, siku, pelek, blok, panci, dan puluhan jenis lain
+              </div>
+              <div class="mc-tags">
+                <span class="mc-tag">AK</span><span class="mc-tag">Kusen</span
+                ><span class="mc-tag">Pelek</span
+                ><span class="mc-tag">Blok</span>
+              </div>
+            </div>
+          </div>
+          <div class="mc rv">
+            <div
+              class="mc-bg"
+              style="background-image: url(&quot;./img/poto3.jpg&quot;)"
+            ></div>
+            <div class="mc-body">
+              <div class="mc-name">🟤 Tembaga</div>
+              <div class="mc-desc">
+                TM 205, BC, TB, telkom, kawat, dan semua jenis tembaga
+              </div>
+              <div class="mc-tags">
+                <span class="mc-tag">TM</span><span class="mc-tag">BC</span
+                ><span class="mc-tag">TB</span
+                ><span class="mc-tag">Telkom</span>
+              </div>
+            </div>
+          </div>
+          <div class="mc rv">
+            <div
+              class="mc-bg"
+              style="background-image: url(&quot;./img/poto1.jpg&quot;)"
+            ></div>
+            <div class="mc-body">
+              <div class="mc-name">🔘 Stainless & Lainnya</div>
+              <div class="mc-desc">
+                Stainless monel, timah, dan aki bekas juga kami terima
+              </div>
+              <div class="mc-tags">
+                <span class="mc-tag">Monel</span
+                ><span class="mc-tag">India</span
+                ><span class="mc-tag">Timah</span
+                ><span class="mc-tag">Aki</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- CTA -->
-<section class="cta-sec">
-  <div class="wrap">
-    <div class="cta-in rv">
-      <h2>Ada Scrap yang Mau Dijual?</h2>
-      <p>Gratis konsultasi, tidak ada biaya apapun. Tanya harga sekarang!</p>
-      <div class="cta-btns">
-        <a class="btn btn-w" href="https://wa.me/6281229226125?text=Halo+ARV+Logam%2C+saya+mau+jual+scrap" target="_blank">💬 WhatsApp Sekarang</a>
-        <a class="btn btn-g" href="tel:+6281229226125">📞 Telepon</a>
-        <a class="btn btn-g" href="contacts.html">✉️ Kirim Pesan</a>
+    <!-- WHY US -->
+    <section class="sec">
+      <div class="wrap">
+        <div class="rv">
+          <div class="sh">👍 Kenapa Pilih ARV Logam?</div>
+          <div class="ss">Ini yang membuat pelanggan kami terus kembali.</div>
+        </div>
+        <div class="why-grid">
+          <div class="wc rv">
+            <div class="wc-ico">⚖️</div>
+            <div class="wc-t">Timbangan Akurat</div>
+            <div class="wc-d">
+              Timbang dilakukan terbuka dan bisa disaksikan langsung. Tidak ada
+              manipulasi berat.
+            </div>
+          </div>
+          <div class="wc rv">
+            <div class="wc-ico">💰</div>
+            <div class="wc-t">Harga Kompetitif</div>
+            <div class="wc-d">
+              Harga mengikuti kondisi pasar hari ini. Kami usahakan selalu
+              memberikan harga paling baik.
+            </div>
+          </div>
+          <div class="wc rv">
+            <div class="wc-ico">⚡</div>
+            <div class="wc-t">Proses Cepat</div>
+            <div class="wc-d">
+              Datang, timbang, sepakat, langsung bayar. Selesai dalam hitungan
+              menit, tidak perlu antri lama.
+            </div>
+          </div>
+          <div class="wc rv">
+            <div class="wc-ico">🚚</div>
+            <div class="wc-t">Bisa Jemput</div>
+            <div class="wc-d">
+              Tidak punya kendaraan tapi punya scrap banyak? Kami bisa jemput.
+              Hubungi dulu untuk jadwal.
+            </div>
+          </div>
+          <div class="wc rv">
+            <div class="wc-ico">📞</div>
+            <div class="wc-t">Mudah Dihubungi</div>
+            <div class="wc-d">
+              WA, telepon, atau langsung datang. Kami responsif dan siap bantu
+              jawab pertanyaan kamu.
+            </div>
+          </div>
+          <div class="wc rv">
+            <div class="wc-ico">🤲</div>
+            <div class="wc-t">Terima Semua</div>
+            <div class="wc-d">
+              Penjual eceran maupun yang punya tonase besar — semua dilayani
+              dengan pelayanan yang sama baiknya.
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- FOOTER -->
-<footer class="ft">
-  <div class="wrap">
-    <div class="ft-grid">
-      <div>
-        <div class="ft-brand">CV. ARV LOGAM</div>
-        <div class="ft-desc">Pengepul dan supplier scrap logam. Beli harga terbaik, bayar langsung, proses rapi.<br/><br/>📍 JL. Ki Hajar Dewantoro, Growong Kidul, Juwana, Pati</div>
+    <!-- CTA -->
+    <section class="cta-sec">
+      <div class="wrap">
+        <div class="cta-in rv">
+          <h2>Ada Scrap yang Mau Dijual?</h2>
+          <p>
+            Gratis konsultasi, tidak ada biaya apapun. Tanya harga sekarang!
+          </p>
+          <div class="cta-btns">
+            <a
+              class="btn btn-w"
+              href="https://wa.me/6281229226125?text=Halo+ARV+Logam%2C+saya+mau+jual+scrap"
+              target="_blank"
+              >💬 WhatsApp Sekarang</a
+            >
+            <a class="btn btn-g" href="tel:+6281229226125">📞 Telepon</a>
+            <a class="btn btn-g" href="contacts.html">✉️ Kirim Pesan</a>
+          </div>
+        </div>
       </div>
-      <div>
-        <div class="ft-hd">Tautan</div>
-        <a class="ft-a" href="index.html">Beranda</a>
-        <a class="ft-a" href="index.html#harga">Harga Beli</a>
-        <a class="ft-a" href="abot.html">Tentang Kami</a>
-        <a class="ft-a" href="contacts.html">Kontak</a>
-        <a class="ft-a" href="index2.html">English</a>
-      </div>
-      <div>
-        <div class="ft-hd">Hubungi Kami</div>
-        <a class="ft-a" href="https://wa.me/6281229226125" target="_blank">💬 WhatsApp</a>
-        <a class="ft-a" href="tel:+6281229226125">📞 0812 2922 6125</a>
-        <a class="ft-a" href="tel:+6287827730791">📞 0878 2773 0791</a>
-        <a class="ft-a" href="mailto:arvlogam@gmail.com">📧 arvlogam@gmail.com</a>
-        <a class="ft-a" href="https://www.instagram.com/arvlogam" target="_blank">📸 Instagram</a>
-      </div>
-    </div>
-    <div class="ft-btm">© <span id="yr"></span> CV. ARV Logam. All rights reserved.</div>
-  </div>
-</footer>
+    </section>
 
-<script>
-document.getElementById('yr').textContent=new Date().getFullYear();
-function toggleMenu(){document.getElementById('mnav').classList.toggle('open')}
-function closeMenu(){document.getElementById('mnav').classList.remove('open')}
-var io=new IntersectionObserver(function(e){e.forEach(function(n){if(n.isIntersecting){n.target.classList.add('show');io.unobserve(n.target)}})},{threshold:.08});
-document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
-</script>
-</body>
+    <!-- FOOTER -->
+    <footer class="ft">
+      <div class="wrap">
+        <div class="ft-grid">
+          <div>
+            <div class="ft-brand">CV. ARV LOGAM</div>
+            <div class="ft-desc">
+              Pengepul dan supplier scrap logam. Beli harga terbaik, bayar
+              langsung, proses rapi.<br /><br />📍 JL. Ki Hajar Dewantoro,
+              Growong Kidul, Juwana, Pati
+            </div>
+          </div>
+          <div>
+            <div class="ft-hd">Tautan</div>
+            <a class="ft-a" href="index.html">Beranda</a>
+            <a class="ft-a" href="index.html#harga">Harga Beli</a>
+            <a class="ft-a" href="abot.html">Tentang Kami</a>
+            <a class="ft-a" href="contacts.html">Kontak</a>
+            <a class="ft-a" href="index2.html">English</a>
+          </div>
+          <div>
+            <div class="ft-hd">Hubungi Kami</div>
+            <a class="ft-a" href="https://wa.me/6281229226125" target="_blank"
+              >💬 WhatsApp</a
+            >
+            <a class="ft-a" href="tel:+6281229226125">📞 0812 2922 6125</a>
+            <a class="ft-a" href="tel:+6287827730791">📞 0878 2773 0791</a>
+            <a class="ft-a" href="mailto:arvlogam@gmail.com"
+              >📧 arvlogam@gmail.com</a
+            >
+            <a
+              class="ft-a"
+              href="https://www.instagram.com/arvlogam"
+              target="_blank"
+              >📸 Instagram</a
+            >
+          </div>
+        </div>
+        <div class="ft-btm">
+          © <span id="yr"></span> CV. ARV Logam. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("yr").textContent = new Date().getFullYear();
+      function toggleMenu() {
+        document.getElementById("mnav").classList.toggle("open");
+      }
+      function closeMenu() {
+        document.getElementById("mnav").classList.remove("open");
+      }
+      var io = new IntersectionObserver(
+        function (e) {
+          e.forEach(function (n) {
+            if (n.isIntersecting) {
+              n.target.classList.add("show");
+              io.unobserve(n.target);
+            }
+          });
+        },
+        { threshold: 0.08 },
+      );
+      document.querySelectorAll(".rv").forEach(function (el) {
+        io.observe(el);
+      });
+    </script>
+  </body>
 </html>
