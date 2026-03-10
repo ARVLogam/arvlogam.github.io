@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tentang — CV. ARV Logam</title>
+    <meta
+      name="description"
+      content="Profil CV. ARV Logam – pengepul dan pemasok scrap logam untuk kebutuhan industri. Fokus pada grading, QC, dan pasokan yang stabil."
+    />
+    <link rel="icon" href="./img/logo2.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* Enhanced About Page Styles */
+      .brand img {
+        border: 0 !important;
+        outline: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+      }
+
+      /* Hero Banner with Overlay */
+      .about-hero {
+        position: relative;
+        padding: 80px 0 50px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      }
+
+      .about-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: 
+          radial-gradient(circle at 20% 20%, rgba(239, 68, 68, 0.15), transparent 50%),
+          radial-gradient(circle at 80% 80%, rgba(200, 30, 30, 0.12), transparent 50%),
+          url('./img/gudang1.jpg') center/cover no-repeat;
+        opacity: 0.25;
+        z-index: 0;
+      }
+
+      .about-hero .container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .about-hero h1 {
+        color: #ffffff;
+        margin-bottom: 16px;
+        text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .about-hero p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 18px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .about-hero .badge {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.95);
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      /* Stats Bar */
+      .stats-bar {
+        background: linear-gradient(135deg, var(--brand), var(--brand-2));
+        padding: 40px 0;
+        margin: -30px 0 50px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .stats-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .stat-item {
+        text-align: center;
+        color: white;
+      }
+
+      .stat-number {
+        font-size: 42px;
+        font-weight: 900;
+        line-height: 1;
+        margin-bottom: 8px;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .stat-label {
+        font-size: 14px;
+        opacity: 0.95;
+        font-weight: 600;
+      }
+
+      /* Company Values Grid */
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        margin-top: 30px;
+      }
+
+      .value-card {
+        background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(200, 30, 30, 0.05));
+        border: 2px solid rgba(239, 68, 68, 0.2);
+        border-radius: var(--radius);
+        padding: 32px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .value-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(circle, rgba(239, 68, 68, 0.1), transparent);
+        border-radius: 50%;
+        transform: translate(30%, -30%);
+      }
+
+      .value-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 50px rgba(239, 68, 68, 0.15);
+        border-color: rgba(239, 68, 68, 0.4);
+      }
+
+      .value-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--brand), var(--brand-2));
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        margin-bottom: 20px;
+        box-shadow: 0 10px 25px rgba(239, 68, 68, 0.3);
+      }
+
+      .value-card h3 {
+        font-size: 24px;
+        margin-bottom: 12px;
+        color: var(--text);
+      }
+
+      .value-card p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      /* Timeline Process */
+      .timeline {
+        position: relative;
+        padding: 40px 0;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(180deg, var(--brand), var(--brand-2));
+        transform: translateX(-50%);
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 1fr 60px 1fr;
+        gap: 30px;
+        margin-bottom: 50px;
+        align-items: center;
+      }
+
+      .timeline-item:nth-child(even) .timeline-content:first-child {
+        order: 3;
+      }
+
+      .timeline-content {
+        background: var(--surface-2);
+        border: 1px solid var(--stroke);
+        border-radius: var(--radius);
+        padding: 24px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+      }
+
+      .timeline-content h4 {
+        font-size: 18px;
+        margin: 0 0 8px;
+        color: var(--brand);
+      }
+
+      .timeline-content p {
+        margin: 0;
+        font-size: 14px;
+      }
+
+      .timeline-dot {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--brand), var(--brand-2));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+        font-size: 20px;
+        color: white;
+        box-shadow: 0 0 0 8px rgba(239, 68, 68, 0.15);
+        position: relative;
+        z-index: 2;
+      }
+
+      .timeline-spacer {
+        display: none;
+      }
+
+      /* Material Showcase */
+      .material-showcase {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        margin-top: 30px;
+      }
+
+      .material-card {
+        background: var(--surface-2);
+        border: 1px solid var(--stroke);
+        border-radius: var(--radius);
+        overflow: hidden;
+        position: relative;
+        height: 280px;
+        transition: transform 0.3s ease;
+      }
+
+      .material-card:hover {
+        transform: scale(1.02);
+      }
+
+      .material-image {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .material-image::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+      }
+
+      .material-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 24px;
+        color: white;
+        z-index: 1;
+      }
+
+      .material-info h4 {
+        font-size: 24px;
+        margin: 0 0 8px;
+        color: white;
+      }
+
+      .material-specs {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+      }
+
+      .spec-tag {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        color: white;
+      }
+
+      /* CTA Section */
+      .cta-section {
+        background: linear-gradient(135deg, var(--brand), var(--brand-2));
+        padding: 60px 0;
+        text-align: center;
+        margin-top: 80px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: 
+          radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1), transparent 50%),
+          radial-gradient(circle at 70% 50%, rgba(255, 255, 255, 0.05), transparent 50%);
+      }
+
+      .cta-section .container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta-section h2 {
+        color: white;
+        margin-bottom: 16px;
+      }
+
+      .cta-section p {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn-white {
+        background: white;
+        color: var(--brand);
+        border: 2px solid white;
+      }
+
+      .btn-white:hover {
+        background: rgba(255, 255, 255, 0.9);
+        transform: translateY(-3px);
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+      }
+
+      .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-3px);
+      }
+
+      /* Responsive */
+      @media (max-width: 980px) {
+        .stats-container {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+
+        .values-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .timeline::before {
+          left: 30px;
+        }
+
+        .timeline-item {
+          grid-template-columns: 60px 1fr;
+          gap: 20px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content:first-child {
+          order: 1;
+        }
+
+        .timeline-spacer {
+          display: block;
+        }
+
+        .material-showcase {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .about-hero {
+          padding: 60px 0 40px;
+        }
+
+        .about-hero h1 {
+          font-size: 32px;
+        }
+
+        .stats-bar {
+          padding: 30px 0;
+          margin: -20px 0 40px;
+        }
+
+        .stats-container {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        .stat-number {
+          font-size: 36px;
+        }
+
+        .timeline-dot {
+          width: 50px;
+          height: 50px;
+          font-size: 18px;
+        }
+
+        .cta-section {
+          padding: 50px 0;
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+          align-items: stretch;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container bar">
+        <a class="brand" href="index.html">
+          <img src="./img/logo2.png" alt="Logo ARV Logam" />
+          <div>
+            <div class="name">CV. ARV LOGAM</div>
+            <div class="sub">Rongsok & Metal Supply</div>
+          </div>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Buka menu"
+          data-menu-toggle
+        >
+          ☰
+        </button>
+
+        <nav class="nav" data-nav>
+          <a href="index.html">Beranda</a>
+          <a
+            href="abot.html"
+            aria-current="page"
+            style="background: rgba(255, 255, 255, 0.1)"
+            >Tentang</a
+          >
+          <a href="contacts.html">Kontak</a>
+          <a class="lang" href="abouten.html" title="English">EN</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="about-hero">
+      <div class="container" style="text-align: center">
+        <div class="reveal">
+          <span class="badge">
+            🏭 Industrial Supplier • ✅ ISO Ready • 🚚 Logistics Partner
+          </span>
+          <h1>
+            Mitra Terpercaya untuk<br>Pasokan Scrap Logam Industri
+          </h1>
+          <p>
+            CV. ARV Logam adalah pengepul dan pemasok scrap logam profesional yang melayani kebutuhan industri manufaktur, peleburan, dan pengolahan logam di seluruh Indonesia. Dengan komitmen pada kualitas, konsistensi, dan ketepatan waktu, kami membantu perusahaan besar mengoptimalkan supply chain material mereka.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+      <div class="stats-container">
+        <div class="stat-item reveal">
+          <div class="stat-number">4+</div>
+          <div class="stat-label">Jenis Material Utama</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Quality Assurance</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Customer Support</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number">95%</div>
+          <div class="stat-label">On-Time Delivery</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Profile -->
+    <section class="section">
+      <div class="container">
+        <div class="reveal" style="text-align: center; max-width: 800px; margin: 0 auto 50px">
+          <h2>Profil Perusahaan</h2>
+          <p>
+            Didirikan dengan visi menjadi supplier scrap logam terdepan di Indonesia, CV. ARV Logam menghadirkan solusi pasokan material yang profesional, transparan, dan berkelanjutan untuk mendukung pertumbuhan industri manufaktur nasional.
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card reveal">
+            <div class="value-icon">🎯</div>
+            <h3>Visi Kami</h3>
+            <p>
+              Menjadi mitra supply scrap logam terpercaya yang menghadirkan standar kualitas internasional, proses yang transparan, dan komitmen keberlanjutan untuk mendukung kemajuan industri Indonesia.
+            </p>
+          </div>
+
+          <div class="value-card reveal">
+            <div class="value-icon">🧭</div>
+            <h3>Misi Kami</h3>
+            <p>
+              Menyediakan scrap logam berkualitas tinggi dengan sistem grading yang jelas, quality control yang ketat, serta layanan logistik yang handal untuk memenuhi kebutuhan supply chain industri modern.
+            </p>
+          </div>
+
+          <div class="value-card reveal">
+            <div class="value-icon">⚡</div>
+            <h3>Komitmen Kualitas</h3>
+            <p>
+              Setiap batch material melalui proses sortasi, grading, dan inspeksi ketat untuk memastikan konsistensi spesifikasi, meminimalkan kontaminasi, dan memenuhi standar industri yang Anda butuhkan.
+            </p>
+          </div>
+
+          <div class="value-card reveal">
+            <div class="value-icon">🤝</div>
+            <h3>Kemitraan Jangka Panjang</h3>
+            <p>
+              Kami tidak hanya menjual material, tetapi membangun kemitraan strategis dengan menyesuaikan SOP, dokumentasi, dan jadwal pengiriman sesuai kebutuhan operasional perusahaan Anda.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="section" style="padding-top: 80px">
+      <div class="container">
+        <div class="reveal" style="text-align: center; max-width: 800px; margin: 0 auto 60px">
+          <h2>Proses Kerja Profesional</h2>
+          <p>
+            Sistem kerja terstandar yang memastikan material berkualitas tinggi dan pengiriman tepat waktu untuk mendukung kontinuitas produksi Anda.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-content">
+              <h4>Intake & Pencatatan</h4>
+              <p>
+                Penerimaan material dengan pencatatan detail jenis, kondisi, dan sumber. Pemisahan awal untuk mencegah kontaminasi silang sejak awal proses.
+              </p>
+            </div>
+            <div class="timeline-dot">01</div>
+            <div class="timeline-spacer"></div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-spacer"></div>
+            <div class="timeline-dot">02</div>
+            <div class="timeline-content">
+              <h4>Sortasi & Grading</h4>
+              <p>
+                Pengelompokan material berdasarkan grade dan spesifikasi. Kontrol ketat terhadap kontaminasi (plastik, karet, material asing) untuk menjaga kemurnian.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-content">
+              <h4>Quality Control</h4>
+              <p>
+                Inspeksi visual menyeluruh, penimbangan akurat, dan dokumentasi foto untuk setiap batch. Memastikan material sesuai spesifikasi yang disepakati.
+              </p>
+            </div>
+            <div class="timeline-dot">03</div>
+            <div class="timeline-spacer"></div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-spacer"></div>
+            <div class="timeline-dot">04</div>
+            <div class="timeline-content">
+              <h4>Packing & Pengiriman</h4>
+              <p>
+                Packing rapi sesuai standar (karung, pallet, jumbo bag). Pengiriman terjadwal dengan tracking real-time dan koordinasi receiving yang jelas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Materials Showcase -->
+    <section class="section" style="background: var(--bg); padding: 80px 0">
+      <div class="container">
+        <div class="reveal" style="text-align: center; max-width: 800px; margin: 0 auto 50px">
+          <h2>Material Unggulan</h2>
+          <p>
+            Kami menangani berbagai jenis scrap logam dengan standar kualitas tinggi untuk mendukung proses produksi industri Anda.
+          </p>
+        </div>
+
+        <div class="material-showcase">
+          <div class="material-card reveal">
+            <div class="material-image" style="background-image: url('./img/poto4.jpg')"></div>
+            <div class="material-info">
+              <h4>🥉 Kuningan Scrap</h4>
+              <p style="color: rgba(255, 255, 255, 0.9); font-size: 14px">
+                Grade premium untuk industri peleburan dan manufaktur
+              </p>
+              <div class="material-specs">
+                <span class="spec-tag">High Grade</span>
+                <span class="spec-tag">Low Contamination</span>
+                <span class="spec-tag">Sorted</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="material-card reveal">
+            <div class="material-image" style="background-image: url('./img/poto5.jpg')"></div>
+            <div class="material-info">
+              <h4>⚪ Aluminium Scrap</h4>
+              <p style="color: rgba(255, 255, 255, 0.9); font-size: 14px">
+                Berbagai grade untuk kebutuhan daur ulang dan peleburan
+              </p>
+              <div class="material-specs">
+                <span class="spec-tag">Multi Grade</span>
+                <span class="spec-tag">Clean</span>
+                <span class="spec-tag">Ready to Process</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="material-card reveal">
+            <div class="material-image" style="background-image: url('./img/poto3.jpg')"></div>
+            <div class="material-info">
+              <h4>🔶 Tembaga Scrap</h4>
+              <p style="color: rgba(255, 255, 255, 0.9); font-size: 14px">
+                Material berkualitas tinggi untuk industri kabel dan elektronik
+              </p>
+              <div class="material-specs">
+                <span class="spec-tag">Bright Copper</span>
+                <span class="spec-tag">Wire Grade</span>
+                <span class="spec-tag">Pure</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="material-card reveal">
+            <div class="material-image" style="background-image: url('./img/poto1.jpg')"></div>
+            <div class="material-info">
+              <h4>⚙️ Stainless Scrap</h4>
+              <p style="color: rgba(255, 255, 255, 0.9); font-size: 14px">
+                Grade 304 & 316 untuk industri manufaktur presisi
+              </p>
+              <div class="material-specs">
+                <span class="spec-tag">304/316</span>
+                <span class="spec-tag">Sorted</span>
+                <span class="spec-tag">Industrial Grade</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section">
+      <div class="container">
+        <div class="reveal" style="text-align: center; max-width: 800px; margin: 0 auto 50px">
+          <h2>Mengapa Perusahaan Besar Memilih Kami</h2>
+          <p>
+            Keunggulan yang membuat CV. ARV Logam menjadi mitra supplier terpercaya untuk kebutuhan industri Anda.
+          </p>
+        </div>
+
+        <div class="split">
+          <div class="card feature reveal">
+            <div class="icon">📋</div>
+            <h3>Transparansi Penuh</h3>
+            <p>
+              Dokumentasi lengkap untuk setiap batch: surat jalan, foto muatan, spesifikasi material, dan tracking pengiriman. Audit trail yang jelas untuk kebutuhan procurement Anda.
+            </p>
+          </div>
+
+          <div class="card feature reveal">
+            <div class="icon">🎯</div>
+            <h3>Konsistensi Kualitas</h3>
+            <p>
+              Sistem grading terstandar dan quality control ketat memastikan setiap pengiriman memenuhi spesifikasi yang sama. Meminimalkan variasi antar batch untuk stabilitas produksi.
+            </p>
+          </div>
+
+          <div class="card feature reveal">
+            <div class="icon">⏱️</div>
+            <h3>Ketepatan Waktu</h3>
+            <p>
+              On-time delivery rate 95% dengan sistem penjadwalan yang terkoordinasi. Update real-time status pengiriman untuk sinkronisasi dengan jadwal receiving pabrik Anda.
+            </p>
+          </div>
+
+          <div class="card feature reveal">
+            <div class="icon">🔧</div>
+            <h3>Fleksibilitas SOP</h3>
+            <p>
+              Siap menyesuaikan prosedur packing, labeling, dan dokumentasi sesuai standar perusahaan Anda. Kami memahami setiap industri memiliki requirement yang berbeda.
+            </p>
+          </div>
+
+          <div class="card feature reveal">
+            <div class="icon">💼</div>
+            <h3>Trial Order Friendly</h3>
+            <p>
+              Memfasilitasi trial order untuk verifikasi kualitas sebelum kontrak jangka panjang. Memahami pentingnya due diligence dalam keputusan procurement besar.
+            </p>
+          </div>
+
+          <div class="card feature reveal">
+            <div class="icon">♻️</div>
+            <h3>Komitmen Keberlanjutan</h3>
+            <p>
+              Mendukung target ESG perusahaan Anda melalui pengelolaan material yang bertanggung jawab dan mendorong ekonomi sirkular dalam industri logam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="reveal">
+          <h2>Siap Menjadi Partner Supply Anda?</h2>
+          <p>
+            Mari diskusikan kebutuhan material, spesifikasi, dan jadwal pasokan Anda.<br>
+            Tim kami siap memberikan solusi terbaik untuk mendukung operasional perusahaan Anda.
+          </p>
+          <div class="cta-buttons">
+            <a class="btn btn-white" href="contacts.html">
+              📞 Hubungi Kami Sekarang
+            </a>
+            <a class="btn btn-outline" href="mailto:arvlogam@gmail.com">
+              ✉️ Kirim Email
+            </a>
+            <a class="btn btn-outline" href="tel:+6281229226125">
+              📱 +62 812 2922 6125
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="cols">
+          <div>
+            <div class="name" style="font-weight: 800">CV. ARV LOGAM</div>
+            <p class="small">
+              High Quality Metal Scrap Management and Supplier
+            </p>
+            <p class="small">
+              📍 JL KI HAJAR DEWANTORO, GROWONG KIDUL, JUWANA, PATI
+            </p>
+          </div>
+          <div>
+            <div style="font-weight: 800; margin-bottom: 8px">Tautan</div>
+            <div class="small"><a href="index.html">Beranda</a></div>
+            <div class="small"><a href="contacts.html">Kontak</a></div>
+            <div class="small"><a href="abouten.html">English</a></div>
+          </div>
+          <div>
+            <div style="font-weight: 800; margin-bottom: 8px">Kontak</div>
+            <div class="small">
+              📧 <a href="mailto:arvlogam@gmail.com">arvlogam@gmail.com</a>
+            </div>
+            <div class="small">
+              📞 <a href="tel:+6281229226125">+62 812 2922 6125</a>
+            </div>
+            <div class="small">
+              📞 <a href="tel:+6287827730791">+62 878 2773 0791</a>
+            </div>
+            <div class="small
