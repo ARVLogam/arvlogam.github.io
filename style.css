@@ -24,10 +24,19 @@ html {
 }
 body {
   margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
-    Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    "Noto Sans",
+    "Helvetica Neue",
+    sans-serif;
   color: var(--text);
-  background: radial-gradient(
+  background:
+    radial-gradient(
       900px 520px at 12% 8%,
       rgba(239, 68, 68, 0.18),
       transparent 60%
@@ -148,7 +157,9 @@ a {
   padding: 10px 12px;
   border-radius: 12px;
   color: var(--text);
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 .nav a:hover {
   background: rgba(255, 255, 255, 0.08);
@@ -178,7 +189,8 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.92) 0%,
       rgba(255, 255, 255, 0.72) 45%,
@@ -218,7 +230,10 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.14);
   text-decoration: none;
   font-weight: 700;
-  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
 }
 .btn-primary {
   background: linear-gradient(135deg, var(--brand), var(--brand-2));
@@ -384,7 +399,9 @@ a {
 .reveal {
   opacity: 0;
   transform: translateY(12px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
 }
 .reveal.show {
   opacity: 1;
