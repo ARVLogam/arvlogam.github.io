@@ -1,393 +1,479 @@
 <!doctype html>
 <html lang="id">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>ARV Logam — Beli Scrap Logam Harga Terbaik, Juwana Pati</title>
-  <meta
-    name="description"
-    content="ARV Logam beli scrap kuningan, aluminium, tembaga, stainless. Harga terbaik, bayar langsung. Juwana, Pati. Hubungi sekarang!"
-  />
-  <link rel="icon" href="./img/logo2.png" type="image/x-icon" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap"
-    rel="stylesheet"
-  />
-  <head>
-    <style>
-      /* ── REVEAL ── */
-      .reveal {
-        opacity: 0;
-        transform: translateY(14px);
-        transition:
-          opacity 0.6s,
-          transform 0.6s;
-      }
-      .reveal.show {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      /* ── SECTION ── */
-      .sec {
-        padding: 48px 0;
-      }
-      .sec-ttl {
-        font-size: clamp(20px, 3vw, 28px);
-        font-weight: 900;
-        margin-bottom: 5px;
-      }
-      .sec-sub {
-        font-size: 14px;
-        color: var(--sub);
-        margin-bottom: 22px;
-      }
-      .container {
-        max-width: var(--max);
-        margin: 0 auto;
-        padding: 0 18px;
-      }
-      /* ── PRICELIST ── */
-      #harga {
-        background: var(--white);
-        border-top: 1px solid var(--border);
-      }
-      .pl-bar {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
-        margin-bottom: 14px;
-      }
-      .pl-srch-wrap {
-        position: relative;
-        flex: 1;
-        min-width: 200px;
-      }
-      .pl-srch-ico {
-        position: absolute;
-        left: 12px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: var(--muted);
-        font-size: 15px;
-        pointer-events: none;
-      }
-      .pl-srch {
-        width: 100%;
-        padding: 10px 14px 10px 38px;
-        border: 1.5px solid var(--border);
-        border-radius: 12px;
-        font-size: 14px;
-        font-family: inherit;
-        background: var(--bg);
-        color: var(--text);
-        outline: none;
-        transition: border 0.15s;
-      }
-      .pl-srch:focus {
-        border-color: var(--red);
-        background: var(--white);
-      }
-      .pl-srch::placeholder {
-        color: var(--muted);
-      }
-      .pl-tabs {
-        display: flex;
-        gap: 6px;
-        flex-wrap: wrap;
-      }
-      .pl-tab {
-        padding: 7px 13px;
-        border-radius: 999px;
-        font-size: 12px;
-        font-weight: 700;
-        border: 1.5px solid var(--border);
-        background: var(--white);
-        color: var(--sub);
-        cursor: pointer;
-        transition: all 0.15s;
-        font-family: inherit;
-        white-space: nowrap;
-      }
-      .pl-tab:hover {
-        border-color: var(--red);
-        color: var(--red);
-      }
-      .pl-tab.on {
-        background: var(--red);
-        color: #fff;
-        border-color: var(--red);
-      }
+  <meta name="description" content="ARV Logam beli scrap kuningan, aluminium, tembaga, stainless. Harga terbaik, bayar langsung. Juwana, Pati. Hubungi sekarang!"/>
+  <link rel="icon" href="./img/logo2.png" type="image/x-icon"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+:root{
+  --red:#c81e1e; --red2:#e53935; --red-bg:#fef2f2; --red-border:#fecaca;
+  --bg:#f7f8fa; --white:#fff; --text:#111827; --sub:#4b5563;
+  --muted:#9ca3af; --border:#e5e7eb;
+  --shadow:0 2px 12px rgba(0,0,0,.07);
+  --shadow-md:0 4px 20px rgba(0,0,0,.1);
+  --r:14px; --max:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  background:var(--bg);color:var(--text);
+  font-size:15px;line-height:1.6;
+}
+a{color:inherit;text-decoration:none}
 
-      .pl-info {
-        font-size: 12.5px;
-        color: var(--muted);
-        margin-bottom: 14px;
-        min-height: 18px;
-      }
-      .pl-info b {
-        color: var(--text);
-      }
-      .pl-updated {
-        font-size: 12px;
-        color: var(--muted);
-        margin-bottom: 12px;
-        display: none;
-        align-items: center;
-        gap: 5px;
-      }
-      .pl-updated.show {
-        display: flex;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- HARGA BELI -->
-    <section id="harga" class="sec">
-      <div class="container">
-        <div class="reveal">
-          <h2 class="sec-ttl">💰 Harga Beli Scrap Hari Ini</h2>
-          <p class="sec-sub">
-            Harga per kg. Untuk barang bersih dan sudah dipilah. Hubungi kami
-            untuk konfirmasi harga sebelum kirim.
-          </p>
-        </div>
+.container{max-width:var(--max);margin:0 auto;padding:0 18px}
 
-        <div class="pl-bar">
-          <div class="pl-srch-wrap">
-            <span class="pl-srch-ico">🔍</span>
-            <input
-              class="pl-srch"
-              id="plSrch"
-              type="text"
-              placeholder="Ketik nama barang… contoh: BC, Bron, AK, Kusen"
-              autocomplete="off"
-            />
-          </div>
-          <div class="pl-tabs" id="plTabs">
-            <button class="pl-tab on" data-mat="semua">Semua</button>
-            <button class="pl-tab" data-mat="Tembaga">🟤 Tembaga</button>
-            <button class="pl-tab" data-mat="Kuningan">🟡 Kuningan</button>
-            <button class="pl-tab" data-mat="Aluminium">⚪ Aluminium</button>
-            <button class="pl-tab" data-mat="Stainless">🔘 Stainless</button>
-            <button class="pl-tab" data-mat="Timah & Aki">
-              🟣 Timah & Aki
-            </button>
-          </div>
-        </div>
+/* ── HEADER ── */
+.hdr{background:var(--white);border-bottom:1px solid var(--border);
+  position:sticky;top:0;z-index:99;box-shadow:var(--shadow)}
+.hdr-inner{display:flex;align-items:center;justify-content:space-between;
+  padding:12px 18px;max-width:var(--max);margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{width:38px;height:38px;border-radius:10px;object-fit:cover}
+.brand-name{font-weight:900;font-size:15px}
+.brand-tagline{font-size:11px;color:var(--muted);margin-top:1px}
+.nav{display:flex;align-items:center;gap:2px}
+.nav a{padding:8px 13px;border-radius:10px;font-weight:600;font-size:13.5px;
+  color:var(--sub);transition:all .15s}
+.nav a:hover{background:#f3f4f6;color:var(--text)}
+.nav .cta-nav{background:var(--red);color:#fff;padding:8px 16px;font-weight:700}
+.nav .cta-nav:hover{background:var(--red2)}
+.hdr-menu{display:none;border:1px solid var(--border);background:var(--white);
+  border-radius:10px;padding:8px 12px;cursor:pointer;font-size:18px;line-height:1}
+.mob-nav{display:none;flex-direction:column;background:var(--white);
+  border-bottom:1px solid var(--border);padding:8px 18px 14px;gap:2px}
+.mob-nav.open{display:flex}
+.mob-nav a{padding:10px 14px;border-radius:10px;font-weight:600;color:var(--sub)}
+.mob-nav .cta-nav{background:var(--red);color:#fff;text-align:center;margin-top:6px;border-radius:12px}
 
-        <div class="pl-updated" id="plUpd">
-          <span>🕐</span><span id="plUpdTxt"></span>
-        </div>
-        <div class="pl-info" id="plInfo"></div>
+/* ── HERO ── */
+.hero{background:var(--white);padding:36px 0 32px;border-bottom:1px solid var(--border)}
+.hero-wrap{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+.hero-pill{display:inline-flex;align-items:center;gap:6px;background:var(--red-bg);
+  color:var(--red);border:1px solid var(--red-border);border-radius:999px;
+  padding:4px 14px;font-size:12px;font-weight:700;margin-bottom:14px}
+.hero h1{font-size:clamp(26px,4vw,42px);font-weight:900;line-height:1.18;
+  letter-spacing:-.5px;margin-bottom:10px}
+.hero h1 em{color:var(--red);font-style:normal}
+.hero-sub{font-size:15px;color:var(--sub);max-width:48ch;margin-bottom:18px;line-height:1.65}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:11px 20px;
+  border-radius:12px;font-weight:700;font-size:14px;cursor:pointer;
+  border:none;font-family:inherit;transition:all .15s}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 4px 14px rgba(200,30,30,.22)}
+.btn-red:hover{background:var(--red2);transform:translateY(-1px)}
+.btn-line{background:var(--white);color:var(--text);border:1.5px solid var(--border)}
+.btn-line:hover{border-color:#9ca3af;background:#f9fafb}
+.hero-contact{font-size:13px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap}
+.hero-nums{display:flex;flex-direction:column;gap:10px}
+.num-card{background:var(--bg);border:1px solid var(--border);border-radius:12px;
+  padding:14px 18px;text-align:center;min-width:100px}
+.num-val{font-size:20px;font-weight:900;color:var(--red);line-height:1}
+.num-lbl{font-size:11px;color:var(--muted);margin-top:3px;font-weight:600}
 
-        <div class="pl-skel-wrap" id="plSkelWrap">
-          <div class="pl-skel"></div>
-          <div class="pl-skel"></div>
-        </div>
+/* ── SECTION ── */
+.sec{padding:48px 0}
+.sec-ttl{font-size:clamp(20px,3vw,28px);font-weight:900;margin-bottom:5px}
+.sec-sub{font-size:14px;color:var(--sub);margin-bottom:22px}
 
-        <div id="plContent"></div>
-        <div class="pl-empty" id="plEmpty">
-          😕 Tidak ada hasil untuk "<span id="plEmptyQ"></span>".<br />Coba kata
-          lain atau pilih semua kategori.
-        </div>
-        <div class="pl-err" id="plErr">
-          ⚠️ Harga tidak bisa dimuat sekarang.<br /><a
-            href="contacts.html"
-            style="
-              color: var(--red);
-              font-weight: 700;
-              display: inline-block;
-              margin-top: 6px;
-            "
-            >→ Hubungi kami langsung</a
-          >
-        </div>
+/* ── PRICELIST ── */
+#harga{background:var(--white);border-top:1px solid var(--border)}
+.pl-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.pl-srch-wrap{position:relative;flex:1;min-width:200px}
+.pl-srch-ico{position:absolute;left:12px;top:50%;transform:translateY(-50%);
+  color:var(--muted);font-size:15px;pointer-events:none}
+.pl-srch{width:100%;padding:10px 14px 10px 38px;border:1.5px solid var(--border);
+  border-radius:12px;font-size:14px;font-family:inherit;background:var(--bg);
+  color:var(--text);outline:none;transition:border .15s}
+.pl-srch:focus{border-color:var(--red);background:var(--white)}
+.pl-srch::placeholder{color:var(--muted)}
+.pl-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.pl-tab{padding:7px 13px;border-radius:999px;font-size:12px;font-weight:700;
+  border:1.5px solid var(--border);background:var(--white);color:var(--sub);
+  cursor:pointer;transition:all .15s;font-family:inherit;white-space:nowrap}
+.pl-tab:hover{border-color:var(--red);color:var(--red)}
+.pl-tab.on{background:var(--red);color:#fff;border-color:var(--red)}
 
-        <div class="pl-note">
-          <span style="flex: 0 0 auto">💡</span>
-          <span
-            ><strong>Catatan penting:</strong> Harga berlaku untuk barang
-            bersih, sudah dipilah, bebas karat berlebih dan sampah. Harga final
-            ditentukan setelah timbang dan cek bersama di lokasi.</span
-          >
-        </div>
+.pl-info{font-size:12.5px;color:var(--muted);margin-bottom:14px;min-height:18px}
+.pl-info b{color:var(--text)}
+.pl-updated{font-size:12px;color:var(--muted);margin-bottom:12px;display:none;align-items:center;gap:5px}
+.pl-updated.show{display:flex}
+
+/* Skeleton */
+.pl-skel-wrap{margin-top:4px}
+.pl-skel{height:90px;border-radius:12px;margin-bottom:10px;
+  background:linear-gradient(90deg,#f0f0f0 25%,#e4e4e4 50%,#f0f0f0 75%);
+  background-size:400% 100%;animation:sk 1.3s infinite}
+@keyframes sk{0%{background-position:100% 0}100%{background-position:-100% 0}}
+
+/* Group */
+.pl-group{margin-bottom:26px}
+.pl-grp-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;
+  padding-bottom:9px;border-bottom:2px solid var(--border)}
+.pl-dot{width:11px;height:11px;border-radius:50%;flex:0 0 11px}
+.pl-grp-name{font-size:15px;font-weight:800}
+.pl-grp-ct{font-size:11px;color:var(--muted);background:var(--bg);
+  border:1px solid var(--border);border-radius:999px;padding:2px 9px;
+  margin-left:auto;font-weight:600}
+
+/* Items */
+.pl-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:8px}
+.pl-item{background:var(--white);border:1px solid var(--border);border-radius:12px;
+  padding:12px 13px;transition:all .15s;cursor:default}
+.pl-item:hover{border-color:#fca5a5;box-shadow:0 3px 14px rgba(200,30,30,.1);
+  transform:translateY(-2px)}
+.pl-item-name{font-size:12.5px;font-weight:700;margin-bottom:6px;line-height:1.35;color:var(--text)}
+.pl-item-price{font-size:18px;font-weight:900;color:var(--red);line-height:1}
+.pl-item-price.no{font-size:12px;font-style:italic;color:var(--muted);font-weight:600}
+.pl-item-unit{font-size:11px;color:var(--muted);margin-top:2px;font-weight:600}
+.pl-item-note{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.3}
+
+.pl-empty{display:none;text-align:center;padding:28px 16px;color:var(--muted);font-size:14px}
+.pl-empty.show{display:block}
+.pl-err{display:none;background:var(--red-bg);border:1px solid var(--red-border);
+  border-radius:12px;padding:18px;text-align:center;font-size:14px;color:var(--sub)}
+.pl-err.show{display:block}
+.pl-note{background:#fffbeb;border:1px solid #fde68a;border-radius:12px;
+  padding:12px 16px;margin-top:18px;font-size:13px;color:#92400e;
+  display:flex;gap:10px;align-items:flex-start}
+
+/* ── PRODUK ── */
+.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.prod-card{border-radius:var(--r);overflow:hidden;position:relative;
+  min-height:170px;display:flex;align-items:flex-end;box-shadow:var(--shadow)}
+.prod-card::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.65))}
+.prod-card[data-bg=brass]{background:url('./img/poto4.jpg') center/cover}
+.prod-card[data-bg=alu]{background:url('./img/poto5.jpg') center/cover}
+.prod-card[data-bg=copper]{background:url('./img/poto3.jpg') center/cover}
+.prod-card[data-bg=ss]{background:url('./img/poto1.jpg') center/cover}
+.prod-txt{position:relative;z-index:1;padding:14px;color:#fff}
+.prod-no{font-size:10px;font-weight:800;opacity:.65;letter-spacing:1px}
+.prod-name{font-size:16px;font-weight:900;margin-top:2px}
+
+/* ── LAYANAN ── */
+.lyr-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.lyr-card{background:var(--white);border:1px solid var(--border);
+  border-radius:var(--r);padding:18px;display:flex;gap:14px;align-items:flex-start}
+.lyr-ico{width:40px;height:40px;border-radius:11px;background:var(--red-bg);
+  font-size:19px;display:flex;align-items:center;justify-content:center;flex:0 0 40px}
+.lyr-ttl{font-weight:800;font-size:14px;margin-bottom:4px}
+.lyr-desc{font-size:13px;color:var(--sub);line-height:1.55}
+
+/* ── CARA KERJA ── */
+.cara-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cara-card{background:var(--white);border:1px solid var(--border);
+  border-radius:var(--r);padding:16px 18px}
+.cara-num{width:30px;height:30px;border-radius:50%;background:var(--red);
+  color:#fff;font-weight:900;font-size:13px;display:flex;
+  align-items:center;justify-content:center;margin-bottom:10px}
+.cara-ttl{font-weight:800;font-size:13.5px;margin-bottom:5px}
+.cara-desc{font-size:12.5px;color:var(--sub);line-height:1.55}
+
+/* ── CTA BIG ── */
+.cta-big{background:linear-gradient(135deg,var(--red),var(--red2));padding:44px 0}
+.cta-big-in{text-align:center;color:#fff}
+.cta-big h2{font-size:clamp(20px,3vw,32px);font-weight:900;margin-bottom:8px}
+.cta-big p{font-size:14.5px;opacity:.82;margin-bottom:22px;max-width:44ch;margin-left:auto;margin-right:auto}
+.cta-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn-wht{background:#fff;color:var(--red);font-weight:800}
+.btn-wht:hover{background:#fef2f2}
+.btn-ghost{background:rgba(255,255,255,.15);color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+.btn-ghost:hover{background:rgba(255,255,255,.25)}
+
+/* ── FOOTER ── */
+.ft{background:#111827;color:rgba(255,255,255,.78);padding:32px 0 20px}
+.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:22px;margin-bottom:22px}
+.ft-brand{font-weight:900;color:#fff;font-size:15px;margin-bottom:7px}
+.ft-desc{font-size:12.5px;color:rgba(255,255,255,.5);line-height:1.65}
+.ft-head{font-weight:800;font-size:12.5px;color:#fff;margin-bottom:9px}
+.ft-a{display:block;font-size:12.5px;color:rgba(255,255,255,.5);margin-bottom:5px;transition:color .15s}
+.ft-a:hover{color:#fff}
+.ft-btm{border-top:1px solid rgba(255,255,255,.08);padding-top:16px;
+  font-size:12px;color:rgba(255,255,255,.35)}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
+.reveal.show{opacity:1;transform:translateY(0)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:860px){
+  .hero-wrap{grid-template-columns:1fr}
+  .hero-nums{flex-direction:row}
+  .prod-grid{grid-template-columns:repeat(2,1fr)}
+  .cara-grid{grid-template-columns:repeat(2,1fr)}
+  .ft-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .nav{display:none}
+  .hdr-menu{display:block}
+  .lyr-grid{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr}
+  .pl-items{grid-template-columns:1fr 1fr}
+}
+@media(max-width:360px){
+  .pl-items{grid-template-columns:1fr}
+}
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+</header>
+
+<!-- HERO -->
+
+
+<!-- HARGA BELI -->
+<section id="harga" class="sec">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="sec-ttl">💰 Harga Beli Scrap Hari Ini</h2>
+      <p class="sec-sub">Harga per kg. Untuk barang bersih dan sudah dipilah. Hubungi kami untuk konfirmasi harga sebelum kirim.</p>
+    </div>
+
+    <div class="pl-bar">
+      <div class="pl-srch-wrap">
+        <span class="pl-srch-ico">🔍</span>
+        <input class="pl-srch" id="plSrch" type="text" placeholder="Ketik nama barang… contoh: BC, Bron, AK, Kusen" autocomplete="off"/>
       </div>
-    </section>
-    <script>
-      document.getElementById("yr").textContent = new Date().getFullYear();
+      <div class="pl-tabs" id="plTabs">
+        <button class="pl-tab on" data-mat="semua">Semua</button>
+        <button class="pl-tab" data-mat="Tembaga">🟤 Tembaga</button>
+        <button class="pl-tab" data-mat="Kuningan">🟡 Kuningan</button>
+        <button class="pl-tab" data-mat="Aluminium">⚪ Aluminium</button>
+        <button class="pl-tab" data-mat="Stainless">🔘 Stainless</button>
+        <button class="pl-tab" data-mat="Timah & Aki">🟣 Timah & Aki</button>
+      </div>
+    </div>
 
-      function toggleMenu() {
-        document.getElementById("mobNav").classList.toggle("open");
+    <div class="pl-updated" id="plUpd"><span>🕐</span><span id="plUpdTxt"></span></div>
+    <div class="pl-info" id="plInfo"></div>
+
+    <div class="pl-skel-wrap" id="plSkelWrap">
+      <div class="pl-skel"></div>
+      <div class="pl-skel"></div>
+    </div>
+
+    <div id="plContent"></div>
+    <div class="pl-empty" id="plEmpty">😕 Tidak ada hasil untuk "<span id="plEmptyQ"></span>".<br/>Coba kata lain atau pilih semua kategori.</div>
+    <div class="pl-err" id="plErr">⚠️ Harga tidak bisa dimuat sekarang.<br/><a href="contacts.html" style="color:var(--red);font-weight:700;display:inline-block;margin-top:6px">→ Hubungi kami langsung</a></div>
+
+    <div class="pl-note">
+      <span style="flex:0 0 auto">💡</span>
+      <span><strong>Catatan penting:</strong> Harga berlaku untuk barang bersih, sudah dipilah, bebas karat berlebih dan sampah. Harga final ditentukan setelah timbang dan cek bersama di lokasi.</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUK -->
+
+
+<!-- LAYANAN -->
+
+
+<!-- CARA KERJA -->
+<section class="sec" style="background:var(--white)">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="sec-ttl">📋 Cara Jual Scrap ke Kami</h2>
+      <p class="sec-sub">Mudah, 4 langkah saja.</p>
+    </div>
+    <div class="cara-grid">
+      <div class="cara-card reveal">
+        <div class="cara-num">1</div>
+        <div class="cara-ttl">Hubungi Dulu</div>
+        <div class="cara-desc">WA atau telepon. Ceritakan jenis scrap dan kira-kira beratnya.</div>
+      </div>
+      <div class="cara-card reveal">
+        <div class="cara-num">2</div>
+        <div class="cara-ttl">Bawa ke Kami</div>
+        <div class="cara-desc">Bawa ke lokasi kami di Juwana. Atau kami jemput kalau jumlahnya banyak.</div>
+      </div>
+      <div class="cara-card reveal">
+        <div class="cara-num">3</div>
+        <div class="cara-ttl">Timbang Bareng</div>
+        <div class="cara-desc">Ditimbang dan dicek bersama. Harga disepakati setelah ini.</div>
+      </div>
+      <div class="cara-card reveal">
+        <div class="cara-num">4</div>
+        <div class="cara-ttl">Terima Uang</div>
+        <div class="cara-desc">Langsung bayar setelah sepakat. Tunai atau transfer bank.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-big">
+  <div class="container">
+    <div class="cta-big-in reveal">
+      <h2>Ada Scrap yang Mau Dijual?</h2>
+      <p>Gratis konsultasi. Tidak ada biaya apapun. Langsung tanya harga sekarang!</p>
+      <div class="cta-btns">
+        <a class="btn btn-wht" href="https://wa.me/6281229226125?text=Halo+ARV+Logam%2C+saya+mau+tanya+harga+scrap" target="_blank">💬 WhatsApp Sekarang</a>
+        <a class="btn btn-ghost" href="tel:+6281229226125">📞 Telepon</a>
+        <a class="btn btn-ghost" href="contacts.html">✉️ Kirim Pesan</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ft">
+  <div class="container">
+    <div class="ft-grid">
+      <div>
+        <div class="ft-brand">CV. ARV LOGAM</div>
+        <div class="ft-desc">Pengepul dan supplier scrap logam. Beli harga terbaik, bayar langsung, proses rapi.<br/><br/>📍 JL. Ki Hajar Dewantoro, Growong Kidul, Juwana, Pati</div>
+      </div>
+      <div>
+        <div class="ft-head">Tautan</div>
+        <a class="ft-a" href="#harga">Harga Beli</a>
+        <a class="ft-a" href="#produk">Produk</a>
+        <a class="ft-a" href="abot.html">Tentang Kami</a>
+        <a class="ft-a" href="contacts.html">Kontak</a>
+        <a class="ft-a" href="index2.html">English</a>
+      </div>
+      <div>
+        <div class="ft-head">Hubungi Kami</div>
+        <a class="ft-a" href="https://wa.me/6281229226125" target="_blank">💬 WhatsApp</a>
+        <a class="ft-a" href="tel:+6281229226125">📞 0812 2922 6125</a>
+        <a class="ft-a" href="tel:+6287827730791">📞 0878 2773 0791</a>
+        <a class="ft-a" href="mailto:arvlogam@gmail.com">📧 arvlogam@gmail.com</a>
+        <a class="ft-a" href="https://www.instagram.com/arv_family" target="_blank">📸 Instagram</a>
+      </div>
+    </div>
+    <div class="ft-btm">© <span id="yr"></span> CV. ARV Logam. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+function toggleMenu(){ document.getElementById('mobNav').classList.toggle('open'); }
+function closeMenu(){ document.getElementById('mobNav').classList.remove('open'); }
+
+// Scroll reveal
+var rvIo = new IntersectionObserver(function(e){
+  e.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('show');rvIo.unobserve(en.target);} });
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(function(el){ rvIo.observe(el); });
+
+// ══ PRICELIST ══
+var BACKEND = 'https://umgap-ai.onrender.com';
+var MAT_DOT = {Tembaga:'#b87333',Kuningan:'#b8860b',Aluminium:'#9aa5b4',Stainless:'#607d8b','Timah & Aki':'#6366f1'};
+var allData  = [];
+var curMat   = 'semua';
+var curQ     = '';
+
+function rp(p){
+  var n=Math.round(parseFloat(p)||0);
+  if(!n) return null;
+  return 'Rp '+n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+}
+function esc(s){ var d=document.createElement('div');d.textContent=s;return d.innerHTML; }
+
+function doRender(){
+  var html=''; var total=0;
+  allData.forEach(function(g){
+    var items=g.items.filter(function(it){
+      var mM=(curMat==='semua'||it.material===curMat);
+      var mQ=!curQ||it.grade.toLowerCase().indexOf(curQ)>=0||it.material.toLowerCase().indexOf(curQ)>=0;
+      return mM&&mQ;
+    });
+    if(!items.length) return;
+    total+=items.length;
+    var dot=MAT_DOT[g.material]||'#6b7280';
+    html+='<div class="pl-group">';
+    html+='<div class="pl-grp-head">';
+    html+='<div class="pl-dot" style="background:'+dot+'"></div>';
+    html+='<div class="pl-grp-name">'+esc(g.material)+'</div>';
+    html+='<div class="pl-grp-ct">'+items.length+' barang</div>';
+    html+='</div><div class="pl-items">';
+    items.forEach(function(it){
+      var pr=rp(it.price);
+      html+='<div class="pl-item">';
+      html+='<div class="pl-item-name">'+esc(it.grade||'—')+'</div>';
+      if(pr){
+        html+='<div class="pl-item-price">'+pr+'</div>';
+        html+='<div class="pl-item-unit">per '+esc(it.unit||'kg')+'</div>';
+      } else {
+        html+='<div class="pl-item-price no">Hubungi kami</div>';
       }
-      function closeMenu() {
-        document.getElementById("mobNav").classList.remove("open");
+      if(it.note) html+='<div class="pl-item-note">'+esc(it.note)+'</div>';
+      html+='</div>';
+    });
+    html+='</div></div>';
+  });
+
+  document.getElementById('plContent').innerHTML=html;
+
+  // Info
+  var info=document.getElementById('plInfo');
+  info.innerHTML=total>0
+    ?'Menampilkan <b>'+total+' barang</b>'+(curQ?' — hasil pencarian "<b>'+esc(curQ)+'</b>"':'')
+    :'';
+
+  // Empty
+  var emp=document.getElementById('plEmpty');
+  if(!total&&(curQ||curMat!=='semua')){
+    document.getElementById('plEmptyQ').textContent=curQ||curMat;
+    emp.classList.add('show');
+  } else {
+    emp.classList.remove('show');
+  }
+}
+
+// Tabs
+document.getElementById('plTabs').addEventListener('click',function(e){
+  var t=e.target.closest('.pl-tab');
+  if(!t) return;
+  document.querySelectorAll('.pl-tab').forEach(function(b){b.classList.remove('on')});
+  t.classList.add('on');
+  curMat=t.dataset.mat;
+  doRender();
+});
+
+// Search
+var stmr;
+document.getElementById('plSrch').addEventListener('input',function(){
+  clearTimeout(stmr);
+  var v=this.value;
+  stmr=setTimeout(function(){ curQ=v.toLowerCase().trim(); doRender(); },200);
+});
+
+// Fetch
+(function(){
+  fetch('/api/buy-prices',{headers:{Accept:'application/json'}})
+    .then(function(r){if(!r.ok) throw 0;return r.json();})
+    .catch(function(){
+      return fetch(BACKEND+'/api/buy-prices',{headers:{Accept:'application/json'}}).then(function(r){return r.json();});
+    })
+    .then(function(d){
+      if(!d||!d.ok) throw 0;
+      allData=d.groups||[];
+      document.getElementById('plSkelWrap').style.display='none';
+      // Timestamp
+      var mx='';
+      allData.forEach(function(g){g.items.forEach(function(it){if(it.updated_at&&it.updated_at>mx)mx=it.updated_at;});});
+      if(mx){
+        document.getElementById('plUpdTxt').textContent='Harga terakhir diperbarui: '+mx;
+        document.getElementById('plUpd').classList.add('show');
       }
-
-      // Scroll reveal
-      var rvIo = new IntersectionObserver(
-        function (e) {
-          e.forEach(function (en) {
-            if (en.isIntersecting) {
-              en.target.classList.add("show");
-              rvIo.unobserve(en.target);
-            }
-          });
-        },
-        { threshold: 0.08 },
-      );
-      document.querySelectorAll(".reveal").forEach(function (el) {
-        rvIo.observe(el);
-      });
-
-      // ══ PRICELIST ══
-      var BACKEND = "https://umgap-ai.onrender.com";
-      var MAT_DOT = {
-        Tembaga: "#b87333",
-        Kuningan: "#b8860b",
-        Aluminium: "#9aa5b4",
-        Stainless: "#607d8b",
-        "Timah & Aki": "#6366f1",
-      };
-      var allData = [];
-      var curMat = "semua";
-      var curQ = "";
-
-      function rp(p) {
-        var n = Math.round(parseFloat(p) || 0);
-        if (!n) return null;
-        return "Rp " + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-      }
-      function esc(s) {
-        var d = document.createElement("div");
-        d.textContent = s;
-        return d.innerHTML;
-      }
-
-      function doRender() {
-        var html = "";
-        var total = 0;
-        allData.forEach(function (g) {
-          var items = g.items.filter(function (it) {
-            var mM = curMat === "semua" || it.material === curMat;
-            var mQ =
-              !curQ ||
-              it.grade.toLowerCase().indexOf(curQ) >= 0 ||
-              it.material.toLowerCase().indexOf(curQ) >= 0;
-            return mM && mQ;
-          });
-          if (!items.length) return;
-          total += items.length;
-          var dot = MAT_DOT[g.material] || "#6b7280";
-          html += '<div class="pl-group">';
-          html += '<div class="pl-grp-head">';
-          html += '<div class="pl-dot" style="background:' + dot + '"></div>';
-          html += '<div class="pl-grp-name">' + esc(g.material) + "</div>";
-          html += '<div class="pl-grp-ct">' + items.length + " barang</div>";
-          html += '</div><div class="pl-items">';
-          items.forEach(function (it) {
-            var pr = rp(it.price);
-            html += '<div class="pl-item">';
-            html +=
-              '<div class="pl-item-name">' + esc(it.grade || "—") + "</div>";
-            if (pr) {
-              html += '<div class="pl-item-price">' + pr + "</div>";
-              html +=
-                '<div class="pl-item-unit">per ' +
-                esc(it.unit || "kg") +
-                "</div>";
-            } else {
-              html += '<div class="pl-item-price no">Hubungi kami</div>';
-            }
-            if (it.note)
-              html += '<div class="pl-item-note">' + esc(it.note) + "</div>";
-            html += "</div>";
-          });
-          html += "</div></div>";
-        });
-
-        document.getElementById("plContent").innerHTML = html;
-
-        // Info
-        var info = document.getElementById("plInfo");
-        info.innerHTML =
-          total > 0
-            ? "Menampilkan <b>" +
-              total +
-              " barang</b>" +
-              (curQ ? ' — hasil pencarian "<b>' + esc(curQ) + '</b>"' : "")
-            : "";
-
-        // Empty
-        var emp = document.getElementById("plEmpty");
-        if (!total && (curQ || curMat !== "semua")) {
-          document.getElementById("plEmptyQ").textContent = curQ || curMat;
-          emp.classList.add("show");
-        } else {
-          emp.classList.remove("show");
-        }
-      }
-
-      // Tabs
-      document.getElementById("plTabs").addEventListener("click", function (e) {
-        var t = e.target.closest(".pl-tab");
-        if (!t) return;
-        document.querySelectorAll(".pl-tab").forEach(function (b) {
-          b.classList.remove("on");
-        });
-        t.classList.add("on");
-        curMat = t.dataset.mat;
-        doRender();
-      });
-
-      // Search
-      var stmr;
-      document.getElementById("plSrch").addEventListener("input", function () {
-        clearTimeout(stmr);
-        var v = this.value;
-        stmr = setTimeout(function () {
-          curQ = v.toLowerCase().trim();
-          doRender();
-        }, 200);
-      });
-
-      // Fetch
-      (function () {
-        fetch("/api/buy-prices", { headers: { Accept: "application/json" } })
-          .then(function (r) {
-            if (!r.ok) throw 0;
-            return r.json();
-          })
-          .catch(function () {
-            return fetch(BACKEND + "/api/buy-prices", {
-              headers: { Accept: "application/json" },
-            }).then(function (r) {
-              return r.json();
-            });
-          })
-          .then(function (d) {
-            if (!d || !d.ok) throw 0;
-            allData = d.groups || [];
-            document.getElementById("plSkelWrap").style.display = "none";
-            // Timestamp
-            var mx = "";
-            allData.forEach(function (g) {
-              g.items.forEach(function (it) {
-                if (it.updated_at && it.updated_at > mx) mx = it.updated_at;
-              });
-            });
-            if (mx) {
-              document.getElementById("plUpdTxt").textContent =
-                "Harga terakhir diperbarui: " + mx;
-              document.getElementById("plUpd").classList.add("show");
-            }
-            doRender();
-          })
-          .catch(function () {
-            document.getElementById("plSkelWrap").style.display = "none";
-            document.getElementById("plErr").classList.add("show");
-          });
-      })();
-    </script>
-  </body>
+      doRender();
+    })
+    .catch(function(){
+      document.getElementById('plSkelWrap').style.display='none';
+      document.getElementById('plErr').classList.add('show');
+    });
+})();
+</script>
+</body>
 </html>
