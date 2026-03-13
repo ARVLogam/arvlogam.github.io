@@ -1,479 +1,1262 @@
 <!doctype html>
 <html lang="id">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>ARV Logam — Beli Scrap Logam Harga Terbaik, Juwana Pati</title>
-  <meta name="description" content="ARV Logam beli scrap kuningan, aluminium, tembaga, stainless. Harga terbaik, bayar langsung. Juwana, Pati. Hubungi sekarang!"/>
-  <link rel="icon" href="./img/logo2.png" type="image/x-icon"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
-  <style>
-:root{
-  --red:#c81e1e; --red2:#e53935; --red-bg:#fef2f2; --red-border:#fecaca;
-  --bg:#f7f8fa; --white:#fff; --text:#111827; --sub:#4b5563;
-  --muted:#9ca3af; --border:#e5e7eb;
-  --shadow:0 2px 12px rgba(0,0,0,.07);
-  --shadow-md:0 4px 20px rgba(0,0,0,.1);
-  --r:14px; --max:1080px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  font-family:'Plus Jakarta Sans',sans-serif;
-  background:var(--bg);color:var(--text);
-  font-size:15px;line-height:1.6;
-}
-a{color:inherit;text-decoration:none}
-
-.container{max-width:var(--max);margin:0 auto;padding:0 18px}
-
-/* ── HEADER ── */
-.hdr{background:var(--white);border-bottom:1px solid var(--border);
-  position:sticky;top:0;z-index:99;box-shadow:var(--shadow)}
-.hdr-inner{display:flex;align-items:center;justify-content:space-between;
-  padding:12px 18px;max-width:var(--max);margin:0 auto}
-.brand{display:flex;align-items:center;gap:10px}
-.brand img{width:38px;height:38px;border-radius:10px;object-fit:cover}
-.brand-name{font-weight:900;font-size:15px}
-.brand-tagline{font-size:11px;color:var(--muted);margin-top:1px}
-.nav{display:flex;align-items:center;gap:2px}
-.nav a{padding:8px 13px;border-radius:10px;font-weight:600;font-size:13.5px;
-  color:var(--sub);transition:all .15s}
-.nav a:hover{background:#f3f4f6;color:var(--text)}
-.nav .cta-nav{background:var(--red);color:#fff;padding:8px 16px;font-weight:700}
-.nav .cta-nav:hover{background:var(--red2)}
-.hdr-menu{display:none;border:1px solid var(--border);background:var(--white);
-  border-radius:10px;padding:8px 12px;cursor:pointer;font-size:18px;line-height:1}
-.mob-nav{display:none;flex-direction:column;background:var(--white);
-  border-bottom:1px solid var(--border);padding:8px 18px 14px;gap:2px}
-.mob-nav.open{display:flex}
-.mob-nav a{padding:10px 14px;border-radius:10px;font-weight:600;color:var(--sub)}
-.mob-nav .cta-nav{background:var(--red);color:#fff;text-align:center;margin-top:6px;border-radius:12px}
-
-/* ── HERO ── */
-.hero{background:var(--white);padding:36px 0 32px;border-bottom:1px solid var(--border)}
-.hero-wrap{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
-.hero-pill{display:inline-flex;align-items:center;gap:6px;background:var(--red-bg);
-  color:var(--red);border:1px solid var(--red-border);border-radius:999px;
-  padding:4px 14px;font-size:12px;font-weight:700;margin-bottom:14px}
-.hero h1{font-size:clamp(26px,4vw,42px);font-weight:900;line-height:1.18;
-  letter-spacing:-.5px;margin-bottom:10px}
-.hero h1 em{color:var(--red);font-style:normal}
-.hero-sub{font-size:15px;color:var(--sub);max-width:48ch;margin-bottom:18px;line-height:1.65}
-.hero-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
-.btn{display:inline-flex;align-items:center;gap:7px;padding:11px 20px;
-  border-radius:12px;font-weight:700;font-size:14px;cursor:pointer;
-  border:none;font-family:inherit;transition:all .15s}
-.btn-red{background:var(--red);color:#fff;box-shadow:0 4px 14px rgba(200,30,30,.22)}
-.btn-red:hover{background:var(--red2);transform:translateY(-1px)}
-.btn-line{background:var(--white);color:var(--text);border:1.5px solid var(--border)}
-.btn-line:hover{border-color:#9ca3af;background:#f9fafb}
-.hero-contact{font-size:13px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap}
-.hero-nums{display:flex;flex-direction:column;gap:10px}
-.num-card{background:var(--bg);border:1px solid var(--border);border-radius:12px;
-  padding:14px 18px;text-align:center;min-width:100px}
-.num-val{font-size:20px;font-weight:900;color:var(--red);line-height:1}
-.num-lbl{font-size:11px;color:var(--muted);margin-top:3px;font-weight:600}
-
-/* ── SECTION ── */
-.sec{padding:48px 0}
-.sec-ttl{font-size:clamp(20px,3vw,28px);font-weight:900;margin-bottom:5px}
-.sec-sub{font-size:14px;color:var(--sub);margin-bottom:22px}
-
-/* ── PRICELIST ── */
-#harga{background:var(--white);border-top:1px solid var(--border)}
-.pl-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
-.pl-srch-wrap{position:relative;flex:1;min-width:200px}
-.pl-srch-ico{position:absolute;left:12px;top:50%;transform:translateY(-50%);
-  color:var(--muted);font-size:15px;pointer-events:none}
-.pl-srch{width:100%;padding:10px 14px 10px 38px;border:1.5px solid var(--border);
-  border-radius:12px;font-size:14px;font-family:inherit;background:var(--bg);
-  color:var(--text);outline:none;transition:border .15s}
-.pl-srch:focus{border-color:var(--red);background:var(--white)}
-.pl-srch::placeholder{color:var(--muted)}
-.pl-tabs{display:flex;gap:6px;flex-wrap:wrap}
-.pl-tab{padding:7px 13px;border-radius:999px;font-size:12px;font-weight:700;
-  border:1.5px solid var(--border);background:var(--white);color:var(--sub);
-  cursor:pointer;transition:all .15s;font-family:inherit;white-space:nowrap}
-.pl-tab:hover{border-color:var(--red);color:var(--red)}
-.pl-tab.on{background:var(--red);color:#fff;border-color:var(--red)}
-
-.pl-info{font-size:12.5px;color:var(--muted);margin-bottom:14px;min-height:18px}
-.pl-info b{color:var(--text)}
-.pl-updated{font-size:12px;color:var(--muted);margin-bottom:12px;display:none;align-items:center;gap:5px}
-.pl-updated.show{display:flex}
-
-/* Skeleton */
-.pl-skel-wrap{margin-top:4px}
-.pl-skel{height:90px;border-radius:12px;margin-bottom:10px;
-  background:linear-gradient(90deg,#f0f0f0 25%,#e4e4e4 50%,#f0f0f0 75%);
-  background-size:400% 100%;animation:sk 1.3s infinite}
-@keyframes sk{0%{background-position:100% 0}100%{background-position:-100% 0}}
-
-/* Group */
-.pl-group{margin-bottom:26px}
-.pl-grp-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;
-  padding-bottom:9px;border-bottom:2px solid var(--border)}
-.pl-dot{width:11px;height:11px;border-radius:50%;flex:0 0 11px}
-.pl-grp-name{font-size:15px;font-weight:800}
-.pl-grp-ct{font-size:11px;color:var(--muted);background:var(--bg);
-  border:1px solid var(--border);border-radius:999px;padding:2px 9px;
-  margin-left:auto;font-weight:600}
-
-/* Items */
-.pl-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:8px}
-.pl-item{background:var(--white);border:1px solid var(--border);border-radius:12px;
-  padding:12px 13px;transition:all .15s;cursor:default}
-.pl-item:hover{border-color:#fca5a5;box-shadow:0 3px 14px rgba(200,30,30,.1);
-  transform:translateY(-2px)}
-.pl-item-name{font-size:12.5px;font-weight:700;margin-bottom:6px;line-height:1.35;color:var(--text)}
-.pl-item-price{font-size:18px;font-weight:900;color:var(--red);line-height:1}
-.pl-item-price.no{font-size:12px;font-style:italic;color:var(--muted);font-weight:600}
-.pl-item-unit{font-size:11px;color:var(--muted);margin-top:2px;font-weight:600}
-.pl-item-note{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.3}
-
-.pl-empty{display:none;text-align:center;padding:28px 16px;color:var(--muted);font-size:14px}
-.pl-empty.show{display:block}
-.pl-err{display:none;background:var(--red-bg);border:1px solid var(--red-border);
-  border-radius:12px;padding:18px;text-align:center;font-size:14px;color:var(--sub)}
-.pl-err.show{display:block}
-.pl-note{background:#fffbeb;border:1px solid #fde68a;border-radius:12px;
-  padding:12px 16px;margin-top:18px;font-size:13px;color:#92400e;
-  display:flex;gap:10px;align-items:flex-start}
-
-/* ── PRODUK ── */
-.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.prod-card{border-radius:var(--r);overflow:hidden;position:relative;
-  min-height:170px;display:flex;align-items:flex-end;box-shadow:var(--shadow)}
-.prod-card::after{content:'';position:absolute;inset:0;
-  background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.65))}
-.prod-card[data-bg=brass]{background:url('./img/poto4.jpg') center/cover}
-.prod-card[data-bg=alu]{background:url('./img/poto5.jpg') center/cover}
-.prod-card[data-bg=copper]{background:url('./img/poto3.jpg') center/cover}
-.prod-card[data-bg=ss]{background:url('./img/poto1.jpg') center/cover}
-.prod-txt{position:relative;z-index:1;padding:14px;color:#fff}
-.prod-no{font-size:10px;font-weight:800;opacity:.65;letter-spacing:1px}
-.prod-name{font-size:16px;font-weight:900;margin-top:2px}
-
-/* ── LAYANAN ── */
-.lyr-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.lyr-card{background:var(--white);border:1px solid var(--border);
-  border-radius:var(--r);padding:18px;display:flex;gap:14px;align-items:flex-start}
-.lyr-ico{width:40px;height:40px;border-radius:11px;background:var(--red-bg);
-  font-size:19px;display:flex;align-items:center;justify-content:center;flex:0 0 40px}
-.lyr-ttl{font-weight:800;font-size:14px;margin-bottom:4px}
-.lyr-desc{font-size:13px;color:var(--sub);line-height:1.55}
-
-/* ── CARA KERJA ── */
-.cara-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.cara-card{background:var(--white);border:1px solid var(--border);
-  border-radius:var(--r);padding:16px 18px}
-.cara-num{width:30px;height:30px;border-radius:50%;background:var(--red);
-  color:#fff;font-weight:900;font-size:13px;display:flex;
-  align-items:center;justify-content:center;margin-bottom:10px}
-.cara-ttl{font-weight:800;font-size:13.5px;margin-bottom:5px}
-.cara-desc{font-size:12.5px;color:var(--sub);line-height:1.55}
-
-/* ── CTA BIG ── */
-.cta-big{background:linear-gradient(135deg,var(--red),var(--red2));padding:44px 0}
-.cta-big-in{text-align:center;color:#fff}
-.cta-big h2{font-size:clamp(20px,3vw,32px);font-weight:900;margin-bottom:8px}
-.cta-big p{font-size:14.5px;opacity:.82;margin-bottom:22px;max-width:44ch;margin-left:auto;margin-right:auto}
-.cta-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.btn-wht{background:#fff;color:var(--red);font-weight:800}
-.btn-wht:hover{background:#fef2f2}
-.btn-ghost{background:rgba(255,255,255,.15);color:#fff;border:1.5px solid rgba(255,255,255,.35)}
-.btn-ghost:hover{background:rgba(255,255,255,.25)}
-
-/* ── FOOTER ── */
-.ft{background:#111827;color:rgba(255,255,255,.78);padding:32px 0 20px}
-.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:22px;margin-bottom:22px}
-.ft-brand{font-weight:900;color:#fff;font-size:15px;margin-bottom:7px}
-.ft-desc{font-size:12.5px;color:rgba(255,255,255,.5);line-height:1.65}
-.ft-head{font-weight:800;font-size:12.5px;color:#fff;margin-bottom:9px}
-.ft-a{display:block;font-size:12.5px;color:rgba(255,255,255,.5);margin-bottom:5px;transition:color .15s}
-.ft-a:hover{color:#fff}
-.ft-btm{border-top:1px solid rgba(255,255,255,.08);padding-top:16px;
-  font-size:12px;color:rgba(255,255,255,.35)}
-
-/* ── REVEAL ── */
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
-.reveal.show{opacity:1;transform:translateY(0)}
-
-/* ── RESPONSIVE ── */
-@media(max-width:860px){
-  .hero-wrap{grid-template-columns:1fr}
-  .hero-nums{flex-direction:row}
-  .prod-grid{grid-template-columns:repeat(2,1fr)}
-  .cara-grid{grid-template-columns:repeat(2,1fr)}
-  .ft-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:620px){
-  .nav{display:none}
-  .hdr-menu{display:block}
-  .lyr-grid{grid-template-columns:1fr}
-  .ft-grid{grid-template-columns:1fr}
-  .pl-items{grid-template-columns:1fr 1fr}
-}
-@media(max-width:360px){
-  .pl-items{grid-template-columns:1fr}
-}
-  </style>
-</head>
-<body>
-
-<!-- HEADER -->
-<header>
-</header>
-
-<!-- HERO -->
-
-
-<!-- HARGA BELI -->
-<section id="harga" class="sec">
-  <div class="container">
-    <div class="reveal">
-      <h2 class="sec-ttl">💰 Harga Beli Scrap Hari Ini</h2>
-      <p class="sec-sub">Harga per kg. Untuk barang bersih dan sudah dipilah. Hubungi kami untuk konfirmasi harga sebelum kirim.</p>
-    </div>
-
-    <div class="pl-bar">
-      <div class="pl-srch-wrap">
-        <span class="pl-srch-ico">🔍</span>
-        <input class="pl-srch" id="plSrch" type="text" placeholder="Ketik nama barang… contoh: BC, Bron, AK, Kusen" autocomplete="off"/>
-      </div>
-      <div class="pl-tabs" id="plTabs">
-        <button class="pl-tab on" data-mat="semua">Semua</button>
-        <button class="pl-tab" data-mat="Tembaga">🟤 Tembaga</button>
-        <button class="pl-tab" data-mat="Kuningan">🟡 Kuningan</button>
-        <button class="pl-tab" data-mat="Aluminium">⚪ Aluminium</button>
-        <button class="pl-tab" data-mat="Stainless">🔘 Stainless</button>
-        <button class="pl-tab" data-mat="Timah & Aki">🟣 Timah & Aki</button>
-      </div>
-    </div>
-
-    <div class="pl-updated" id="plUpd"><span>🕐</span><span id="plUpdTxt"></span></div>
-    <div class="pl-info" id="plInfo"></div>
-
-    <div class="pl-skel-wrap" id="plSkelWrap">
-      <div class="pl-skel"></div>
-      <div class="pl-skel"></div>
-    </div>
-
-    <div id="plContent"></div>
-    <div class="pl-empty" id="plEmpty">😕 Tidak ada hasil untuk "<span id="plEmptyQ"></span>".<br/>Coba kata lain atau pilih semua kategori.</div>
-    <div class="pl-err" id="plErr">⚠️ Harga tidak bisa dimuat sekarang.<br/><a href="contacts.html" style="color:var(--red);font-weight:700;display:inline-block;margin-top:6px">→ Hubungi kami langsung</a></div>
-
-    <div class="pl-note">
-      <span style="flex:0 0 auto">💡</span>
-      <span><strong>Catatan penting:</strong> Harga berlaku untuk barang bersih, sudah dipilah, bebas karat berlebih dan sampah. Harga final ditentukan setelah timbang dan cek bersama di lokasi.</span>
-    </div>
-  </div>
-</section>
-
-<!-- PRODUK -->
-
-
-<!-- LAYANAN -->
-
-
-<!-- CARA KERJA -->
-<section class="sec" style="background:var(--white)">
-  <div class="container">
-    <div class="reveal">
-      <h2 class="sec-ttl">📋 Cara Jual Scrap ke Kami</h2>
-      <p class="sec-sub">Mudah, 4 langkah saja.</p>
-    </div>
-    <div class="cara-grid">
-      <div class="cara-card reveal">
-        <div class="cara-num">1</div>
-        <div class="cara-ttl">Hubungi Dulu</div>
-        <div class="cara-desc">WA atau telepon. Ceritakan jenis scrap dan kira-kira beratnya.</div>
-      </div>
-      <div class="cara-card reveal">
-        <div class="cara-num">2</div>
-        <div class="cara-ttl">Bawa ke Kami</div>
-        <div class="cara-desc">Bawa ke lokasi kami di Juwana. Atau kami jemput kalau jumlahnya banyak.</div>
-      </div>
-      <div class="cara-card reveal">
-        <div class="cara-num">3</div>
-        <div class="cara-ttl">Timbang Bareng</div>
-        <div class="cara-desc">Ditimbang dan dicek bersama. Harga disepakati setelah ini.</div>
-      </div>
-      <div class="cara-card reveal">
-        <div class="cara-num">4</div>
-        <div class="cara-ttl">Terima Uang</div>
-        <div class="cara-desc">Langsung bayar setelah sepakat. Tunai atau transfer bank.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-big">
-  <div class="container">
-    <div class="cta-big-in reveal">
-      <h2>Ada Scrap yang Mau Dijual?</h2>
-      <p>Gratis konsultasi. Tidak ada biaya apapun. Langsung tanya harga sekarang!</p>
-      <div class="cta-btns">
-        <a class="btn btn-wht" href="https://wa.me/6281229226125?text=Halo+ARV+Logam%2C+saya+mau+tanya+harga+scrap" target="_blank">💬 WhatsApp Sekarang</a>
-        <a class="btn btn-ghost" href="tel:+6281229226125">📞 Telepon</a>
-        <a class="btn btn-ghost" href="contacts.html">✉️ Kirim Pesan</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="ft">
-  <div class="container">
-    <div class="ft-grid">
-      <div>
-        <div class="ft-brand">CV. ARV LOGAM</div>
-        <div class="ft-desc">Pengepul dan supplier scrap logam. Beli harga terbaik, bayar langsung, proses rapi.<br/><br/>📍 JL. Ki Hajar Dewantoro, Growong Kidul, Juwana, Pati</div>
-      </div>
-      <div>
-        <div class="ft-head">Tautan</div>
-        <a class="ft-a" href="#harga">Harga Beli</a>
-        <a class="ft-a" href="#produk">Produk</a>
-        <a class="ft-a" href="abot.html">Tentang Kami</a>
-        <a class="ft-a" href="contacts.html">Kontak</a>
-        <a class="ft-a" href="index2.html">English</a>
-      </div>
-      <div>
-        <div class="ft-head">Hubungi Kami</div>
-        <a class="ft-a" href="https://wa.me/6281229226125" target="_blank">💬 WhatsApp</a>
-        <a class="ft-a" href="tel:+6281229226125">📞 0812 2922 6125</a>
-        <a class="ft-a" href="tel:+6287827730791">📞 0878 2773 0791</a>
-        <a class="ft-a" href="mailto:arvlogam@gmail.com">📧 arvlogam@gmail.com</a>
-        <a class="ft-a" href="https://www.instagram.com/arv_family" target="_blank">📸 Instagram</a>
-      </div>
-    </div>
-    <div class="ft-btm">© <span id="yr"></span> CV. ARV Logam. All rights reserved.</div>
-  </div>
-</footer>
-
-<script>
-document.getElementById('yr').textContent = new Date().getFullYear();
-
-function toggleMenu(){ document.getElementById('mobNav').classList.toggle('open'); }
-function closeMenu(){ document.getElementById('mobNav').classList.remove('open'); }
-
-// Scroll reveal
-var rvIo = new IntersectionObserver(function(e){
-  e.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('show');rvIo.unobserve(en.target);} });
-},{threshold:.08});
-document.querySelectorAll('.reveal').forEach(function(el){ rvIo.observe(el); });
-
-// ══ PRICELIST ══
-var BACKEND = 'https://umgap-ai.onrender.com';
-var MAT_DOT = {Tembaga:'#b87333',Kuningan:'#b8860b',Aluminium:'#9aa5b4',Stainless:'#607d8b','Timah & Aki':'#6366f1'};
-var allData  = [];
-var curMat   = 'semua';
-var curQ     = '';
-
-function rp(p){
-  var n=Math.round(parseFloat(p)||0);
-  if(!n) return null;
-  return 'Rp '+n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.');
-}
-function esc(s){ var d=document.createElement('div');d.textContent=s;return d.innerHTML; }
-
-function doRender(){
-  var html=''; var total=0;
-  allData.forEach(function(g){
-    var items=g.items.filter(function(it){
-      var mM=(curMat==='semua'||it.material===curMat);
-      var mQ=!curQ||it.grade.toLowerCase().indexOf(curQ)>=0||it.material.toLowerCase().indexOf(curQ)>=0;
-      return mM&&mQ;
-    });
-    if(!items.length) return;
-    total+=items.length;
-    var dot=MAT_DOT[g.material]||'#6b7280';
-    html+='<div class="pl-group">';
-    html+='<div class="pl-grp-head">';
-    html+='<div class="pl-dot" style="background:'+dot+'"></div>';
-    html+='<div class="pl-grp-name">'+esc(g.material)+'</div>';
-    html+='<div class="pl-grp-ct">'+items.length+' barang</div>';
-    html+='</div><div class="pl-items">';
-    items.forEach(function(it){
-      var pr=rp(it.price);
-      html+='<div class="pl-item">';
-      html+='<div class="pl-item-name">'+esc(it.grade||'—')+'</div>';
-      if(pr){
-        html+='<div class="pl-item-price">'+pr+'</div>';
-        html+='<div class="pl-item-unit">per '+esc(it.unit||'kg')+'</div>';
-      } else {
-        html+='<div class="pl-item-price no">Hubungi kami</div>';
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      Harga Beli Hari Ini — Rongsokan & Logam Bekas | ARV Logam Juwana Pati
+    </title>
+    <meta
+      name="description"
+      content="Cek harga beli rongsokan dan logam bekas hari ini di ARV Logam Juwana Pati. Harga kuningan, aluminium, tembaga, stainless, timah update real-time. Bayar langsung."
+    />
+    <meta
+      name="keywords"
+      content="harga beli logam hari ini, harga rongsokan Pati, harga kuningan bekas Juwana, harga aluminium bekas hari ini, harga tembaga bekas, harga scrap logam Jawa Tengah, ARV Logam harga"
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://arvlogam.com/price.html" />
+    <meta
+      property="og:title"
+      content="Harga Beli Rongsokan & Logam Hari Ini — ARV Logam"
+    />
+    <meta
+      property="og:description"
+      content="Harga beli kuningan, aluminium, tembaga, stainless update real-time. ARV Logam Juwana, Pati."
+    />
+    <meta property="og:url" content="https://arvlogam.com/price.html" />
+    <link rel="icon" href="./img/logo2.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --cr: #c8161a;
+        --cr2: #e12529;
+        --cr3: #a01015;
+        --cr-bg: #fef2f2;
+        --cr-bd: #fecaca;
+        --bg: #f5f6f8;
+        --bg2: #eef0f4;
+        --white: #fff;
+        --text: #111827;
+        --sub: #374151;
+        --muted: #6b7280;
+        --faint: #9ca3af;
+        --border: #e5e7eb;
+        --border2: #d1d5db;
+        --shadow: 0 1px 4px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.06);
+        --max: 1160px;
+        --r: 12px;
+        --r2: 18px;
+        --hdr: 66px;
       }
-      if(it.note) html+='<div class="pl-item-note">'+esc(it.note)+'</div>';
-      html+='</div>';
-    });
-    html+='</div></div>';
-  });
-
-  document.getElementById('plContent').innerHTML=html;
-
-  // Info
-  var info=document.getElementById('plInfo');
-  info.innerHTML=total>0
-    ?'Menampilkan <b>'+total+' barang</b>'+(curQ?' — hasil pencarian "<b>'+esc(curQ)+'</b>"':'')
-    :'';
-
-  // Empty
-  var emp=document.getElementById('plEmpty');
-  if(!total&&(curQ||curMat!=='semua')){
-    document.getElementById('plEmptyQ').textContent=curQ||curMat;
-    emp.classList.add('show');
-  } else {
-    emp.classList.remove('show');
-  }
-}
-
-// Tabs
-document.getElementById('plTabs').addEventListener('click',function(e){
-  var t=e.target.closest('.pl-tab');
-  if(!t) return;
-  document.querySelectorAll('.pl-tab').forEach(function(b){b.classList.remove('on')});
-  t.classList.add('on');
-  curMat=t.dataset.mat;
-  doRender();
-});
-
-// Search
-var stmr;
-document.getElementById('plSrch').addEventListener('input',function(){
-  clearTimeout(stmr);
-  var v=this.value;
-  stmr=setTimeout(function(){ curQ=v.toLowerCase().trim(); doRender(); },200);
-});
-
-// Fetch
-(function(){
-  fetch('/api/buy-prices',{headers:{Accept:'application/json'}})
-    .then(function(r){if(!r.ok) throw 0;return r.json();})
-    .catch(function(){
-      return fetch(BACKEND+'/api/buy-prices',{headers:{Accept:'application/json'}}).then(function(r){return r.json();});
-    })
-    .then(function(d){
-      if(!d||!d.ok) throw 0;
-      allData=d.groups||[];
-      document.getElementById('plSkelWrap').style.display='none';
-      // Timestamp
-      var mx='';
-      allData.forEach(function(g){g.items.forEach(function(it){if(it.updated_at&&it.updated_at>mx)mx=it.updated_at;});});
-      if(mx){
-        document.getElementById('plUpdTxt').textContent='Harga terakhir diperbarui: '+mx;
-        document.getElementById('plUpd').classList.add('show');
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
-      doRender();
-    })
-    .catch(function(){
-      document.getElementById('plSkelWrap').style.display='none';
-      document.getElementById('plErr').classList.add('show');
-    });
-})();
-</script>
-</body>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 78px;
+      }
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        font-size: 15px;
+        line-height: 1.65;
+        overflow-x: hidden;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Syne", sans-serif;
+        line-height: 1.13;
+      }
+      .W {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* HEADER — same as index */
+      #hdr {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        height: var(--hdr);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+        transition: box-shadow 0.3s;
+      }
+      #hdr.scrolled {
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      }
+      .hdr-in {
+        height: var(--hdr);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        flex-shrink: 0;
+      }
+      .logo img {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        object-fit: cover;
+        border: 2px solid var(--cr-bd);
+      }
+      .logo-text .l1 {
+        font-family: "Syne", sans-serif;
+        font-size: 15.5px;
+        font-weight: 800;
+        letter-spacing: 0.3px;
+      }
+      .logo-text .l2 {
+        font-size: 10.5px;
+        color: var(--muted);
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+        margin-top: 1px;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 1px;
+      }
+      .nav-links a {
+        padding: 7px 13px;
+        border-radius: 8px;
+        font-size: 13.5px;
+        font-weight: 600;
+        color: var(--sub);
+        transition: all 0.15s;
+      }
+      .nav-links a:hover,
+      .nav-links a.on {
+        color: var(--text);
+        background: var(--bg);
+      }
+      .nav-cta {
+        background: var(--cr) !important;
+        color: #fff !important;
+        padding: 8px 18px !important;
+        border-radius: 9px !important;
+        font-weight: 700 !important;
+        box-shadow: 0 3px 12px rgba(200, 22, 26, 0.22) !important;
+      }
+      .nav-cta:hover {
+        background: var(--cr2) !important;
+        transform: translateY(-1px) !important;
+      }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        width: 32px;
+        padding: 4px;
+        background: none;
+        border: none;
+      }
+      .hamburger span {
+        display: block;
+        height: 2px;
+        background: var(--sub);
+        border-radius: 2px;
+        transition: all 0.3s;
+      }
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+      .mob-nav {
+        display: none;
+        flex-direction: column;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        padding: 8px 24px 18px;
+        gap: 2px;
+        position: fixed;
+        top: var(--hdr);
+        left: 0;
+        right: 0;
+        z-index: 998;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      }
+      .mob-nav.open {
+        display: flex;
+      }
+      .mob-nav a {
+        padding: 10px 14px;
+        border-radius: 10px;
+        font-weight: 600;
+        color: var(--sub);
+        font-size: 14.5px;
+      }
+      .mob-nav a:hover {
+        background: var(--bg);
+        color: var(--text);
+      }
+      .mob-nav .nav-cta {
+        background: var(--cr) !important;
+        color: #fff !important;
+        text-align: center;
+        margin-top: 8px;
+        border-radius: 10px !important;
+      }
+
+      /* PAGE HERO */
+      .page-hero {
+        padding: calc(var(--hdr) + 48px) 0 44px;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+      }
+      .page-hero-in {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 32px;
+        align-items: center;
+      }
+      .ph-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: var(--cr-bg);
+        border: 1px solid var(--cr-bd);
+        border-radius: 999px;
+        padding: 5px 14px;
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--cr);
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+      .ph-eyebrow::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #22c55e;
+        box-shadow: 0 0 6px #22c55e;
+        animation: blink 2s infinite;
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.3;
+        }
+      }
+      .page-hero h1 {
+        font-size: clamp(28px, 3.5vw, 44px);
+        font-weight: 800;
+        letter-spacing: -0.8px;
+        margin-bottom: 10px;
+        color: var(--text);
+      }
+      .page-hero h1 em {
+        color: var(--cr);
+        font-style: normal;
+      }
+      .ph-sub {
+        font-size: 15px;
+        color: var(--sub);
+        max-width: 56ch;
+        line-height: 1.7;
+      }
+      .ph-meta {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 18px;
+      }
+      .ph-badge {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .ph-badge .b {
+        font-weight: 700;
+        color: var(--sub);
+      }
+      .ph-card {
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: var(--r2);
+        padding: 20px 24px;
+        min-width: 200px;
+        text-align: center;
+      }
+      .ph-card .cv {
+        font-family: "Syne", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
+      }
+      .ph-card .live {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        font-size: 13px;
+        color: var(--sub);
+        font-weight: 600;
+      }
+      .live-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #22c55e;
+        animation: blink 2s infinite;
+      }
+
+      /* PRICELIST */
+      .pl-section {
+        padding: 36px 0 64px;
+      }
+      .pl-bar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 18px;
+        padding: 18px 20px;
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--r2);
+        box-shadow: var(--shadow);
+      }
+      .pl-srch-wrap {
+        position: relative;
+        flex: 1;
+        min-width: 200px;
+      }
+      .pl-srch-ico {
+        position: absolute;
+        left: 13px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--faint);
+        font-size: 14px;
+        pointer-events: none;
+      }
+      .pl-srch {
+        width: 100%;
+        padding: 10px 14px 10px 38px;
+        border: 1.5px solid var(--border2);
+        border-radius: 10px;
+        font-size: 14px;
+        font-family: inherit;
+        background: var(--bg);
+        color: var(--text);
+        outline: none;
+        transition: border 0.15s;
+      }
+      .pl-srch:focus {
+        border-color: var(--cr);
+        background: var(--white);
+      }
+      .pl-srch::placeholder {
+        color: var(--faint);
+      }
+      .pl-tabs {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .pl-tab {
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 700;
+        border: 1.5px solid var(--border2);
+        background: var(--white);
+        color: var(--sub);
+        cursor: pointer;
+        transition: all 0.15s;
+        font-family: inherit;
+        white-space: nowrap;
+      }
+      .pl-tab:hover {
+        border-color: var(--cr);
+        color: var(--cr);
+      }
+      .pl-tab.on {
+        background: var(--cr);
+        color: #fff;
+        border-color: var(--cr);
+      }
+
+      .pl-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;
+        font-size: 12.5px;
+        color: var(--muted);
+        margin-bottom: 16px;
+      }
+      .pl-meta b {
+        color: var(--sub);
+      }
+      .pl-upd {
+        display: none;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .pl-upd.show {
+        display: flex;
+      }
+      .live-dot-sm {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #22c55e;
+        animation: blink 2s infinite;
+      }
+
+      .pl-skel {
+        height: 88px;
+        border-radius: 12px;
+        margin-bottom: 10px;
+        background: linear-gradient(
+          90deg,
+          #f0f0f0 25%,
+          #e8e8e8 50%,
+          #f0f0f0 75%
+        );
+        background-size: 400% 100%;
+        animation: sk 1.5s infinite;
+      }
+      @keyframes sk {
+        0% {
+          background-position: 100% 0;
+        }
+        100% {
+          background-position: -100% 0;
+        }
+      }
+
+      .pl-group {
+        margin-bottom: 30px;
+      }
+      .pl-grp-head {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 12px;
+        padding-bottom: 11px;
+        border-bottom: 2px solid var(--border);
+      }
+      .pl-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        flex: 0 0 10px;
+      }
+      .pl-grp-name {
+        font-family: "Syne", sans-serif;
+        font-size: 16px;
+        font-weight: 800;
+        color: var(--text);
+      }
+      .pl-grp-ct {
+        font-size: 11px;
+        color: var(--muted);
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 2px 10px;
+        margin-left: auto;
+        font-weight: 700;
+      }
+
+      .pl-items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+        gap: 8px;
+      }
+      .pl-item {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 14px 15px;
+        transition: all 0.15s;
+        cursor: default;
+      }
+      .pl-item:hover {
+        border-color: var(--cr-bd);
+        box-shadow: 0 4px 16px rgba(200, 22, 26, 0.1);
+        transform: translateY(-2px);
+      }
+      .pl-item-name {
+        font-size: 12.5px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        line-height: 1.35;
+        color: var(--sub);
+      }
+      .pl-item-price {
+        font-size: 20px;
+        font-weight: 800;
+        font-family: "Syne", sans-serif;
+        color: var(--cr);
+        line-height: 1;
+      }
+      .pl-item-price.no {
+        font-size: 12px;
+        font-style: italic;
+        color: var(--faint);
+        font-weight: 500;
+        font-family: inherit;
+      }
+      .pl-item-unit {
+        font-size: 11px;
+        color: var(--faint);
+        margin-top: 3px;
+        font-weight: 600;
+      }
+      .pl-item-note {
+        font-size: 11px;
+        color: var(--faint);
+        margin-top: 5px;
+        line-height: 1.3;
+      }
+
+      .pl-empty {
+        display: none;
+        text-align: center;
+        padding: 48px 16px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .pl-empty.show {
+        display: block;
+      }
+      .pl-err {
+        display: none;
+        background: var(--cr-bg);
+        border: 1px solid var(--cr-bd);
+        border-radius: 12px;
+        padding: 24px;
+        text-align: center;
+        font-size: 14px;
+        color: var(--sub);
+      }
+      .pl-err.show {
+        display: block;
+      }
+
+      .pl-note {
+        background: #fffbeb;
+        border: 1px solid #fde68a;
+        border-radius: 12px;
+        padding: 14px 18px;
+        margin-top: 22px;
+        font-size: 13px;
+        color: #78350f;
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        line-height: 1.65;
+      }
+
+      /* SIDEBAR LAYOUT */
+      .pl-layout {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 24px;
+        align-items: start;
+      }
+      .pl-sidebar {
+        position: sticky;
+        top: 84px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .sidebar-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--r2);
+        padding: 20px 22px;
+        box-shadow: var(--shadow);
+      }
+      .sidebar-card .sc-title {
+        font-size: 13px;
+        font-weight: 800;
+        color: var(--text);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 14px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--border);
+      }
+      .wa-cta-sidebar {
+        background: linear-gradient(135deg, var(--cr), #e84445);
+        border-radius: var(--r2);
+        padding: 22px;
+        text-align: center;
+      }
+      .wa-cta-sidebar .wt {
+        font-family: "Syne", sans-serif;
+        font-size: 16px;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 6px;
+      }
+      .wa-cta-sidebar .ws {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.75);
+        margin-bottom: 16px;
+      }
+      .btn-wa {
+        display: block;
+        background: #fff;
+        color: var(--cr);
+        font-weight: 800;
+        font-size: 14px;
+        padding: 11px 16px;
+        border-radius: 10px;
+        transition: all 0.15s;
+      }
+      .btn-wa:hover {
+        background: rgba(255, 255, 255, 0.85);
+      }
+      .jam-list {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+      }
+      .jam-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .jam-row:last-child {
+        border-bottom: none;
+      }
+      .jam-day {
+        color: var(--sub);
+        font-weight: 600;
+      }
+      .jam-time {
+        color: var(--muted);
+      }
+      .jam-row.today .jam-day,
+      .jam-row.today .jam-time {
+        color: var(--cr);
+        font-weight: 700;
+      }
+      .jam-row.today {
+        background: var(--cr-bg);
+        margin: 0 -4px;
+        padding: 6px 4px;
+        border-radius: 6px;
+        border-bottom: none;
+      }
+      .jam-closed {
+        color: var(--faint) !important;
+        font-style: italic;
+      }
+
+      /* WA FLOAT */
+      .wa-float {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        z-index: 990;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background: #25d366;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        font-size: 24px;
+        transition: all 0.2s;
+      }
+      .wa-float:hover {
+        transform: scale(1.1);
+      }
+
+      /* Footer minimal */
+      .ft-mini {
+        background: #0f1214;
+        padding: 28px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .ft-mini-in {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .ft-mini-l {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.3);
+      }
+      .ft-mini-r {
+        display: flex;
+        gap: 16px;
+      }
+      .ft-mini-r a {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.35);
+        transition: color 0.15s;
+      }
+      .ft-mini-r a:hover {
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      @media (max-width: 900px) {
+        .pl-layout {
+          grid-template-columns: 1fr;
+        }
+        .pl-sidebar {
+          position: static;
+        }
+        .page-hero-in {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 640px) {
+        .nav-links {
+          display: none;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .pl-items {
+          grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a
+      class="wa-float"
+      href="https://wa.me/6281229226125?text=Halo+ARV+Logam%2C+saya+mau+cek+harga+beli+rongsokan+hari+ini"
+      target="_blank"
+      >💬</a
+    >
+
+    <!-- HEADER -->
+    <header id="hdr">
+      <div class="W hdr-in">
+        <a class="logo" href="/">
+          <img src="./img/logo2.png" alt="ARV Logam" />
+          <div class="logo-text">
+            <div class="l1">ARV LOGAM</div>
+            <div class="l2">Juwana · Pati · Jawa Tengah</div>
+          </div>
+        </a>
+        <nav class="nav-links">
+          <a href="/">Beranda</a>
+          <a href="/#tentang">Tentang</a>
+          <a href="/#layanan">Layanan</a>
+          <a href="price.html" class="on">Harga Beli</a>
+          <a href="/#karir">Karir</a>
+          <a href="contacts.html" class="nav-cta">Hubungi Kami →</a>
+        </nav>
+        <button
+          class="hamburger"
+          id="hbg"
+          onclick="toggleMenu()"
+          aria-label="Buka Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <nav class="mob-nav" id="mobNav">
+      <a href="/" onclick="closeMenu()">Beranda</a>
+      <a href="/#layanan" onclick="closeMenu()">Layanan</a>
+      <a href="price.html" onclick="closeMenu()">Harga Beli</a>
+      <a href="/#karir" onclick="closeMenu()">Karir</a>
+      <a href="contacts.html" class="nav-cta" onclick="closeMenu()"
+        >📞 Hubungi Kami</a
+      >
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="W">
+        <div class="page-hero-in">
+          <div>
+            <div class="ph-eyebrow">Update Real-Time</div>
+            <h1>Harga Beli <em>Rongsokan</em><br />& Logam Hari Ini</h1>
+            <p class="ph-sub">
+              Harga per kg untuk material bersih dan tergrading. Harga final
+              ditetapkan setelah inspeksi dan timbang bersama. Hubungi kami
+              untuk konfirmasi harga terkini.
+            </p>
+            <div class="ph-meta">
+              <div class="ph-badge">
+                ⚖️ <span class="b">Timbang transparan</span> di tempat
+              </div>
+              <div class="ph-badge">
+                💳 <span class="b">Bayar langsung</span> setelah sepakat
+              </div>
+              <div class="ph-badge">
+                📍 <span class="b">Juwana, Pati</span> Jawa Tengah
+              </div>
+            </div>
+          </div>
+          <div class="ph-card">
+            <div class="cv" id="phDate">—</div>
+            <div class="live">
+              <div class="live-dot"></div>
+              Harga Live
+            </div>
+            <div style="margin-top: 12px; font-size: 13px; color: var(--muted)">
+              <span id="phCount">—</span> grade tersedia
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICELIST -->
+    <main class="pl-section">
+      <div class="W">
+        <div class="pl-layout">
+          <div>
+            <div class="pl-bar">
+              <div class="pl-srch-wrap">
+                <span class="pl-srch-ico">🔍</span>
+                <input
+                  class="pl-srch"
+                  id="plSrch"
+                  type="text"
+                  placeholder="Cari material... contoh: BC, Bron, AK, Kusen, TM"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="pl-tabs" id="plTabs">
+                <button class="pl-tab on" data-mat="semua">Semua</button>
+                <button class="pl-tab" data-mat="Tembaga">🟤 Tembaga</button>
+                <button class="pl-tab" data-mat="Kuningan">🟡 Kuningan</button>
+                <button class="pl-tab" data-mat="Aluminium">
+                  ⚪ Aluminium
+                </button>
+                <button class="pl-tab" data-mat="Stainless">
+                  🔘 Stainless
+                </button>
+                <button class="pl-tab" data-mat="Timah & Aki">
+                  🟣 Timah & Aki
+                </button>
+              </div>
+            </div>
+            <div class="pl-meta">
+              <span id="plInfo">Memuat data harga...</span>
+              <div class="pl-upd" id="plUpd">
+                <div class="live-dot-sm"></div>
+                <span id="plUpdTxt"></span>
+              </div>
+            </div>
+            <div id="plSkelWrap">
+              <div class="pl-skel"></div>
+              <div class="pl-skel"></div>
+              <div class="pl-skel"></div>
+            </div>
+            <div id="plContent"></div>
+            <div class="pl-empty" id="plEmpty">
+              Tidak ada hasil untuk "<span id="plEmptyQ"></span>". Coba kata
+              kunci lain.
+            </div>
+            <div class="pl-err" id="plErr">
+              ⚠️ Tidak dapat memuat harga saat ini.<br />
+              <a
+                href="https://wa.me/6281229226125?text=Halo%2C+saya+mau+tanya+harga+rongsokan+hari+ini"
+                target="_blank"
+                style="
+                  color: var(--cr);
+                  font-weight: 700;
+                  display: inline-block;
+                  margin-top: 8px;
+                "
+                >→ Tanya harga langsung via WhatsApp</a
+              >
+            </div>
+            <div class="pl-note">
+              <span style="flex: 0 0 auto">⚠️</span>
+              <span
+                ><strong>Catatan:</strong> Harga di atas adalah harga untuk
+                material
+                <strong>bersih, tergrading, dan bebas kontaminan</strong>
+                (plastik, karet, material asing). Harga final ditetapkan setelah
+                inspeksi dan timbang bersama di lokasi. Harga dapat berubah
+                sewaktu-waktu mengikuti kondisi pasar.</span
+              >
+            </div>
+          </div>
+
+          <!-- SIDEBAR -->
+          <aside class="pl-sidebar">
+            <div class="wa-cta-sidebar">
+              <div class="wt">Mau Jual Rongsokan?</div>
+              <div class="ws">
+                Tanya harga langsung, gratis, tidak ada biaya apapun
+              </div>
+              <a
+                class="btn-wa"
+                href="https://wa.me/6281229226125?text=Halo+ARV+Logam%2C+saya+mau+jual+rongsokan+logam"
+                target="_blank"
+                >💬 Chat WhatsApp →</a
+              >
+            </div>
+            <div class="sidebar-card">
+              <div class="sc-title">🕐 Jam Operasional</div>
+              <div class="jam-list" id="jamList">
+                <div class="jam-row" data-day="1">
+                  <span class="jam-day">Senin</span
+                  ><span class="jam-time">07.00 – 17.00</span>
+                </div>
+                <div class="jam-row" data-day="2">
+                  <span class="jam-day">Selasa</span
+                  ><span class="jam-time">07.00 – 17.00</span>
+                </div>
+                <div class="jam-row" data-day="3">
+                  <span class="jam-day">Rabu</span
+                  ><span class="jam-time">07.00 – 17.00</span>
+                </div>
+                <div class="jam-row" data-day="4">
+                  <span class="jam-day">Kamis</span
+                  ><span class="jam-time">07.00 – 17.00</span>
+                </div>
+                <div class="jam-row" data-day="5">
+                  <span class="jam-day">Jumat</span
+                  ><span class="jam-time">07.00 – 16.00</span>
+                </div>
+                <div class="jam-row" data-day="6">
+                  <span class="jam-day">Sabtu</span
+                  ><span class="jam-time">07.00 – 14.00</span>
+                </div>
+                <div class="jam-row" data-day="0">
+                  <span class="jam-day">Minggu</span
+                  ><span class="jam-time jam-closed">Tutup</span>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-card">
+              <div class="sc-title">📞 Kontak Langsung</div>
+              <div style="display: flex; flex-direction: column; gap: 9px">
+                <a
+                  href="tel:+6281229226125"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: var(--text);
+                  "
+                  >📱 0812 2922 6125</a
+                >
+                <a
+                  href="tel:+6287827730791"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: var(--text);
+                  "
+                  >📱 0878 2773 0791</a
+                >
+                <div
+                  style="
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 8px;
+                    font-size: 13px;
+                    color: var(--muted);
+                    margin-top: 4px;
+                    line-height: 1.6;
+                  "
+                >
+                  📍 JL. Ki Hajar Dewantoro, Growong Kidul, Juwana, Pati
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-card">
+              <div class="sc-title">💡 Tips Agar Harga Lebih Tinggi</div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  gap: 8px;
+                  font-size: 13px;
+                  color: var(--sub);
+                  line-height: 1.6;
+                "
+              >
+                <div>→ Pisahkan berdasarkan jenis logam sebelum dibawa</div>
+                <div>→ Bersihkan dari plastik, karet, atau material lain</div>
+                <div>→ Konfirmasi harga via WA sebelum berangkat</div>
+                <div>
+                  → Bawa langsung, tidak perlu janjian untuk volume kecil
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="ft-mini">
+      <div class="W ft-mini-in">
+        <div class="ft-mini-l">
+          © <span id="yr"></span> ARV Logam Juwana. Hak Cipta Dilindungi.
+        </div>
+        <div class="ft-mini-r">
+          <a href="/">Beranda</a>
+          <a href="abot.html">Tentang</a>
+          <a href="contacts.html">Kontak</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("yr").textContent = new Date().getFullYear();
+
+      // Header scroll
+      var hdr = document.getElementById("hdr");
+      window.addEventListener(
+        "scroll",
+        function () {
+          hdr.classList.toggle("scrolled", window.scrollY > 40);
+        },
+        { passive: true },
+      );
+
+      // Mobile menu
+      function toggleMenu() {
+        var m = document.getElementById("mobNav");
+        var b = document.getElementById("hbg");
+        m.classList.toggle("open");
+        b.classList.toggle("active");
+      }
+      function closeMenu() {
+        document.getElementById("mobNav").classList.remove("open");
+        document.getElementById("hbg").classList.remove("active");
+      }
+
+      // Today highlight
+      var today = new Date().getDay();
+      document.querySelectorAll(".jam-row").forEach(function (r) {
+        if (parseInt(r.dataset.day) === today) r.classList.add("today");
+      });
+
+      // Date header
+      var now = new Date();
+      var opts = {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      };
+      document.getElementById("phDate").textContent = now.toLocaleDateString(
+        "id-ID",
+        opts,
+      );
+
+      // ══════════ PRICELIST ══════════
+      var BACKEND = "https://umgap-ai.onrender.com";
+      var MAT_DOT = {
+        Tembaga: "#b87333",
+        Kuningan: "#d4a017",
+        Aluminium: "#9aa5b4",
+        Stainless: "#607d8b",
+        "Timah & Aki": "#7c6bbd",
+      };
+      var allData = [],
+        curMat = "semua",
+        curQ = "";
+
+      function rp(p) {
+        var n = Math.round(parseFloat(p) || 0);
+        if (!n) return null;
+        return "Rp " + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      }
+      function esc(s) {
+        var d = document.createElement("div");
+        d.textContent = s;
+        return d.innerHTML;
+      }
+
+      function doRender() {
+        var html = "",
+          total = 0;
+        allData.forEach(function (g) {
+          var items = g.items.filter(function (it) {
+            var mM = curMat === "semua" || it.material === curMat;
+            var mQ =
+              !curQ ||
+              it.grade.toLowerCase().indexOf(curQ) >= 0 ||
+              it.material.toLowerCase().indexOf(curQ) >= 0;
+            return mM && mQ;
+          });
+          if (!items.length) return;
+          total += items.length;
+          var dot = MAT_DOT[g.material] || "#6b7280";
+          html += '<div class="pl-group">';
+          html +=
+            '<div class="pl-grp-head"><div class="pl-dot" style="background:' +
+            dot +
+            '"></div>';
+          html += '<div class="pl-grp-name">' + esc(g.material) + "</div>";
+          html +=
+            '<div class="pl-grp-ct">' + items.length + " grade</div></div>";
+          html += '<div class="pl-items">';
+          items.forEach(function (it) {
+            var pr = rp(it.price);
+            html += '<div class="pl-item">';
+            html +=
+              '<div class="pl-item-name">' + esc(it.grade || "—") + "</div>";
+            if (pr) {
+              html += '<div class="pl-item-price">' + pr + "</div>";
+              html +=
+                '<div class="pl-item-unit">per ' +
+                esc(it.unit || "kg") +
+                "</div>";
+            } else {
+              html += '<div class="pl-item-price no">Hubungi kami</div>';
+            }
+            if (it.note)
+              html += '<div class="pl-item-note">' + esc(it.note) + "</div>";
+            html += "</div>";
+          });
+          html += "</div></div>";
+        });
+
+        document.getElementById("plContent").innerHTML = html;
+        document.getElementById("plInfo").innerHTML =
+          total > 0
+            ? "Menampilkan <b>" +
+              total +
+              " grade material</b>" +
+              (curQ ? ' — hasil: "<b>' + esc(curQ) + '</b>"' : "")
+            : "";
+        document.getElementById("phCount").textContent = total;
+
+        var emp = document.getElementById("plEmpty");
+        if (!total && (curQ || curMat !== "semua")) {
+          document.getElementById("plEmptyQ").textContent = curQ || curMat;
+          emp.classList.add("show");
+        } else {
+          emp.classList.remove("show");
+        }
+      }
+
+      document.getElementById("plTabs").addEventListener("click", function (e) {
+        var t = e.target.closest(".pl-tab");
+        if (!t) return;
+        document.querySelectorAll(".pl-tab").forEach(function (b) {
+          b.classList.remove("on");
+        });
+        t.classList.add("on");
+        curMat = t.dataset.mat;
+        doRender();
+      });
+
+      var stmr;
+      document.getElementById("plSrch").addEventListener("input", function () {
+        clearTimeout(stmr);
+        var v = this.value;
+        stmr = setTimeout(function () {
+          curQ = v.toLowerCase().trim();
+          doRender();
+        }, 200);
+      });
+
+      // Handle URL param ?q=
+      var urlQ = new URLSearchParams(window.location.search).get("q");
+      if (urlQ) document.getElementById("plSrch").value = urlQ;
+
+      (function () {
+        fetch("/api/buy-prices", { headers: { Accept: "application/json" } })
+          .then(function (r) {
+            if (!r.ok) throw 0;
+            return r.json();
+          })
+          .catch(function () {
+            return fetch(BACKEND + "/api/buy-prices", {
+              headers: { Accept: "application/json" },
+            }).then(function (r) {
+              return r.json();
+            });
+          })
+          .then(function (d) {
+            if (!d || !d.ok) throw 0;
+            allData = d.groups || [];
+            document.getElementById("plSkelWrap").style.display = "none";
+            var mx = "";
+            allData.forEach(function (g) {
+              g.items.forEach(function (it) {
+                if (it.updated_at && it.updated_at > mx) mx = it.updated_at;
+              });
+            });
+            if (mx) {
+              document.getElementById("plUpdTxt").textContent =
+                "Update terakhir: " + mx;
+              document.getElementById("plUpd").classList.add("show");
+            }
+            if (urlQ) {
+              curQ = urlQ.toLowerCase().trim();
+            }
+            doRender();
+          })
+          .catch(function () {
+            document.getElementById("plSkelWrap").style.display = "none";
+            document.getElementById("plErr").classList.add("show");
+            document.getElementById("plInfo").textContent = "";
+            document.getElementById("phCount").textContent = "—";
+          });
+      })();
+    </script>
+  </body>
 </html>
