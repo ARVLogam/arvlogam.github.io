@@ -422,40 +422,188 @@
       #hero {
         min-height: 100vh;
         padding: calc(var(--hdr) + 60px) 0 80px;
-        background: var(--white);
         position: relative;
         overflow: hidden;
         display: flex;
         align-items: center;
-        border-bottom: 1px solid var(--border);
+        border-bottom: 1px solid rgba(200, 22, 26, 0.3);
       }
-      .hero-dots {
+      .hero-bg-photo {
         position: absolute;
         inset: 0;
-        background-image: radial-gradient(
-          circle,
-          rgba(200, 22, 26, 0.1) 1px,
-          transparent 1px
-        );
-        background-size: 28px 28px;
-        mask-image: radial-gradient(
-          ellipse 70% 80% at 80% 50%,
-          black 0%,
-          transparent 70%
-        );
+        background: url("./img/gudang1.jpg") center/cover no-repeat;
+        z-index: 0;
+        transform: scale(1.05);
+        animation: heroZoom 18s ease-in-out infinite alternate;
       }
-      .hero-red-blob {
+      @keyframes heroZoom {
+        0% {
+          transform: scale(1.05) translateX(0);
+        }
+        100% {
+          transform: scale(1.12) translateX(-20px);
+        }
+      }
+      .hero-overlay {
         position: absolute;
-        top: -100px;
-        right: -100px;
-        width: 500px;
-        height: 500px;
-        border-radius: 50%;
+        inset: 0;
+        background:
+          linear-gradient(
+            110deg,
+            rgba(5, 5, 7, 0.92) 0%,
+            rgba(5, 5, 7, 0.8) 40%,
+            rgba(5, 5, 7, 0.45) 70%,
+            rgba(5, 5, 7, 0.25) 100%
+          ),
+          linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.3) 0%,
+            transparent 40%,
+            rgba(0, 0, 0, 0.5) 100%
+          );
+        z-index: 1;
+      }
+      .hero-overlay-red {
+        position: absolute;
+        inset: 0;
         background: radial-gradient(
-          circle,
-          rgba(200, 22, 26, 0.06) 0%,
-          transparent 70%
+          ellipse 55% 70% at 75% 45%,
+          rgba(200, 22, 26, 0.18) 0%,
+          transparent 65%
         );
+        z-index: 1;
+      }
+      .hero-grain {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        opacity: 0.028;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        background-repeat: repeat;
+        background-size: 200px 200px;
+        pointer-events: none;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 4;
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        gap: 64px;
+        align-items: center;
+      }
+      /* teks terang karena bg gelap */
+      #hero .hero-eyebrow {
+        background: rgba(200, 22, 26, 0.2);
+        border-color: rgba(200, 22, 26, 0.45);
+        color: rgba(255, 150, 150, 0.95);
+      }
+      #hero h1 {
+        color: #fff;
+      }
+      #hero h1 em {
+        color: #ff5255;
+      }
+      #hero .hero-desc {
+        color: rgba(255, 255, 255, 0.72);
+      }
+      #hero .trust-item {
+        color: rgba(255, 255, 255, 0.52);
+      }
+      #hero .trust-item .chk {
+        color: #ff5255;
+      }
+      #hero .btn-line {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.24);
+        color: #fff;
+      }
+      #hero .btn-line:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: rgba(255, 255, 255, 0.55);
+      }
+      #hero .hero-stat-main {
+        background: rgba(10, 10, 12, 0.72);
+        border-color: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+      #hero .stat-val {
+        color: #ff5255;
+      }
+      #hero .stat-label {
+        color: rgba(255, 255, 255, 0.45);
+      }
+      #hero .stat-sub {
+        color: rgba(255, 255, 255, 0.32);
+      }
+      #hero .stat-mini {
+        background: rgba(255, 255, 255, 0.07);
+        border-color: rgba(255, 255, 255, 0.1);
+      }
+      #hero .stat-mini .v {
+        color: #fff;
+      }
+      #hero .stat-mini .l {
+        color: rgba(255, 255, 255, 0.38);
+      }
+      #hero .harga-cta-card {
+        background: linear-gradient(135deg, var(--cr), #e84445);
+        backdrop-filter: blur(8px);
+      }
+      /* teks hero jadi terang karena bg gelap */
+      #hero .hero-eyebrow {
+        background: rgba(200, 22, 26, 0.18);
+        border-color: rgba(200, 22, 26, 0.4);
+        color: rgba(255, 150, 150, 0.95);
+      }
+      #hero h1 {
+        color: #fff;
+      }
+      #hero h1 em {
+        color: #ff5557;
+      }
+      #hero .hero-desc {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      #hero .trust-item {
+        color: rgba(255, 255, 255, 0.5);
+      }
+      #hero .trust-item .chk {
+        color: #ff6668;
+      }
+      #hero .btn-line {
+        background: rgba(255, 255, 255, 0.07);
+        border-color: rgba(255, 255, 255, 0.22);
+        color: #fff;
+      }
+      #hero .btn-line:hover {
+        background: rgba(255, 255, 255, 0.13);
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+      #hero .hero-stat-main {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+      }
+      #hero .stat-val {
+        color: #ff5557;
+      }
+      #hero .stat-label {
+        color: rgba(255, 255, 255, 0.45);
+      }
+      #hero .stat-sub {
+        color: rgba(255, 255, 255, 0.35);
+      }
+      #hero .stat-mini {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.09);
+      }
+      #hero .stat-mini .v {
+        color: #fff;
+      }
+      #hero .stat-mini .l {
+        color: rgba(255, 255, 255, 0.4);
       }
       .hero-content {
         position: relative;
@@ -1864,8 +2012,20 @@
         id="hero"
         aria-label="ARV Logam - Jual Beli Rongsokan Logam Juwana Pati"
       >
-        <div class="hero-dots"></div>
-        <div class="hero-red-blob"></div>
+        <div class="hero-bg-photo"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-overlay-red"></div>
+        <div class="hero-grain"></div>
+        <div class="hero-scan"></div>
+        <div class="hero-bracket tl">
+          <svg viewBox="0 0 56 56" fill="none">
+            <path
+              d="M0 40 L0 0 L40 0"
+              stroke="rgba(200,22,26,.7)"
+              stroke-width="1.8"
+            />
+          </svg>
+        </div>
         <div class="W">
           <div class="hero-content">
             <div>
@@ -1937,7 +2097,7 @@
                   <div class="ht">📊 Harga Beli Hari Ini</div>
                   <div class="hs">Update real-time dari pasar</div>
                 </div>
-                <a href="price.html">Cek Harga →</a>
+                <a href="price.html">Cek Harga</a>
               </div>
             </div>
           </div>
@@ -2895,6 +3055,119 @@
           "_blank",
         );
       }
+      (function () {
+        var c = document.getElementById("heroCanvas");
+        if (!c) return;
+        var ctx = c.getContext("2d");
+        var W,
+          H,
+          pts = [],
+          RAF;
+        var MOUSE = { x: 0, y: 0 };
+
+        function resize() {
+          W = c.width = c.offsetWidth;
+          H = c.height = c.offsetHeight;
+        }
+
+        // Generate floating metal-like nodes
+        function initPts() {
+          pts = [];
+          var n = Math.min(Math.floor((W * H) / 9000), 90);
+          for (var i = 0; i < n; i++) {
+            pts.push({
+              x: Math.random() * W,
+              y: Math.random() * H,
+              r: Math.random() * 1.8 + 0.4,
+              vx: (Math.random() - 0.5) * 0.35,
+              vy: (Math.random() - 0.5) * 0.35,
+              hue: Math.random() < 0.3 ? "rgba(200,22,26," : "rgba(180,100,80,",
+            });
+          }
+        }
+
+        function draw() {
+          ctx.clearRect(0, 0, W, H);
+
+          // subtle mouse-glow
+          var grd = ctx.createRadialGradient(
+            MOUSE.x,
+            MOUSE.y,
+            0,
+            MOUSE.x,
+            MOUSE.y,
+            220,
+          );
+          grd.addColorStop(0, "rgba(200,22,26,.07)");
+          grd.addColorStop(1, "transparent");
+          ctx.fillStyle = grd;
+          ctx.fillRect(0, 0, W, H);
+
+          // connect nearby points
+          for (var i = 0; i < pts.length; i++) {
+            for (var j = i + 1; j < pts.length; j++) {
+              var dx = pts[i].x - pts[j].x;
+              var dy = pts[i].y - pts[j].y;
+              var dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < 130) {
+                ctx.beginPath();
+                ctx.moveTo(pts[i].x, pts[i].y);
+                ctx.lineTo(pts[j].x, pts[j].y);
+                ctx.strokeStyle =
+                  "rgba(200,22,26," + (1 - dist / 130) * 0.18 + ")";
+                ctx.lineWidth = 0.6;
+                ctx.stroke();
+              }
+            }
+            // move
+            pts[i].x += pts[i].vx;
+            pts[i].y += pts[i].vy;
+            if (pts[i].x < 0 || pts[i].x > W) pts[i].vx *= -1;
+            if (pts[i].y < 0 || pts[i].y > H) pts[i].vy *= -1;
+
+            // draw dot
+            ctx.beginPath();
+            ctx.arc(pts[i].x, pts[i].y, pts[i].r, 0, Math.PI * 2);
+            ctx.fillStyle = pts[i].hue + ".55)";
+            ctx.fill();
+          }
+
+          RAF = requestAnimationFrame(draw);
+        }
+
+        // mouse parallax on hero content
+        var heroEl = document.getElementById("hero");
+        if (heroEl) {
+          heroEl.addEventListener(
+            "mousemove",
+            function (e) {
+              var rect = heroEl.getBoundingClientRect();
+              MOUSE.x = e.clientX - rect.left;
+              MOUSE.y = e.clientY - rect.top;
+              // subtle content parallax
+              var cx = (e.clientX / window.innerWidth - 0.5) * 14;
+              var cy = (e.clientY / window.innerHeight - 0.5) * 8;
+              var content = heroEl.querySelector(".hero-content");
+              if (content)
+                content.style.transform =
+                  "translate(" + cx * 0.3 + "px," + cy * 0.3 + "px)";
+            },
+            { passive: true },
+          );
+          heroEl.addEventListener("mouseleave", function () {
+            var content = heroEl.querySelector(".hero-content");
+            if (content) content.style.transform = "";
+          });
+        }
+
+        window.addEventListener("resize", function () {
+          resize();
+          initPts();
+        });
+        resize();
+        initPts();
+        draw();
+      })();
     </script>
   </body>
 </html>
